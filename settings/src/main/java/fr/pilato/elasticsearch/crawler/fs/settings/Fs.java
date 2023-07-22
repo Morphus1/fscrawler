@@ -59,6 +59,7 @@ public class Fs {
     private ByteSizeValue ignoreAbove = null;
     private boolean followSymlinks = false;
     private String tikaConfigPath = null;
+    private boolean vectorize = false;
 
     public static Builder builder() {
         return new Builder();
@@ -93,6 +94,7 @@ public class Fs {
         private ByteSizeValue ignoreAbove = null;
         private boolean followSymlinks = false;
         private String tikaConfigPath = null;
+        private boolean vectorize = false;
 
         public Builder setUrl(String url) {
             this.url = url;
@@ -253,11 +255,16 @@ public class Fs {
             return this;
         }
 
+        public Builder setVectorize(boolean vectorize) {
+            this.vectorize = vectorize;
+            return this;
+        }
+
         public Fs build() {
             return new Fs(url, updateRate, includes, excludes, filters, jsonSupport, filenameAsId, addFilesize,
                     removeDeleted, addAsInnerObject, storeSource, indexedChars, indexContent, attributesSupport, rawMetadata,
                     checksum, xmlSupport, indexFolders, langDetect, continueOnError, ocr, ignoreAbove, followSymlinks,
-                    tikaConfigPath);
+                    tikaConfigPath, vectorize);
         }
     }
 
@@ -269,7 +276,7 @@ public class Fs {
                boolean filenameAsId, boolean addFilesize, boolean removeDeleted, boolean addAsInnerObject, boolean storeSource,
                Percentage indexedChars, boolean indexContent, boolean attributesSupport, boolean rawMetadata, String checksum, boolean xmlSupport,
                boolean indexFolders, boolean langDetect, boolean continueOnError, Ocr ocr, ByteSizeValue ignoreAbove, boolean followSymlinks,
-               String tikaConfigPath) {
+               String tikaConfigPath, boolean vectorize) {
         this.url = url;
         this.updateRate = updateRate;
         this.includes = includes;
@@ -294,6 +301,7 @@ public class Fs {
         this.ignoreAbove = ignoreAbove;
         this.followSymlinks = followSymlinks;
         this.tikaConfigPath = tikaConfigPath;
+        this.vectorize = vectorize;
     }
 
     public String getUrl() {
@@ -504,6 +512,10 @@ public class Fs {
       this.tikaConfigPath = tikaConfigPath;
     }
 
+    public boolean setVectorize() {
+        return vectorize;
+    }
+
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
@@ -532,14 +544,15 @@ public class Fs {
                 Objects.equals(checksum, fs.checksum) &&
                 Objects.equals(ocr, fs.ocr) &&
                 Objects.equals(ignoreAbove, fs.ignoreAbove) &&
-                Objects.equals(tikaConfigPath, fs.tikaConfigPath);
+                Objects.equals(tikaConfigPath, fs.tikaConfigPath) &&
+                Objects.equals(vectorize, fs.vectorize);
     }
 
     @Override
     public int hashCode() {
         return Objects.hash(url, updateRate, includes, excludes, filters, jsonSupport, filenameAsId, addFilesize,
                 removeDeleted, addAsInnerObject, storeSource, indexContent, indexedChars, attributesSupport, rawMetadata, xmlSupport,
-                checksum, indexFolders, langDetect, continueOnError, ocr, ignoreAbove, followSymlinks, tikaConfigPath);
+                checksum, indexFolders, langDetect, continueOnError, ocr, ignoreAbove, followSymlinks, tikaConfigPath, vectorize);
     }
 
     @Override
@@ -568,6 +581,7 @@ public class Fs {
                 ", ignoreAbove=" + ignoreAbove +
                 ", followSymlinks=" + followSymlinks +
                 ", tikaConfigPath='" + tikaConfigPath + '\'' +
+                ", vectorize=" + vectorize +
                 '}';
     }
 }
