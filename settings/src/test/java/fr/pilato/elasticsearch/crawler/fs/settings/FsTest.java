@@ -1,28 +1,41 @@
 package fr.pilato.elasticsearch.crawler.fs.settings;
 
-import fr.pilato.elasticsearch.crawler.fs.test.framework.AbstractFSCrawlerTestCase;
 import org.junit.Test;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 
-import static org.junit.Assert.*;
+import static org.junit.Assert.assertTrue;
 
-public class FsTest extends AbstractFSCrawlerTestCase {
+public class FsTest {
+    private static final Logger logger = LogManager.getLogger(FsTest.class);
 
     @Test
-    public void testDefaultVectorize() {
-        Fs fs = new Fs();
-        assertFalse(fs.setVectorize()); // Default value should be false
+    public void testVectorizeTrue() {
+        // Arrange
+        boolean expectedVectorizeValue = true;
+
+        // Act
+        Fs fs = Fs.builder().setVectorize(expectedVectorizeValue).build();
+
+        // Assert
+        assertTrue(fs.setVectorize() == expectedVectorizeValue);
+
+        // Log
+        logger.info("Vectorize is set to true");
     }
 
     @Test
-    public void testSetAndGetVectorize() {
-        Fs fs = new Fs();
+    public void testVectorizeFalse() {
+        // Arrange
+        boolean expectedVectorizeValue = false;
 
-        // Test setting vectorize to true
-        fs.setVectorize();
-        assertTrue(fs.setVectorize());
+        // Act
+        Fs fs = Fs.builder().setVectorize(expectedVectorizeValue).build();
 
-        // Test setting vectorize to false
-        fs.setVectorize();
-        assertFalse(fs.setVectorize());
+        // Assert
+        assertTrue(fs.setVectorize() == expectedVectorizeValue);
+
+        // Log
+        logger.info("Vectorize is set to false");
     }
 }

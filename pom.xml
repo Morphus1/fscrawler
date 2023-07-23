@@ -41,7 +41,7 @@
         <elasticsearch8.version>8.8.1</elasticsearch8.version>
         <elasticsearch7.version>7.17.7</elasticsearch7.version>
         <elasticsearch6.version>6.8.23</elasticsearch6.version>
-        <elasticsearch.version>${elasticsearch8.version}</elasticsearch.version>
+        <elasticsearch.version>${elasticsearch7.version}</elasticsearch.version>
 
         <tika.version>2.8.0</tika.version>
         <jackson.version>2.15.2</jackson.version>
@@ -992,6 +992,12 @@
                 <groupId>org.eclipse.jetty.websocket</groupId>
                 <artifactId>websocket-client</artifactId>
                 <version>9.4.51.v20230217</version>
+            </dependency>
+            <!-- Trying to Implement Vectorization -->
+            <dependency>
+                <groupId>dev.langchain4j</groupId>
+                <artifactId>langchain4j</artifactId>
+                <version>0.17.0</version>
             </dependency>
         </dependencies>
     </dependencyManagement>

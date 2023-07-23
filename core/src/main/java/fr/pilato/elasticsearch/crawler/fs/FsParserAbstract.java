@@ -439,6 +439,14 @@ public abstract class FsParserAbstract extends FsParser {
                 TikaDocParser.generate(fsSettings, inputStream, filename, fullFilename, doc, messageDigest, filesize);
             }
 
+            // Log whether vectorize is enabled or not
+            boolean vectorize = fsSettings.getFs().setVectorize();
+            if (vectorize) {
+                logger.info("!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! VECTORIZE IS ON !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!");
+            } else {
+                logger.info("!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! Vectorize is OFF !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!");
+            }
+
             // We index the data structure
             if (isIndexable(doc.getContent(), fsSettings.getFs().getFilters())) {
                 if (!closed) {
