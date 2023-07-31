@@ -50,6 +50,10 @@
       "content": {
         "type": "text"
       },
+      "dense_vector": {
+        "type": "dense_vector",
+        "dims": 384
+      },
       "file": {
         "properties": {
           "content_type": {

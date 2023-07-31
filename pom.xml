@@ -629,6 +629,16 @@
                 <version>2.5.0</version>
             </dependency>
 
+            <dependency>
+                <groupId>com.squareup.retrofit2</groupId>
+                <artifactId>retrofit</artifactId>
+                <version>2.9.0</version>
+            </dependency>
+            <dependency>
+                <groupId>com.squareup.retrofit2</groupId>
+                <artifactId>converter-gson</artifactId>
+                <version>2.9.0</version>
+            </dependency>
             <!--
             Because elasticsearch is not using transitive dependencies, we need to be explicit here
             -->
@@ -993,12 +1003,6 @@
                 <artifactId>websocket-client</artifactId>
                 <version>9.4.51.v20230217</version>
             </dependency>
-            <!-- Trying to Implement Vectorization -->
-            <dependency>
-                <groupId>dev.langchain4j</groupId>
-                <artifactId>langchain4j</artifactId>
-                <version>0.17.0</version>
-            </dependency>
         </dependencies>
     </dependencyManagement>
 
@@ -1029,6 +1033,19 @@
             <url>https://s01.oss.sonatype.org/content/repositories/snapshots/</url>
             <releases><enabled>false</enabled></releases>
             <snapshots><enabled>true</enabled></snapshots>
+        </repository>
+        
+        <repository>
+            <id>central</id>
+            <url>https://repo.maven.apache.org/maven2</url>
+            <releases><enabled>true</enabled></releases>
+            <snapshots><enabled>false</enabled></snapshots>
+        </repository>
+        <repository>
+            <id>jitpack.io</id>
+            <url>https://jitpack.io</url>
+            <releases><enabled>true</enabled></releases>
+            <snapshots><enabled>false</enabled></snapshots>
         </repository>
 
         <!-- Only used for Tika release candidates -->

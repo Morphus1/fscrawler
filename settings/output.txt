@@ -1,0 +1,1834 @@
+[1mApache Maven 3.6.3[m
+Maven home: /usr/share/maven
+Java version: 11.0.12, vendor: Azul Systems, Inc., runtime: /home/chris/.sdkman/candidates/java/11.0.12-zulu
+Default locale: en_US, platform encoding: UTF-8
+OS name: "linux", version: "5.19.0-46-generic", arch: "amd64", family: "unix"
+[[1;36mDEBUG[m] Created new class realm maven.api
+[[1;36mDEBUG[m] Importing foreign packages into class realm maven.api
+[[1;36mDEBUG[m]   Imported: javax.annotation.* < plexus.core
+[[1;36mDEBUG[m]   Imported: javax.annotation.security.* < plexus.core
+[[1;36mDEBUG[m]   Imported: javax.enterprise.inject.* < plexus.core
+[[1;36mDEBUG[m]   Imported: javax.enterprise.util.* < plexus.core
+[[1;36mDEBUG[m]   Imported: javax.inject.* < plexus.core
+[[1;36mDEBUG[m]   Imported: org.apache.maven.* < plexus.core
+[[1;36mDEBUG[m]   Imported: org.apache.maven.artifact < plexus.core
+[[1;36mDEBUG[m]   Imported: org.apache.maven.classrealm < plexus.core
+[[1;36mDEBUG[m]   Imported: org.apache.maven.cli < plexus.core
+[[1;36mDEBUG[m]   Imported: org.apache.maven.configuration < plexus.core
+[[1;36mDEBUG[m]   Imported: org.apache.maven.exception < plexus.core
+[[1;36mDEBUG[m]   Imported: org.apache.maven.execution < plexus.core
+[[1;36mDEBUG[m]   Imported: org.apache.maven.execution.scope < plexus.core
+[[1;36mDEBUG[m]   Imported: org.apache.maven.lifecycle < plexus.core
+[[1;36mDEBUG[m]   Imported: org.apache.maven.model < plexus.core
+[[1;36mDEBUG[m]   Imported: org.apache.maven.monitor < plexus.core
+[[1;36mDEBUG[m]   Imported: org.apache.maven.plugin < plexus.core
+[[1;36mDEBUG[m]   Imported: org.apache.maven.profiles < plexus.core
+[[1;36mDEBUG[m]   Imported: org.apache.maven.project < plexus.core
+[[1;36mDEBUG[m]   Imported: org.apache.maven.reporting < plexus.core
+[[1;36mDEBUG[m]   Imported: org.apache.maven.repository < plexus.core
+[[1;36mDEBUG[m]   Imported: org.apache.maven.rtinfo < plexus.core
+[[1;36mDEBUG[m]   Imported: org.apache.maven.settings < plexus.core
+[[1;36mDEBUG[m]   Imported: org.apache.maven.toolchain < plexus.core
+[[1;36mDEBUG[m]   Imported: org.apache.maven.usability < plexus.core
+[[1;36mDEBUG[m]   Imported: org.apache.maven.wagon.* < plexus.core
+[[1;36mDEBUG[m]   Imported: org.apache.maven.wagon.authentication < plexus.core
+[[1;36mDEBUG[m]   Imported: org.apache.maven.wagon.authorization < plexus.core
+[[1;36mDEBUG[m]   Imported: org.apache.maven.wagon.events < plexus.core
+[[1;36mDEBUG[m]   Imported: org.apache.maven.wagon.observers < plexus.core
+[[1;36mDEBUG[m]   Imported: org.apache.maven.wagon.proxy < plexus.core
+[[1;36mDEBUG[m]   Imported: org.apache.maven.wagon.repository < plexus.core
+[[1;36mDEBUG[m]   Imported: org.apache.maven.wagon.resource < plexus.core
+[[1;36mDEBUG[m]   Imported: org.codehaus.classworlds < plexus.core
+[[1;36mDEBUG[m]   Imported: org.codehaus.plexus.* < plexus.core
+[[1;36mDEBUG[m]   Imported: org.codehaus.plexus.classworlds < plexus.core
+[[1;36mDEBUG[m]   Imported: org.codehaus.plexus.component < plexus.core
+[[1;36mDEBUG[m]   Imported: org.codehaus.plexus.configuration < plexus.core
+[[1;36mDEBUG[m]   Imported: org.codehaus.plexus.container < plexus.core
+[[1;36mDEBUG[m]   Imported: org.codehaus.plexus.context < plexus.core
+[[1;36mDEBUG[m]   Imported: org.codehaus.plexus.lifecycle < plexus.core
+[[1;36mDEBUG[m]   Imported: org.codehaus.plexus.logging < plexus.core
+[[1;36mDEBUG[m]   Imported: org.codehaus.plexus.personality < plexus.core
+[[1;36mDEBUG[m]   Imported: org.codehaus.plexus.util.xml.Xpp3Dom < plexus.core
+[[1;36mDEBUG[m]   Imported: org.codehaus.plexus.util.xml.pull.XmlPullParser < plexus.core
+[[1;36mDEBUG[m]   Imported: org.codehaus.plexus.util.xml.pull.XmlPullParserException < plexus.core
+[[1;36mDEBUG[m]   Imported: org.codehaus.plexus.util.xml.pull.XmlSerializer < plexus.core
+[[1;36mDEBUG[m]   Imported: org.eclipse.aether.* < plexus.core
+[[1;36mDEBUG[m]   Imported: org.eclipse.aether.artifact < plexus.core
+[[1;36mDEBUG[m]   Imported: org.eclipse.aether.collection < plexus.core
+[[1;36mDEBUG[m]   Imported: org.eclipse.aether.deployment < plexus.core
+[[1;36mDEBUG[m]   Imported: org.eclipse.aether.graph < plexus.core
+[[1;36mDEBUG[m]   Imported: org.eclipse.aether.impl < plexus.core
+[[1;36mDEBUG[m]   Imported: org.eclipse.aether.installation < plexus.core
+[[1;36mDEBUG[m]   Imported: org.eclipse.aether.internal.impl < plexus.core
+[[1;36mDEBUG[m]   Imported: org.eclipse.aether.metadata < plexus.core
+[[1;36mDEBUG[m]   Imported: org.eclipse.aether.repository < plexus.core
+[[1;36mDEBUG[m]   Imported: org.eclipse.aether.resolution < plexus.core
+[[1;36mDEBUG[m]   Imported: org.eclipse.aether.spi < plexus.core
+[[1;36mDEBUG[m]   Imported: org.eclipse.aether.transfer < plexus.core
+[[1;36mDEBUG[m]   Imported: org.eclipse.aether.version < plexus.core
+[[1;36mDEBUG[m]   Imported: org.fusesource.jansi.* < plexus.core
+[[1;36mDEBUG[m]   Imported: org.slf4j.* < plexus.core
+[[1;36mDEBUG[m]   Imported: org.slf4j.event.* < plexus.core
+[[1;36mDEBUG[m]   Imported: org.slf4j.helpers.* < plexus.core
+[[1;36mDEBUG[m]   Imported: org.slf4j.spi.* < plexus.core
+[[1;36mDEBUG[m] Populating class realm maven.api
+[[1;34mINFO[m] Error stacktraces are turned on.
+[[1;36mDEBUG[m] Message scheme: color
+[[1;36mDEBUG[m] Message styles: [1;36mdebug[m [1;34minfo[m [1;33mwarning[m [1;31merror[m [1;32msuccess[m [1;31mfailure[m [1mstrong[m [32mmojo[m [36mproject[m
+[[1;36mDEBUG[m] Reading global settings from /usr/share/maven/conf/settings.xml
+[[1;36mDEBUG[m] Reading user settings from /home/chris/.m2/settings.xml
+[[1;36mDEBUG[m] Reading global toolchains from /usr/share/maven/conf/toolchains.xml
+[[1;36mDEBUG[m] Reading user toolchains from /home/chris/.m2/toolchains.xml
+[[1;36mDEBUG[m] Using local repository at /home/chris/.m2/repository
+[[1;36mDEBUG[m] Using manager EnhancedLocalRepositoryManager with priority 10.0 for /home/chris/.m2/repository
+[[1;34mINFO[m] Scanning for projects...
+[[1;36mDEBUG[m] Extension realms for project fr.pilato.elasticsearch.crawler:fscrawler-settings:jar:2.10-SNAPSHOT: (none)
+[[1;36mDEBUG[m] Looking up lifecycle mappings for packaging jar from ClassRealm[plexus.core, parent: null]
+[[1;36mDEBUG[m] Extension realms for project fr.pilato.elasticsearch.crawler:fscrawler-parent:pom:2.10-SNAPSHOT: (none)
+[[1;36mDEBUG[m] Looking up lifecycle mappings for packaging pom from ClassRealm[plexus.core, parent: null]
+[[1;36mDEBUG[m] === REACTOR BUILD PLAN ================================================
+[[1;36mDEBUG[m] Project: fr.pilato.elasticsearch.crawler:fscrawler-settings:jar:2.10-SNAPSHOT
+[[1;36mDEBUG[m] Tasks:   [test]
+[[1;36mDEBUG[m] Style:   Regular
+[[1;36mDEBUG[m] =======================================================================
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m---------< [0;36mfr.pilato.elasticsearch.crawler:fscrawler-settings[0;1m >---------[m
+[[1;34mINFO[m] [1mBuilding FSCrawler Settings 2.10-SNAPSHOT[m
+[[1;34mINFO[m] [1m--------------------------------[ jar ]---------------------------------[m
+[[1;36mDEBUG[m] Lifecycle default -> [validate, initialize, generate-sources, process-sources, generate-resources, process-resources, compile, process-classes, generate-test-sources, process-test-sources, generate-test-resources, process-test-resources, test-compile, process-test-classes, test, prepare-package, package, pre-integration-test, integration-test, post-integration-test, verify, install, deploy]
+[[1;36mDEBUG[m] Lifecycle clean -> [pre-clean, clean, post-clean]
+[[1;36mDEBUG[m] Lifecycle site -> [pre-site, site, post-site, site-deploy]
+[[1;36mDEBUG[m] Lifecycle default -> [validate, initialize, generate-sources, process-sources, generate-resources, process-resources, compile, process-classes, generate-test-sources, process-test-sources, generate-test-resources, process-test-resources, test-compile, process-test-classes, test, prepare-package, package, pre-integration-test, integration-test, post-integration-test, verify, install, deploy]
+[[1;36mDEBUG[m] Lifecycle clean -> [pre-clean, clean, post-clean]
+[[1;36mDEBUG[m] Lifecycle site -> [pre-site, site, post-site, site-deploy]
+[[1;36mDEBUG[m] Lifecycle default -> [validate, initialize, generate-sources, process-sources, generate-resources, process-resources, compile, process-classes, generate-test-sources, process-test-sources, generate-test-resources, process-test-resources, test-compile, process-test-classes, test, prepare-package, package, pre-integration-test, integration-test, post-integration-test, verify, install, deploy]
+[[1;36mDEBUG[m] Lifecycle clean -> [pre-clean, clean, post-clean]
+[[1;36mDEBUG[m] Lifecycle site -> [pre-site, site, post-site, site-deploy]
+[[1;36mDEBUG[m] Lifecycle default -> [validate, initialize, generate-sources, process-sources, generate-resources, process-resources, compile, process-classes, generate-test-sources, process-test-sources, generate-test-resources, process-test-resources, test-compile, process-test-classes, test, prepare-package, package, pre-integration-test, integration-test, post-integration-test, verify, install, deploy]
+[[1;36mDEBUG[m] Lifecycle clean -> [pre-clean, clean, post-clean]
+[[1;36mDEBUG[m] Lifecycle site -> [pre-site, site, post-site, site-deploy]
+[[1;36mDEBUG[m] Lifecycle default -> [validate, initialize, generate-sources, process-sources, generate-resources, process-resources, compile, process-classes, generate-test-sources, process-test-sources, generate-test-resources, process-test-resources, test-compile, process-test-classes, test, prepare-package, package, pre-integration-test, integration-test, post-integration-test, verify, install, deploy]
+[[1;36mDEBUG[m] Lifecycle clean -> [pre-clean, clean, post-clean]
+[[1;36mDEBUG[m] Lifecycle site -> [pre-site, site, post-site, site-deploy]
+[[1;36mDEBUG[m] Lifecycle default -> [validate, initialize, generate-sources, process-sources, generate-resources, process-resources, compile, process-classes, generate-test-sources, process-test-sources, generate-test-resources, process-test-resources, test-compile, process-test-classes, test, prepare-package, package, pre-integration-test, integration-test, post-integration-test, verify, install, deploy]
+[[1;36mDEBUG[m] Lifecycle clean -> [pre-clean, clean, post-clean]
+[[1;36mDEBUG[m] Lifecycle site -> [pre-site, site, post-site, site-deploy]
+[[1;36mDEBUG[m] Lifecycle default -> [validate, initialize, generate-sources, process-sources, generate-resources, process-resources, compile, process-classes, generate-test-sources, process-test-sources, generate-test-resources, process-test-resources, test-compile, process-test-classes, test, prepare-package, package, pre-integration-test, integration-test, post-integration-test, verify, install, deploy]
+[[1;36mDEBUG[m] Lifecycle clean -> [pre-clean, clean, post-clean]
+[[1;36mDEBUG[m] Lifecycle site -> [pre-site, site, post-site, site-deploy]
+[[1;36mDEBUG[m] === PROJECT BUILD PLAN ================================================
+[[1;36mDEBUG[m] Project:       fr.pilato.elasticsearch.crawler:fscrawler-settings:2.10-SNAPSHOT
+[[1;36mDEBUG[m] Dependencies (collect): [test]
+[[1;36mDEBUG[m] Dependencies (resolve): [compile, test]
+[[1;36mDEBUG[m] Repositories (dependencies): [elastic-download-service (https://artifacts.elastic.co/maven/, default, releases), oss-snapshots (https://s01.oss.sonatype.org/content/repositories/snapshots/, default, snapshots), central (https://repo.maven.apache.org/maven2, default, releases)]
+[[1;36mDEBUG[m] Repositories (plugins)     : [central (https://repo.maven.apache.org/maven2, default, releases)]
+[[1;36mDEBUG[m] -----------------------------------------------------------------------
+[[1;36mDEBUG[m] Goal:          org.apache.maven.plugins:maven-enforcer-plugin:3.3.0:enforce (enforce)
+[[1;36mDEBUG[m] Style:         Regular
+[[1;36mDEBUG[m] Configuration: <?xml version="1.0" encoding="UTF-8"?>
+<configuration>
+  <commandLineRules>${rules}</commandLineRules>
+  <fail default-value="true">${enforcer.fail}</fail>
+  <failFast default-value="false">${enforcer.failFast}</failFast>
+  <failIfNoRules default-value="true">${enforcer.failIfNoRules}</failIfNoRules>
+  <ignoreCache default-value="false">${enforcer.ignoreCache}</ignoreCache>
+  <mojoExecution default-value="${mojoExecution}"/>
+  <project default-value="${project}"/>
+  <rules>
+    <requireJavaVersion>
+      <version>11</version>
+    </requireJavaVersion>
+    <dependencyConvergence/>
+    <requireMavenVersion>
+      <version>3.3</version>
+    </requireMavenVersion>
+  </rules>
+  <rulesToExecute>${enforcer.rules}</rulesToExecute>
+  <rulesToSkip>${enforcer.skipRules}</rulesToSkip>
+  <session default-value="${session}"/>
+  <skip default-value="false">${enforcer.skip}</skip>
+</configuration>
+[[1;36mDEBUG[m] -----------------------------------------------------------------------
+[[1;36mDEBUG[m] Goal:          org.apache.maven.plugins:maven-resources-plugin:3.3.1:resources (default-resources)
+[[1;36mDEBUG[m] Style:         Regular
+[[1;36mDEBUG[m] Configuration: <?xml version="1.0" encoding="UTF-8"?>
+<configuration>
+  <addDefaultExcludes default-value="true"/>
+  <buildFilters default-value="${project.build.filters}"/>
+  <encoding default-value="${project.build.sourceEncoding}"/>
+  <escapeWindowsPaths default-value="true"/>
+  <fileNameFiltering default-value="false"/>
+  <includeEmptyDirs default-value="false"/>
+  <outputDirectory default-value="${project.build.outputDirectory}"/>
+  <overwrite default-value="false"/>
+  <project default-value="${project}"/>
+  <propertiesEncoding>UTF-8</propertiesEncoding>
+  <resources default-value="${project.resources}"/>
+  <session default-value="${session}"/>
+  <skip default-value="false">${maven.resources.skip}</skip>
+  <supportMultiLineFiltering default-value="false"/>
+  <useBuildFilters default-value="true"/>
+  <useDefaultDelimiters default-value="true"/>
+</configuration>
+[[1;36mDEBUG[m] -----------------------------------------------------------------------
+[[1;36mDEBUG[m] Goal:          org.apache.maven.plugins:maven-compiler-plugin:3.11.0:compile (default-compile)
+[[1;36mDEBUG[m] Style:         Regular
+[[1;36mDEBUG[m] Configuration: <?xml version="1.0" encoding="UTF-8"?>
+<configuration>
+  <basedir default-value="${basedir}"/>
+  <buildDirectory default-value="${project.build.directory}"/>
+  <compilePath default-value="${project.compileClasspathElements}"/>
+  <compileSourceRoots default-value="${project.compileSourceRoots}"/>
+  <compilerArgument>-Xlint:all,-serial,-path,-rawtypes,-unchecked</compilerArgument>
+  <compilerId default-value="javac">${maven.compiler.compilerId}</compilerId>
+  <compilerReuseStrategy default-value="${reuseCreated}">${maven.compiler.compilerReuseStrategy}</compilerReuseStrategy>
+  <compilerVersion>${maven.compiler.compilerVersion}</compilerVersion>
+  <createMissingPackageInfoClass default-value="true">${maven.compiler.createMissingPackageInfoClass}</createMissingPackageInfoClass>
+  <debug default-value="true">${maven.compiler.debug}</debug>
+  <debugFileName default-value="javac"/>
+  <debuglevel>${maven.compiler.debuglevel}</debuglevel>
+  <enablePreview default-value="false">${maven.compiler.enablePreview}</enablePreview>
+  <encoding default-value="${project.build.sourceEncoding}">UTF-8</encoding>
+  <executable>${maven.compiler.executable}</executable>
+  <failOnError default-value="true">${maven.compiler.failOnError}</failOnError>
+  <failOnWarning default-value="false">${maven.compiler.failOnWarning}</failOnWarning>
+  <forceJavacCompilerUse default-value="false">${maven.compiler.forceJavacCompilerUse}</forceJavacCompilerUse>
+  <fork default-value="false">${maven.compiler.fork}</fork>
+  <generatedSourcesDirectory default-value="${project.build.directory}/generated-sources/annotations"/>
+  <implicit>${maven.compiler.implicit}</implicit>
+  <maxmem>${maven.compiler.maxmem}</maxmem>
+  <meminitial>${maven.compiler.meminitial}</meminitial>
+  <mojoExecution default-value="${mojoExecution}"/>
+  <optimize default-value="false">true</optimize>
+  <outputDirectory default-value="${project.build.outputDirectory}"/>
+  <parameters default-value="false">${maven.compiler.parameters}</parameters>
+  <project default-value="${project}"/>
+  <projectArtifact default-value="${project.artifact}"/>
+  <release>11</release>
+  <session default-value="${session}"/>
+  <showCompilationChanges default-value="false">${maven.compiler.showCompilationChanges}</showCompilationChanges>
+  <showDeprecation default-value="false">true</showDeprecation>
+  <showWarnings default-value="true">true</showWarnings>
+  <skipMain>${maven.main.skip}</skipMain>
+  <skipMultiThreadWarning default-value="false">${maven.compiler.skipMultiThreadWarning}</skipMultiThreadWarning>
+  <source default-value="1.8">${maven.compiler.source}</source>
+  <staleMillis default-value="0">${lastModGranularityMs}</staleMillis>
+  <target default-value="1.8">${maven.compiler.target}</target>
+  <useIncrementalCompilation default-value="true">${maven.compiler.useIncrementalCompilation}</useIncrementalCompilation>
+  <verbose default-value="false">${maven.compiler.verbose}</verbose>
+</configuration>
+[[1;36mDEBUG[m] -----------------------------------------------------------------------
+[[1;36mDEBUG[m] Goal:          org.apache.maven.plugins:maven-resources-plugin:3.3.1:testResources (default-testResources)
+[[1;36mDEBUG[m] Style:         Regular
+[[1;36mDEBUG[m] Configuration: <?xml version="1.0" encoding="UTF-8"?>
+<configuration>
+  <addDefaultExcludes default-value="true"/>
+  <buildFilters default-value="${project.build.filters}"/>
+  <encoding default-value="${project.build.sourceEncoding}"/>
+  <escapeWindowsPaths default-value="true"/>
+  <fileNameFiltering default-value="false"/>
+  <includeEmptyDirs default-value="false"/>
+  <outputDirectory default-value="${project.build.testOutputDirectory}"/>
+  <overwrite default-value="false"/>
+  <project default-value="${project}"/>
+  <propertiesEncoding>UTF-8</propertiesEncoding>
+  <resources default-value="${project.testResources}"/>
+  <session default-value="${session}"/>
+  <skip default-value="false">${maven.test.skip}</skip>
+  <supportMultiLineFiltering default-value="false"/>
+  <useBuildFilters default-value="true"/>
+  <useDefaultDelimiters default-value="true"/>
+</configuration>
+[[1;36mDEBUG[m] -----------------------------------------------------------------------
+[[1;36mDEBUG[m] Goal:          org.apache.maven.plugins:maven-compiler-plugin:3.11.0:testCompile (default-testCompile)
+[[1;36mDEBUG[m] Style:         Regular
+[[1;36mDEBUG[m] Configuration: <?xml version="1.0" encoding="UTF-8"?>
+<configuration>
+  <basedir default-value="${basedir}"/>
+  <buildDirectory default-value="${project.build.directory}"/>
+  <compileSourceRoots default-value="${project.testCompileSourceRoots}"/>
+  <compilerArgument>-Xlint:all,-serial,-path,-rawtypes,-unchecked</compilerArgument>
+  <compilerId default-value="javac">${maven.compiler.compilerId}</compilerId>
+  <compilerReuseStrategy default-value="${reuseCreated}">${maven.compiler.compilerReuseStrategy}</compilerReuseStrategy>
+  <compilerVersion>${maven.compiler.compilerVersion}</compilerVersion>
+  <createMissingPackageInfoClass default-value="true">${maven.compiler.createMissingPackageInfoClass}</createMissingPackageInfoClass>
+  <debug default-value="true">${maven.compiler.debug}</debug>
+  <debugFileName default-value="javac-test"/>
+  <debuglevel>${maven.compiler.debuglevel}</debuglevel>
+  <enablePreview default-value="false">${maven.compiler.enablePreview}</enablePreview>
+  <encoding default-value="${project.build.sourceEncoding}">UTF-8</encoding>
+  <executable>${maven.compiler.executable}</executable>
+  <failOnError default-value="true">${maven.compiler.failOnError}</failOnError>
+  <failOnWarning default-value="false">${maven.compiler.failOnWarning}</failOnWarning>
+  <forceJavacCompilerUse default-value="false">${maven.compiler.forceJavacCompilerUse}</forceJavacCompilerUse>
+  <fork default-value="false">${maven.compiler.fork}</fork>
+  <generatedTestSourcesDirectory default-value="${project.build.directory}/generated-test-sources/test-annotations"/>
+  <implicit>${maven.compiler.implicit}</implicit>
+  <maxmem>${maven.compiler.maxmem}</maxmem>
+  <meminitial>${maven.compiler.meminitial}</meminitial>
+  <mojoExecution default-value="${mojoExecution}"/>
+  <optimize default-value="false">true</optimize>
+  <outputDirectory default-value="${project.build.testOutputDirectory}"/>
+  <parameters default-value="false">${maven.compiler.parameters}</parameters>
+  <project default-value="${project}"/>
+  <release>11</release>
+  <session default-value="${session}"/>
+  <showCompilationChanges default-value="false">${maven.compiler.showCompilationChanges}</showCompilationChanges>
+  <showDeprecation default-value="false">true</showDeprecation>
+  <showWarnings default-value="true">true</showWarnings>
+  <skip>${maven.test.skip}</skip>
+  <skipMultiThreadWarning default-value="false">${maven.compiler.skipMultiThreadWarning}</skipMultiThreadWarning>
+  <source default-value="1.8">${maven.compiler.source}</source>
+  <staleMillis default-value="0">${lastModGranularityMs}</staleMillis>
+  <target default-value="1.8">${maven.compiler.target}</target>
+  <testPath default-value="${project.testClasspathElements}"/>
+  <testRelease>${maven.compiler.testRelease}</testRelease>
+  <testSource>${maven.compiler.testSource}</testSource>
+  <testTarget>${maven.compiler.testTarget}</testTarget>
+  <useIncrementalCompilation default-value="true">${maven.compiler.useIncrementalCompilation}</useIncrementalCompilation>
+  <useModulePath default-value="true"/>
+  <verbose default-value="false">${maven.compiler.verbose}</verbose>
+</configuration>
+[[1;36mDEBUG[m] -----------------------------------------------------------------------
+[[1;36mDEBUG[m] Goal:          com.carrotsearch.randomizedtesting:junit4-maven-plugin:2.8.1:junit4 (unit-tests)
+[[1;36mDEBUG[m] Style:         Regular
+[[1;36mDEBUG[m] Configuration: <?xml version="1.0" encoding="UTF-8"?>
+<configuration>
+  <argLine>${argLine}</argLine>
+  <classesDirectory default-value="${project.build.outputDirectory}"/>
+  <dir>${project.build.directory}</dir>
+  <dynamicAssignmentRatio default-value="0.25"/>
+  <excludes>
+    <exclude>**/*$*</exclude>
+  </excludes>
+  <haltOnFailure default-value="true"/>
+  <heartbeat default-value="0">10</heartbeat>
+  <ifNoTests default-value="ignore">warn</ifNoTests>
+  <includes>
+    <include>**/*Test.class</include>
+  </includes>
+  <isolateWorkingDirectories default-value="true"/>
+  <junitArtifactName default-value="junit:junit">${junitArtifactName}</junitArtifactName>
+  <jvm default-value="java"/>
+  <jvmOutputAction default-value="pipe,warn">pipe,ignore</jvmOutputAction>
+  <leaveTemporary>false</leaveTemporary>
+  <listeners>
+    <report-text showStatusError="true" showStatusFailure="true" showOutput="onError" showSuiteSummary="false" showStackTraces="true" showStatusOk="false" showStatusIgnored="true" showThrowable="true"/>
+  </listeners>
+  <onNonEmptyWorkDirectory default-value="fail"/>
+  <packaging default-value="${project.packaging}"/>
+  <parallelism default-value="1">auto</parallelism>
+  <pluginArtifactMap default-value="${plugin.artifactMap}"/>
+  <printSummary default-value="true"/>
+  <project>${project}</project>
+  <projectArtifactMap default-value="${project.artifactMap}"/>
+  <seed default-value="">${tests.seed}</seed>
+  <session>${session}</session>
+  <shuffleOnForkedJvm default-value="true"/>
+  <shuffleOnSlave default-value="true"/>
+  <skipTests default-value="false">false</skipTests>
+  <surefireReportsDirectory default-value="${project.build.directory}/surefire-reports"/>
+  <sysouts default-value="false"/>
+  <systemProperties combine.children="append">
+    <arg.common>arg.common</arg.common>
+    <tests.timeoutSuite>600000</tests.timeoutSuite>
+    <tests.locale>random</tests.locale>
+    <tests.timezone>random</tests.timezone>
+    <java.util.logging.manager>org.apache.logging.log4j.jul.LogManager</java.util.logging.manager>
+    <java.awt.headless>true</java.awt.headless>
+    <tests.cluster.url></tests.cluster.url>
+    <tests.cluster.cloud_id></tests.cluster.cloud_id>
+    <tests.cluster.user>elastic</tests.cluster.user>
+    <tests.cluster.pass>changeme</tests.cluster.pass>
+    <tests.workplace.url></tests.workplace.url>
+    <tests.workplace.user>elastic</tests.workplace.user>
+    <tests.workplace.pass>changeme</tests.workplace.pass>
+    <tests.rest.port>8080</tests.rest.port>
+    <sun.net.http.allowRestrictedHeaders>true</sun.net.http.allowRestrictedHeaders>
+  </systemProperties>
+  <tempDir>${project.build.directory}</tempDir>
+  <testClassesDirectory default-value="${project.build.testOutputDirectory}"/>
+  <uniqueSuiteNames default-value="true"/>
+</configuration>
+[[1;36mDEBUG[m] =======================================================================
+[[1;36mDEBUG[m] Skipped remote request for fr.pilato.elasticsearch.crawler:fscrawler-framework:2.10-SNAPSHOT/maven-metadata.xml locally installed metadata up-to-date.
+[[1;36mDEBUG[m] Skipped remote request for fr.pilato.elasticsearch.crawler:fscrawler-framework:2.10-SNAPSHOT/maven-metadata.xml locally installed metadata up-to-date.
+[[1;36mDEBUG[m] Skipped remote request for fr.pilato.elasticsearch.crawler:fscrawler-parent:2.10-SNAPSHOT/maven-metadata.xml locally installed metadata up-to-date.
+[[1;36mDEBUG[m] Skipped remote request for fr.pilato.elasticsearch.crawler:fscrawler-test-framework:2.10-SNAPSHOT/maven-metadata.xml locally installed metadata up-to-date.
+[[1;36mDEBUG[m] Skipped remote request for fr.pilato.elasticsearch.crawler:fscrawler-test-framework:2.10-SNAPSHOT/maven-metadata.xml locally installed metadata up-to-date.
+[[1;36mDEBUG[m] Dependency collection stats: {ConflictMarker.analyzeTime=621764, ConflictMarker.markTime=249555, ConflictMarker.nodeCount=55, ConflictIdSorter.graphTime=311227, ConflictIdSorter.topsortTime=215855, ConflictIdSorter.conflictIdCount=29, ConflictIdSorter.conflictIdCycleCount=0, ConflictResolver.totalTime=3650236, ConflictResolver.conflictItemCount=54, DefaultDependencyCollector.collectTime=198216647, DefaultDependencyCollector.transformTime=6434566}
+[[1;36mDEBUG[m] fr.pilato.elasticsearch.crawler:fscrawler-settings:jar:2.10-SNAPSHOT
+[[1;36mDEBUG[m]    fr.pilato.elasticsearch.crawler:fscrawler-framework:jar:2.10-SNAPSHOT:compile
+[[1;36mDEBUG[m]       commons-io:commons-io:jar:2.13.0:compile (version managed from 2.13.0)
+[[1;36mDEBUG[m]       com.fasterxml.jackson.core:jackson-core:jar:2.15.2:compile (version managed from 2.15.2)
+[[1;36mDEBUG[m]       com.fasterxml.jackson.core:jackson-databind:jar:2.15.2:compile (version managed from 2.15.2)
+[[1;36mDEBUG[m]       com.fasterxml.jackson.datatype:jackson-datatype-jsr310:jar:2.15.2:compile (version managed from 2.15.2)
+[[1;36mDEBUG[m]       com.fasterxml.jackson.dataformat:jackson-dataformat-xml:jar:2.15.2:compile (version managed from 2.15.2)
+[[1;36mDEBUG[m]          org.codehaus.woodstox:stax2-api:jar:4.2.1:compile
+[[1;36mDEBUG[m]          com.fasterxml.woodstox:woodstox-core:jar:6.5.1:compile (version managed from 6.5.1)
+[[1;36mDEBUG[m]       com.fasterxml.jackson.dataformat:jackson-dataformat-yaml:jar:2.15.2:compile (version managed from 2.15.2)
+[[1;36mDEBUG[m]          org.yaml:snakeyaml:jar:2.0:compile (version managed from 2.0)
+[[1;36mDEBUG[m]       com.fasterxml.jackson.core:jackson-annotations:jar:2.15.2:compile (version managed from 2.15.2)
+[[1;36mDEBUG[m]       com.jayway.jsonpath:json-path:jar:2.8.0:compile (version managed from 2.8.0)
+[[1;36mDEBUG[m]          net.minidev:json-smart:jar:2.5.0:runtime (version managed from 2.4.10)
+[[1;36mDEBUG[m]             net.minidev:accessors-smart:jar:2.5.0:runtime
+[[1;36mDEBUG[m]                org.ow2.asm:asm:jar:9.5:runtime (version managed from 9.3)
+[[1;36mDEBUG[m]          org.slf4j:slf4j-api:jar:2.0.7:compile (version managed from 1.7.36)
+[[1;36mDEBUG[m]       org.apache.logging.log4j:log4j-core:jar:2.20.0:compile (optional) (version managed from 2.20.0) (optionality managed from false)
+[[1;36mDEBUG[m]          org.apache.logging.log4j:log4j-api:jar:2.20.0:compile (optional) (version managed from 2.20.0) (optionality managed from false)
+[[1;36mDEBUG[m]       org.apache.logging.log4j:log4j-1.2-api:jar:2.20.0:compile (optional) (version managed from 2.20.0) (optionality managed from false)
+[[1;36mDEBUG[m]       org.apache.logging.log4j:log4j-slf4j-impl:jar:2.20.0:compile (optional) (version managed from 2.20.0) (optionality managed from false)
+[[1;36mDEBUG[m]       org.apache.logging.log4j:log4j-jcl:jar:2.20.0:compile (optional) (version managed from 2.20.0) (optionality managed from false)
+[[1;36mDEBUG[m]          commons-logging:commons-logging:jar:1.2:compile (optional) (version managed from 1.2)
+[[1;36mDEBUG[m]       org.apache.logging.log4j:log4j-jul:jar:2.20.0:compile (optional) (version managed from 2.20.0) (optionality managed from false)
+[[1;36mDEBUG[m]       org.fusesource.jansi:jansi:jar:2.4.0:compile (optional) (version managed from 2.4.0) (optionality managed from false)
+[[1;36mDEBUG[m]    fr.pilato.elasticsearch.crawler:fscrawler-test-framework:jar:2.10-SNAPSHOT:test
+[[1;36mDEBUG[m]       org.hamcrest:hamcrest-all:jar:1.3:test (version managed from 1.3)
+[[1;36mDEBUG[m]       junit:junit:jar:4.13.2:test (version managed from 4.13.2)
+[[1;36mDEBUG[m]          org.hamcrest:hamcrest-core:jar:1.3:test
+[[1;36mDEBUG[m]       com.carrotsearch.randomizedtesting:randomizedtesting-runner:jar:2.8.1:test (version managed from 2.8.1)
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-enforcer-plugin:3.3.0:enforce[m [1m(enforce)[m @ [36mfscrawler-settings[0;1m ---[m
+[[1;36mDEBUG[m] Dependency collection stats: {ConflictMarker.analyzeTime=43283, ConflictMarker.markTime=62087, ConflictMarker.nodeCount=11, ConflictIdSorter.graphTime=14651, ConflictIdSorter.topsortTime=12123, ConflictIdSorter.conflictIdCount=10, ConflictIdSorter.conflictIdCycleCount=0, ConflictResolver.totalTime=306974, ConflictResolver.conflictItemCount=11, DefaultDependencyCollector.collectTime=31110855, DefaultDependencyCollector.transformTime=504790}
+[[1;36mDEBUG[m] org.apache.maven.plugins:maven-enforcer-plugin:jar:3.3.0
+[[1;36mDEBUG[m]    org.apache.maven.enforcer:enforcer-api:jar:3.3.0:compile
+[[1;36mDEBUG[m]    org.apache.maven.enforcer:enforcer-rules:jar:3.3.0:compile
+[[1;36mDEBUG[m]       org.eclipse.aether:aether-util:jar:1.0.0.v20140518:compile (version managed from default)
+[[1;36mDEBUG[m]          org.eclipse.aether:aether-api:jar:1.0.0.v20140518:provided (scope managed from default) (version managed from default)
+[[1;36mDEBUG[m]       org.codehaus.plexus:plexus-utils:jar:3.5.1:compile (version managed from default)
+[[1;36mDEBUG[m]       org.apache.commons:commons-lang3:jar:3.12.0:compile (version managed from default)
+[[1;36mDEBUG[m]       commons-codec:commons-codec:jar:1.15:compile (version managed from default)
+[[1;36mDEBUG[m]       commons-io:commons-io:jar:2.11.0:compile (version managed from default)
+[[1;36mDEBUG[m]       org.apache-extras.beanshell:bsh:jar:2.0b6:compile
+[[1;36mDEBUG[m] Created new class realm plugin>org.apache.maven.plugins:maven-enforcer-plugin:3.3.0
+[[1;36mDEBUG[m] Importing foreign packages into class realm plugin>org.apache.maven.plugins:maven-enforcer-plugin:3.3.0
+[[1;36mDEBUG[m]   Imported:  < maven.api
+[[1;36mDEBUG[m] Populating class realm plugin>org.apache.maven.plugins:maven-enforcer-plugin:3.3.0
+[[1;36mDEBUG[m]   Included: org.apache.maven.plugins:maven-enforcer-plugin:jar:3.3.0
+[[1;36mDEBUG[m]   Included: org.apache.maven.enforcer:enforcer-api:jar:3.3.0
+[[1;36mDEBUG[m]   Included: org.apache.maven.enforcer:enforcer-rules:jar:3.3.0
+[[1;36mDEBUG[m]   Included: org.eclipse.aether:aether-util:jar:1.0.0.v20140518
+[[1;36mDEBUG[m]   Included: org.codehaus.plexus:plexus-utils:jar:3.5.1
+[[1;36mDEBUG[m]   Included: org.apache.commons:commons-lang3:jar:3.12.0
+[[1;36mDEBUG[m]   Included: commons-codec:commons-codec:jar:1.15
+[[1;36mDEBUG[m]   Included: commons-io:commons-io:jar:2.11.0
+[[1;36mDEBUG[m]   Included: org.apache-extras.beanshell:bsh:jar:2.0b6
+[[1;36mDEBUG[m] Configuring mojo org.apache.maven.plugins:maven-enforcer-plugin:3.3.0:enforce from plugin realm ClassRealm[plugin>org.apache.maven.plugins:maven-enforcer-plugin:3.3.0, parent: jdk.internal.loader.ClassLoaders$AppClassLoader@277050dc]
+[[1;36mDEBUG[m] Configuring mojo 'org.apache.maven.plugins:maven-enforcer-plugin:3.3.0:enforce' with basic configurator -->
+[[1;36mDEBUG[m]   (s) commandLineRules = []
+[[1;36mDEBUG[m]   (s) fail = true
+[[1;36mDEBUG[m]   (s) failFast = false
+[[1;36mDEBUG[m]   (s) failIfNoRules = true
+[[1;36mDEBUG[m]   (f) ignoreCache = false
+[[1;36mDEBUG[m]   (f) mojoExecution = org.apache.maven.plugins:maven-enforcer-plugin:3.3.0:enforce {execution: enforce}
+[[1;36mDEBUG[m]   (f) project = MavenProject: fr.pilato.elasticsearch.crawler:fscrawler-settings:2.10-SNAPSHOT @ /usr/local/programming/fscrawler/settings/pom.xml
+[[1;36mDEBUG[m]   (f) rules = <rules><requireJavaVersion><version>11</version>
+</requireJavaVersion>
+<dependencyConvergence/>
+<requireMavenVersion><version>3.3</version>
+</requireMavenVersion>
+</rules>
+
+[[1;36mDEBUG[m]   (s) rulesToExecute = []
+[[1;36mDEBUG[m]   (s) rulesToSkip = []
+[[1;36mDEBUG[m]   (f) session = org.apache.maven.execution.MavenSession@75308740
+[[1;36mDEBUG[m]   (f) skip = false
+[[1;36mDEBUG[m] -- end configuration --
+[[1;36mDEBUG[m] Executing Rule 0: EnforcerRuleDesc[name=requireJavaVersion, rule=RequireJavaVersion[message=null, version=11, display=false], level=ERROR]
+[[1;36mDEBUG[m] Check cache for class org.apache.maven.enforcer.rules.version.RequireJavaVersion with id 1568
+[[1;36mDEBUG[m] Add cache class org.apache.maven.enforcer.rules.version.RequireJavaVersion with id 1568
+[[1;36mDEBUG[m] Detected Java Version: '11.0.12'
+[[1;36mDEBUG[m] Normalized Java Version: '11.0.12'
+[[1;36mDEBUG[m] Parsed Version: Major: 11 Minor: 0 Incremental: 12 Build: 0 Qualifier: null
+[[1;36mDEBUG[m] Detected JDK Version: 11.0.12 is allowed in the range [11,).
+[[1;34mINFO[m] Rule 0: org.apache.maven.enforcer.rules.version.RequireJavaVersion passed
+[[1;36mDEBUG[m] Finish Rule 0: org.apache.maven.enforcer.rules.version.RequireJavaVersion takes 5 ms
+[[1;36mDEBUG[m] Executing Rule 1: EnforcerRuleDesc[name=dependencyConvergence, rule=DependencyConvergence[includes=null, excludes=null, uniqueVersions=false], level=ERROR]
+[[1;36mDEBUG[m] Dependency collection stats: {ConflictMarker.analyzeTime=118231, ConflictMarker.markTime=83742, ConflictMarker.nodeCount=42, ConflictIdSorter.graphTime=38244, ConflictIdSorter.topsortTime=21659, ConflictIdSorter.conflictIdCount=24, ConflictIdSorter.conflictIdCycleCount=0, ConflictResolver.totalTime=1041763, ConflictResolver.conflictItemCount=41, DefaultDependencyCollector.collectTime=2833513, DefaultDependencyCollector.transformTime=1332893}
+[[1;34mINFO[m] Rule 1: org.apache.maven.enforcer.rules.dependency.DependencyConvergence passed
+[[1;36mDEBUG[m] Finish Rule 1: org.apache.maven.enforcer.rules.dependency.DependencyConvergence takes 10 ms
+[[1;36mDEBUG[m] Executing Rule 2: EnforcerRuleDesc[name=requireMavenVersion, rule=RequireMavenVersion[message=null, version=3.3], level=ERROR]
+[[1;36mDEBUG[m] Check cache for class org.apache.maven.enforcer.rules.version.RequireMavenVersion with id 50488
+[[1;36mDEBUG[m] Add cache class org.apache.maven.enforcer.rules.version.RequireMavenVersion with id 50488
+[[1;36mDEBUG[m] Detected Maven Version: 3.6.3
+[[1;36mDEBUG[m] Detected Maven Version: 3.6.3 is allowed in the range [3.3,).
+[[1;34mINFO[m] Rule 2: org.apache.maven.enforcer.rules.version.RequireMavenVersion passed
+[[1;36mDEBUG[m] Finish Rule 2: org.apache.maven.enforcer.rules.version.RequireMavenVersion takes 1 ms
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-resources-plugin:3.3.1:resources[m [1m(default-resources)[m @ [36mfscrawler-settings[0;1m ---[m
+[[1;36mDEBUG[m] Dependency collection stats: {ConflictMarker.analyzeTime=46447, ConflictMarker.markTime=51693, ConflictMarker.nodeCount=13, ConflictIdSorter.graphTime=15339, ConflictIdSorter.topsortTime=10278, ConflictIdSorter.conflictIdCount=9, ConflictIdSorter.conflictIdCycleCount=0, ConflictResolver.totalTime=227108, ConflictResolver.conflictItemCount=13, DefaultDependencyCollector.collectTime=24979033, DefaultDependencyCollector.transformTime=368982}
+[[1;36mDEBUG[m] org.apache.maven.plugins:maven-resources-plugin:jar:3.3.1
+[[1;36mDEBUG[m]    org.codehaus.plexus:plexus-interpolation:jar:1.26:runtime
+[[1;36mDEBUG[m]    org.codehaus.plexus:plexus-utils:jar:3.5.1:compile
+[[1;36mDEBUG[m]    org.apache.maven.shared:maven-filtering:jar:3.3.1:compile
+[[1;36mDEBUG[m]       javax.inject:javax.inject:jar:1:compile
+[[1;36mDEBUG[m]       org.slf4j:slf4j-api:jar:1.7.36:compile
+[[1;36mDEBUG[m]       org.sonatype.plexus:plexus-build-api:jar:0.0.7:compile
+[[1;36mDEBUG[m]    commons-io:commons-io:jar:2.11.0:compile
+[[1;36mDEBUG[m]    org.apache.commons:commons-lang3:jar:3.12.0:compile
+[[1;36mDEBUG[m] Created new class realm plugin>org.apache.maven.plugins:maven-resources-plugin:3.3.1
+[[1;36mDEBUG[m] Importing foreign packages into class realm plugin>org.apache.maven.plugins:maven-resources-plugin:3.3.1
+[[1;36mDEBUG[m]   Imported:  < maven.api
+[[1;36mDEBUG[m] Populating class realm plugin>org.apache.maven.plugins:maven-resources-plugin:3.3.1
+[[1;36mDEBUG[m]   Included: org.apache.maven.plugins:maven-resources-plugin:jar:3.3.1
+[[1;36mDEBUG[m]   Included: org.codehaus.plexus:plexus-interpolation:jar:1.26
+[[1;36mDEBUG[m]   Included: org.codehaus.plexus:plexus-utils:jar:3.5.1
+[[1;36mDEBUG[m]   Included: org.apache.maven.shared:maven-filtering:jar:3.3.1
+[[1;36mDEBUG[m]   Included: org.sonatype.plexus:plexus-build-api:jar:0.0.7
+[[1;36mDEBUG[m]   Included: commons-io:commons-io:jar:2.11.0
+[[1;36mDEBUG[m]   Included: org.apache.commons:commons-lang3:jar:3.12.0
+[[1;36mDEBUG[m] Configuring mojo org.apache.maven.plugins:maven-resources-plugin:3.3.1:resources from plugin realm ClassRealm[plugin>org.apache.maven.plugins:maven-resources-plugin:3.3.1, parent: jdk.internal.loader.ClassLoaders$AppClassLoader@277050dc]
+[[1;36mDEBUG[m] Configuring mojo 'org.apache.maven.plugins:maven-resources-plugin:3.3.1:resources' with basic configurator -->
+[[1;36mDEBUG[m]   (f) addDefaultExcludes = true
+[[1;36mDEBUG[m]   (f) buildFilters = []
+[[1;36mDEBUG[m]   (f) encoding = UTF-8
+[[1;36mDEBUG[m]   (f) escapeWindowsPaths = true
+[[1;36mDEBUG[m]   (f) fileNameFiltering = false
+[[1;36mDEBUG[m]   (s) includeEmptyDirs = false
+[[1;36mDEBUG[m]   (s) outputDirectory = /usr/local/programming/fscrawler/settings/target/classes
+[[1;36mDEBUG[m]   (s) overwrite = false
+[[1;36mDEBUG[m]   (f) project = MavenProject: fr.pilato.elasticsearch.crawler:fscrawler-settings:2.10-SNAPSHOT @ /usr/local/programming/fscrawler/settings/pom.xml
+[[1;36mDEBUG[m]   (f) propertiesEncoding = UTF-8
+[[1;36mDEBUG[m]   (s) resources = [Resource {targetPath: null, filtering: false, FileSet {directory: /usr/local/programming/fscrawler/settings/src/main/resources, PatternSet [includes: {}, excludes: {}]}}]
+[[1;36mDEBUG[m]   (f) session = org.apache.maven.execution.MavenSession@75308740
+[[1;36mDEBUG[m]   (f) skip = false
+[[1;36mDEBUG[m]   (f) supportMultiLineFiltering = false
+[[1;36mDEBUG[m]   (f) useBuildFilters = true
+[[1;36mDEBUG[m]   (s) useDefaultDelimiters = true
+[[1;36mDEBUG[m] -- end configuration --
+[[1;36mDEBUG[m] properties used:
+[[1;36mDEBUG[m] awt.toolkit: sun.awt.X11.XToolkit
+[[1;36mDEBUG[m] classworlds.conf: /usr/share/maven/bin/m2.conf
+[[1;36mDEBUG[m] commons-codec.version: 1.16.0
+[[1;36mDEBUG[m] commons-logging.version: 1.2
+[[1;36mDEBUG[m] contrib.dir: /usr/local/programming/fscrawler/settings/contrib
+[[1;36mDEBUG[m] docker.push.password: ${DOCKER_PASSWORD}
+[[1;36mDEBUG[m] docker.push.username: ${DOCKER_USERNAME}
+[[1;36mDEBUG[m] elasticsearch.version: 7.17.7
+[[1;36mDEBUG[m] elasticsearch6.version: 6.8.23
+[[1;36mDEBUG[m] elasticsearch7.version: 7.17.7
+[[1;36mDEBUG[m] elasticsearch8.version: 8.8.1
+[[1;36mDEBUG[m] env.CHROME_DESKTOP: code-url-handler.desktop
+[[1;36mDEBUG[m] env.CLUTTER_IM_MODULE: ibus
+[[1;36mDEBUG[m] env.COLORTERM: truecolor
+[[1;36mDEBUG[m] env.DBUS_SESSION_BUS_ADDRESS: unix:path=/run/user/1000/bus
+[[1;36mDEBUG[m] env.DISPLAY: :10.0
+[[1;36mDEBUG[m] env.DOCKER_PASSWORD: ${DOCKER_PASSWORD}
+[[1;36mDEBUG[m] env.DOCKER_USERNAME: ${DOCKER_USERNAME}
+[[1;36mDEBUG[m] env.GDK_BACKEND: x11
+[[1;36mDEBUG[m] env.GIO_LAUNCHED_DESKTOP_FILE: /usr/share/applications/code.desktop
+[[1;36mDEBUG[m] env.GIO_LAUNCHED_DESKTOP_FILE_PID: 3677
+[[1;36mDEBUG[m] env.GIT_ASKPASS: /usr/share/code/resources/app/extensions/git/dist/askpass.sh
+[[1;36mDEBUG[m] env.GJS_DEBUG_OUTPUT: stderr
+[[1;36mDEBUG[m] env.GJS_DEBUG_TOPICS: JS ERROR;JS LOG
+[[1;36mDEBUG[m] env.GNOME_DESKTOP_SESSION_ID: this-is-deprecated
+[[1;36mDEBUG[m] env.GPG_AGENT_INFO: /run/user/1000/gnupg/S.gpg-agent:0:1
+[[1;36mDEBUG[m] env.GTK_IM_MODULE: ibus
+[[1;36mDEBUG[m] env.GTK_MODULES: gail:atk-bridge
+[[1;36mDEBUG[m] env.HOME: /home/chris
+[[1;36mDEBUG[m] env.INVOCATION_ID: cdc12d9d8cff496fb45de9cdf3821859
+[[1;36mDEBUG[m] env.JAVA_HOME: /home/chris/.sdkman/candidates/java/current
+[[1;36mDEBUG[m] env.JOURNAL_STREAM: 8:32163
+[[1;36mDEBUG[m] env.LANG: en_US.UTF-8
+[[1;36mDEBUG[m] env.LC_ADDRESS: ar_SA.UTF-8
+[[1;36mDEBUG[m] env.LC_IDENTIFICATION: ar_SA.UTF-8
+[[1;36mDEBUG[m] env.LC_MEASUREMENT: ar_SA.UTF-8
+[[1;36mDEBUG[m] env.LC_MONETARY: ar_SA.UTF-8
+[[1;36mDEBUG[m] env.LC_NAME: ar_SA.UTF-8
+[[1;36mDEBUG[m] env.LC_NUMERIC: ar_SA.UTF-8
+[[1;36mDEBUG[m] env.LC_PAPER: ar_SA.UTF-8
+[[1;36mDEBUG[m] env.LC_TELEPHONE: ar_SA.UTF-8
+[[1;36mDEBUG[m] env.LC_TIME: ar_SA.UTF-8
+[[1;36mDEBUG[m] env.LESSCLOSE: /usr/bin/lesspipe %s %s
+[[1;36mDEBUG[m] env.LESSOPEN: | /usr/bin/lesspipe %s
+[[1;36mDEBUG[m] env.LOGNAME: chris
+[[1;36mDEBUG[m] env.LS_COLORS: rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:
+[[1;36mDEBUG[m] env.MANAGERPID: 2419
+[[1;36mDEBUG[m] env.MAVEN_CMD_LINE_ARGS:  test -Dtest=fr.pilato.elasticsearch.crawler.fs.settings.* -X
+[[1;36mDEBUG[m] env.MAVEN_PROJECTBASEDIR: /usr/local/programming/fscrawler
+[[1;36mDEBUG[m] env.OLDPWD: /usr/local/programming/fscrawler/settings
+[[1;36mDEBUG[m] env.ORIGINAL_XDG_CURRENT_DESKTOP: GNOME
+[[1;36mDEBUG[m] env.PATH: /home/chris/bin:/home/chris/.local/bin:/home/chris/.sdkman/candidates/java/current/bin:/home/chris/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin
+[[1;36mDEBUG[m] env.PULSE_SCRIPT: /etc/xrdp/pulse/default.pa
+[[1;36mDEBUG[m] env.PWD: /usr/local/programming/fscrawler/settings
+[[1;36mDEBUG[m] env.QT_ACCESSIBILITY: 1
+[[1;36mDEBUG[m] env.QT_IM_MODULE: ibus
+[[1;36mDEBUG[m] env.SDKMAN_CANDIDATES_API: https://api.sdkman.io/2
+[[1;36mDEBUG[m] env.SDKMAN_CANDIDATES_DIR: /home/chris/.sdkman/candidates
+[[1;36mDEBUG[m] env.SDKMAN_DIR: /home/chris/.sdkman
+[[1;36mDEBUG[m] env.SDKMAN_PLATFORM: linuxx64
+[[1;36mDEBUG[m] env.SESSION_MANAGER: local/scs-dev-server:@/tmp/.ICE-unix/2804,unix/scs-dev-server:/tmp/.ICE-unix/2804
+[[1;36mDEBUG[m] env.SHELL: /bin/bash
+[[1;36mDEBUG[m] env.SHLVL: 1
+[[1;36mDEBUG[m] env.SONATYPE_PASS: 
+[[1;36mDEBUG[m] env.SONATYPE_USER: 
+[[1;36mDEBUG[m] env.SSH_AGENT_PID: 2623
+[[1;36mDEBUG[m] env.SSH_AUTH_SOCK: /run/user/1000/keyring/ssh
+[[1;36mDEBUG[m] env.SYSTEMD_EXEC_PID: 2835
+[[1;36mDEBUG[m] env.TERM: xterm-256color
+[[1;36mDEBUG[m] env.TERM_PROGRAM: vscode
+[[1;36mDEBUG[m] env.TERM_PROGRAM_VERSION: 1.80.1
+[[1;36mDEBUG[m] env.UID: 1000
+[[1;36mDEBUG[m] env.USER: chris
+[[1;36mDEBUG[m] env.VSCODE_GIT_ASKPASS_EXTRA_ARGS: --ms-enable-electron-run-as-node
+[[1;36mDEBUG[m] env.VSCODE_GIT_ASKPASS_MAIN: /usr/share/code/resources/app/extensions/git/dist/askpass-main.js
+[[1;36mDEBUG[m] env.VSCODE_GIT_ASKPASS_NODE: /usr/share/code/code
+[[1;36mDEBUG[m] env.VSCODE_GIT_IPC_HANDLE: /run/user/1000/vscode-git-16f6bff84c.sock
+[[1;36mDEBUG[m] env.XDG_CURRENT_DESKTOP: GNOME
+[[1;36mDEBUG[m] env.XDG_DATA_DIRS: /usr/share/gnome:/usr/local/share:/usr/share:/var/lib/snapd/desktop
+[[1;36mDEBUG[m] env.XDG_MENU_PREFIX: gnome-
+[[1;36mDEBUG[m] env.XDG_RUNTIME_DIR: /run/user/1000
+[[1;36mDEBUG[m] env.XDG_SESSION_CLASS: user
+[[1;36mDEBUG[m] env.XDG_SESSION_TYPE: x11
+[[1;36mDEBUG[m] env.XMODIFIERS: @im=ibus
+[[1;36mDEBUG[m] env.XRDP_PULSE_SINK_SOCKET: xrdp_chansrv_audio_out_socket_10
+[[1;36mDEBUG[m] env.XRDP_PULSE_SOURCE_SOCKET: xrdp_chansrv_audio_in_socket_10
+[[1;36mDEBUG[m] env.XRDP_SESSION: 1
+[[1;36mDEBUG[m] env.XRDP_SOCKET_PATH: /run/xrdp/sockdir
+[[1;36mDEBUG[m] env._: /usr/bin/mvn
+[[1;36mDEBUG[m] file.encoding: UTF-8
+[[1;36mDEBUG[m] file.separator: /
+[[1;36mDEBUG[m] httpasyncclient.version: 4.1.5
+[[1;36mDEBUG[m] httpclient.version: 4.5.14
+[[1;36mDEBUG[m] httpcore.version: 4.4.16
+[[1;36mDEBUG[m] imageio.version: 3.0.3
+[[1;36mDEBUG[m] integ.elasticsearch.port: 9200
+[[1;36mDEBUG[m] integ.elasticsearch.version: 7.17.7
+[[1;36mDEBUG[m] integ.workplace.port: 3002
+[[1;36mDEBUG[m] jackson.version: 2.15.2
+[[1;36mDEBUG[m] jansi.version: 2.4.0
+[[1;36mDEBUG[m] java.awt.graphicsenv: sun.awt.X11GraphicsEnvironment
+[[1;36mDEBUG[m] java.awt.headless: true
+[[1;36mDEBUG[m] java.awt.printerjob: sun.print.PSPrinterJob
+[[1;36mDEBUG[m] java.class.path: /usr/share/maven/boot/plexus-classworlds-2.x.jar
+[[1;36mDEBUG[m] java.class.version: 55.0
+[[1;36mDEBUG[m] java.compiler.version: 11
+[[1;36mDEBUG[m] java.home: /home/chris/.sdkman/candidates/java/11.0.12-zulu
+[[1;36mDEBUG[m] java.io.tmpdir: /tmp
+[[1;36mDEBUG[m] java.library.path: /usr/java/packages/lib:/usr/lib64:/lib64:/lib:/usr/lib
+[[1;36mDEBUG[m] java.runtime.name: OpenJDK Runtime Environment
+[[1;36mDEBUG[m] java.runtime.version: 11.0.12+7-LTS
+[[1;36mDEBUG[m] java.specification.name: Java Platform API Specification
+[[1;36mDEBUG[m] java.specification.vendor: Oracle Corporation
+[[1;36mDEBUG[m] java.specification.version: 11
+[[1;36mDEBUG[m] java.vendor: Azul Systems, Inc.
+[[1;36mDEBUG[m] java.vendor.url: http://www.azul.com/
+[[1;36mDEBUG[m] java.vendor.url.bug: http://www.azul.com/support/
+[[1;36mDEBUG[m] java.vendor.version: Zulu11.50+19-CA
+[[1;36mDEBUG[m] java.version: 11.0.12
+[[1;36mDEBUG[m] java.version.date: 2021-07-20
+[[1;36mDEBUG[m] java.vm.compressedOopsMode: 32-bit
+[[1;36mDEBUG[m] java.vm.info: mixed mode
+[[1;36mDEBUG[m] java.vm.name: OpenJDK 64-Bit Server VM
+[[1;36mDEBUG[m] java.vm.specification.name: Java Virtual Machine Specification
+[[1;36mDEBUG[m] java.vm.specification.vendor: Oracle Corporation
+[[1;36mDEBUG[m] java.vm.specification.version: 11
+[[1;36mDEBUG[m] java.vm.vendor: Azul Systems, Inc.
+[[1;36mDEBUG[m] java.vm.version: 11.0.12+7-LTS
+[[1;36mDEBUG[m] jdk.debug: release
+[[1;36mDEBUG[m] jdk.vendor.version: Zulu11.50+19-CA
+[[1;36mDEBUG[m] jersey.version: 3.1.2
+[[1;36mDEBUG[m] jpeg.version: 1.4.0
+[[1;36mDEBUG[m] jsonpath.version: 2.8.0
+[[1;36mDEBUG[m] library.jansi.path: /usr/share/maven/lib/jansi-native
+[[1;36mDEBUG[m] line.separator: 
+
+[[1;36mDEBUG[m] log4j.version: 2.20.0
+[[1;36mDEBUG[m] maven.build.timestamp: 2023-07-24T08:22:53Z
+[[1;36mDEBUG[m] maven.build.version: Apache Maven 3.6.3
+[[1;36mDEBUG[m] maven.conf: /usr/share/maven/conf
+[[1;36mDEBUG[m] maven.home: /usr/share/maven
+[[1;36mDEBUG[m] maven.multiModuleProjectDirectory: /usr/local/programming/fscrawler
+[[1;36mDEBUG[m] maven.version: 3.6.3
+[[1;36mDEBUG[m] org.slf4j.simpleLogger.log.org.apache.maven.cli.transfer.Slf4jMavenTransferListener: warn
+[[1;36mDEBUG[m] os.arch: amd64
+[[1;36mDEBUG[m] os.name: Linux
+[[1;36mDEBUG[m] os.version: 5.19.0-46-generic
+[[1;36mDEBUG[m] path.separator: :
+[[1;36mDEBUG[m] project.baseUri: file:/usr/local/programming/fscrawler/settings/
+[[1;36mDEBUG[m] project.build.sourceEncoding: UTF-8
+[[1;36mDEBUG[m] project.reporting.outputEncoding: UTF-8
+[[1;36mDEBUG[m] skipIntegTests: false
+[[1;36mDEBUG[m] skipTests: false
+[[1;36mDEBUG[m] skipUnitTests: false
+[[1;36mDEBUG[m] slf4j.version: 2.0.7
+[[1;36mDEBUG[m] snakeyaml.version: 2.0
+[[1;36mDEBUG[m] sonatype.password: 
+[[1;36mDEBUG[m] sonatype.username: 
+[[1;36mDEBUG[m] sun.arch.data.model: 64
+[[1;36mDEBUG[m] sun.boot.library.path: /home/chris/.sdkman/candidates/java/11.0.12-zulu/lib
+[[1;36mDEBUG[m] sun.cpu.endian: little
+[[1;36mDEBUG[m] sun.cpu.isalist: 
+[[1;36mDEBUG[m] sun.desktop: gnome
+[[1;36mDEBUG[m] sun.io.unicode.encoding: UnicodeLittle
+[[1;36mDEBUG[m] sun.java.command: org.codehaus.plexus.classworlds.launcher.Launcher test -Dtest=fr.pilato.elasticsearch.crawler.fs.settings.* -X
+[[1;36mDEBUG[m] sun.java.launcher: SUN_STANDARD
+[[1;36mDEBUG[m] sun.jnu.encoding: UTF-8
+[[1;36mDEBUG[m] sun.management.compiler: HotSpot 64-Bit Tiered Compilers
+[[1;36mDEBUG[m] sun.os.patch.level: unknown
+[[1;36mDEBUG[m] test: fr.pilato.elasticsearch.crawler.fs.settings.*
+[[1;36mDEBUG[m] tests.cluster.cloud_id: 
+[[1;36mDEBUG[m] tests.cluster.pass: changeme
+[[1;36mDEBUG[m] tests.cluster.url: 
+[[1;36mDEBUG[m] tests.cluster.user: elastic
+[[1;36mDEBUG[m] tests.leaveTemporary: false
+[[1;36mDEBUG[m] tests.locale: random
+[[1;36mDEBUG[m] tests.output: onError
+[[1;36mDEBUG[m] tests.parallelism: auto
+[[1;36mDEBUG[m] tests.rest.port: 8080
+[[1;36mDEBUG[m] tests.seed: 
+[[1;36mDEBUG[m] tests.timeout: 600000
+[[1;36mDEBUG[m] tests.timeoutSuite: 600000
+[[1;36mDEBUG[m] tests.timezone: random
+[[1;36mDEBUG[m] tests.verbose: false
+[[1;36mDEBUG[m] tests.workplace.pass: changeme
+[[1;36mDEBUG[m] tests.workplace.url: 
+[[1;36mDEBUG[m] tests.workplace.user: elastic
+[[1;36mDEBUG[m] tiff.version: 1.4.0
+[[1;36mDEBUG[m] tika.version: 2.8.0
+[[1;36mDEBUG[m] user.country: US
+[[1;36mDEBUG[m] user.dir: /usr/local/programming/fscrawler/settings
+[[1;36mDEBUG[m] user.home: /home/chris
+[[1;36mDEBUG[m] user.language: en
+[[1;36mDEBUG[m] user.name: chris
+[[1;36mDEBUG[m] user.timezone: 
+[[1;36mDEBUG[m] Using 'UTF-8' encoding to copy filtered resources.
+[[1;36mDEBUG[m] Using 'UTF-8' encoding to copy filtered properties files.
+[[1;36mDEBUG[m] resource with targetPath null
+directory /usr/local/programming/fscrawler/settings/src/main/resources
+excludes []
+includes []
+[[1;36mDEBUG[m] ignoreDelta true
+[[1;34mINFO[m] Copying 8 resources from src/main/resources to target/classes
+[[1;36mDEBUG[m] Copying file fr/pilato/elasticsearch/crawler/fs/_default/7/_settings_folder.json
+[[1;36mDEBUG[m] file _settings_folder.json has a filtered file extension
+[[1;36mDEBUG[m] Using 'UTF-8' encoding to copy filtered resource '_settings_folder.json'.
+[[1;36mDEBUG[m] copy /usr/local/programming/fscrawler/settings/src/main/resources/fr/pilato/elasticsearch/crawler/fs/_default/7/_settings_folder.json to /usr/local/programming/fscrawler/settings/target/classes/fr/pilato/elasticsearch/crawler/fs/_default/7/_settings_folder.json
+[[1;36mDEBUG[m] Copying file fr/pilato/elasticsearch/crawler/fs/_default/7/_wpsearch_settings.json
+[[1;36mDEBUG[m] file _wpsearch_settings.json has a filtered file extension
+[[1;36mDEBUG[m] Using 'UTF-8' encoding to copy filtered resource '_wpsearch_settings.json'.
+[[1;36mDEBUG[m] copy /usr/local/programming/fscrawler/settings/src/main/resources/fr/pilato/elasticsearch/crawler/fs/_default/7/_wpsearch_settings.json to /usr/local/programming/fscrawler/settings/target/classes/fr/pilato/elasticsearch/crawler/fs/_default/7/_wpsearch_settings.json
+[[1;36mDEBUG[m] Copying file fr/pilato/elasticsearch/crawler/fs/_default/7/_settings.json
+[[1;36mDEBUG[m] file _settings.json has a filtered file extension
+[[1;36mDEBUG[m] Using 'UTF-8' encoding to copy filtered resource '_settings.json'.
+[[1;36mDEBUG[m] copy /usr/local/programming/fscrawler/settings/src/main/resources/fr/pilato/elasticsearch/crawler/fs/_default/7/_settings.json to /usr/local/programming/fscrawler/settings/target/classes/fr/pilato/elasticsearch/crawler/fs/_default/7/_settings.json
+[[1;36mDEBUG[m] Copying file fr/pilato/elasticsearch/crawler/fs/_default/6/_settings_folder.json
+[[1;36mDEBUG[m] file _settings_folder.json has a filtered file extension
+[[1;36mDEBUG[m] Using 'UTF-8' encoding to copy filtered resource '_settings_folder.json'.
+[[1;36mDEBUG[m] copy /usr/local/programming/fscrawler/settings/src/main/resources/fr/pilato/elasticsearch/crawler/fs/_default/6/_settings_folder.json to /usr/local/programming/fscrawler/settings/target/classes/fr/pilato/elasticsearch/crawler/fs/_default/6/_settings_folder.json
+[[1;36mDEBUG[m] Copying file fr/pilato/elasticsearch/crawler/fs/_default/6/_settings.json
+[[1;36mDEBUG[m] file _settings.json has a filtered file extension
+[[1;36mDEBUG[m] Using 'UTF-8' encoding to copy filtered resource '_settings.json'.
+[[1;36mDEBUG[m] copy /usr/local/programming/fscrawler/settings/src/main/resources/fr/pilato/elasticsearch/crawler/fs/_default/6/_settings.json to /usr/local/programming/fscrawler/settings/target/classes/fr/pilato/elasticsearch/crawler/fs/_default/6/_settings.json
+[[1;36mDEBUG[m] Copying file fr/pilato/elasticsearch/crawler/fs/_default/8/_settings_folder.json
+[[1;36mDEBUG[m] file _settings_folder.json has a filtered file extension
+[[1;36mDEBUG[m] Using 'UTF-8' encoding to copy filtered resource '_settings_folder.json'.
+[[1;36mDEBUG[m] copy /usr/local/programming/fscrawler/settings/src/main/resources/fr/pilato/elasticsearch/crawler/fs/_default/8/_settings_folder.json to /usr/local/programming/fscrawler/settings/target/classes/fr/pilato/elasticsearch/crawler/fs/_default/8/_settings_folder.json
+[[1;36mDEBUG[m] Copying file fr/pilato/elasticsearch/crawler/fs/_default/8/_wpsearch_settings.json
+[[1;36mDEBUG[m] file _wpsearch_settings.json has a filtered file extension
+[[1;36mDEBUG[m] Using 'UTF-8' encoding to copy filtered resource '_wpsearch_settings.json'.
+[[1;36mDEBUG[m] copy /usr/local/programming/fscrawler/settings/src/main/resources/fr/pilato/elasticsearch/crawler/fs/_default/8/_wpsearch_settings.json to /usr/local/programming/fscrawler/settings/target/classes/fr/pilato/elasticsearch/crawler/fs/_default/8/_wpsearch_settings.json
+[[1;36mDEBUG[m] Copying file fr/pilato/elasticsearch/crawler/fs/_default/8/_settings.json
+[[1;36mDEBUG[m] file _settings.json has a filtered file extension
+[[1;36mDEBUG[m] Using 'UTF-8' encoding to copy filtered resource '_settings.json'.
+[[1;36mDEBUG[m] copy /usr/local/programming/fscrawler/settings/src/main/resources/fr/pilato/elasticsearch/crawler/fs/_default/8/_settings.json to /usr/local/programming/fscrawler/settings/target/classes/fr/pilato/elasticsearch/crawler/fs/_default/8/_settings.json
+[[1;36mDEBUG[m] no user filter components
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-compiler-plugin:3.11.0:compile[m [1m(default-compile)[m @ [36mfscrawler-settings[0;1m ---[m
+[[1;36mDEBUG[m] Dependency collection stats: {ConflictMarker.analyzeTime=59704, ConflictMarker.markTime=38960, ConflictMarker.nodeCount=17, ConflictIdSorter.graphTime=19690, ConflictIdSorter.topsortTime=13902, ConflictIdSorter.conflictIdCount=12, ConflictIdSorter.conflictIdCycleCount=0, ConflictResolver.totalTime=234243, ConflictResolver.conflictItemCount=17, DefaultDependencyCollector.collectTime=32531806, DefaultDependencyCollector.transformTime=387694}
+[[1;36mDEBUG[m] org.apache.maven.plugins:maven-compiler-plugin:jar:3.11.0
+[[1;36mDEBUG[m]    org.apache.maven.shared:maven-shared-utils:jar:3.3.4:compile
+[[1;36mDEBUG[m]       commons-io:commons-io:jar:2.6:compile
+[[1;36mDEBUG[m]    org.apache.maven.shared:maven-shared-incremental:jar:1.1:compile
+[[1;36mDEBUG[m]       org.codehaus.plexus:plexus-component-annotations:jar:1.5.5:compile
+[[1;36mDEBUG[m]    org.codehaus.plexus:plexus-java:jar:1.1.2:compile
+[[1;36mDEBUG[m]       org.ow2.asm:asm:jar:9.4:compile
+[[1;36mDEBUG[m]       com.thoughtworks.qdox:qdox:jar:2.0.3:compile (version managed from default)
+[[1;36mDEBUG[m]    org.codehaus.plexus:plexus-compiler-api:jar:2.13.0:compile
+[[1;36mDEBUG[m]       org.codehaus.plexus:plexus-utils:jar:3.5.0:compile (version managed from default)
+[[1;36mDEBUG[m]    org.codehaus.plexus:plexus-compiler-manager:jar:2.13.0:compile
+[[1;36mDEBUG[m]    org.codehaus.plexus:plexus-compiler-javac:jar:2.13.0:runtime
+[[1;36mDEBUG[m] Created new class realm plugin>org.apache.maven.plugins:maven-compiler-plugin:3.11.0
+[[1;36mDEBUG[m] Importing foreign packages into class realm plugin>org.apache.maven.plugins:maven-compiler-plugin:3.11.0
+[[1;36mDEBUG[m]   Imported:  < maven.api
+[[1;36mDEBUG[m] Populating class realm plugin>org.apache.maven.plugins:maven-compiler-plugin:3.11.0
+[[1;36mDEBUG[m]   Included: org.apache.maven.plugins:maven-compiler-plugin:jar:3.11.0
+[[1;36mDEBUG[m]   Included: org.apache.maven.shared:maven-shared-utils:jar:3.3.4
+[[1;36mDEBUG[m]   Included: commons-io:commons-io:jar:2.6
+[[1;36mDEBUG[m]   Included: org.apache.maven.shared:maven-shared-incremental:jar:1.1
+[[1;36mDEBUG[m]   Included: org.codehaus.plexus:plexus-component-annotations:jar:1.5.5
+[[1;36mDEBUG[m]   Included: org.codehaus.plexus:plexus-java:jar:1.1.2
+[[1;36mDEBUG[m]   Included: org.ow2.asm:asm:jar:9.4
+[[1;36mDEBUG[m]   Included: com.thoughtworks.qdox:qdox:jar:2.0.3
+[[1;36mDEBUG[m]   Included: org.codehaus.plexus:plexus-compiler-api:jar:2.13.0
+[[1;36mDEBUG[m]   Included: org.codehaus.plexus:plexus-utils:jar:3.5.0
+[[1;36mDEBUG[m]   Included: org.codehaus.plexus:plexus-compiler-manager:jar:2.13.0
+[[1;36mDEBUG[m]   Included: org.codehaus.plexus:plexus-compiler-javac:jar:2.13.0
+[[1;36mDEBUG[m] Configuring mojo org.apache.maven.plugins:maven-compiler-plugin:3.11.0:compile from plugin realm ClassRealm[plugin>org.apache.maven.plugins:maven-compiler-plugin:3.11.0, parent: jdk.internal.loader.ClassLoaders$AppClassLoader@277050dc]
+[[1;36mDEBUG[m] Configuring mojo 'org.apache.maven.plugins:maven-compiler-plugin:3.11.0:compile' with basic configurator -->
+[[1;36mDEBUG[m]   (f) basedir = /usr/local/programming/fscrawler/settings
+[[1;36mDEBUG[m]   (f) buildDirectory = /usr/local/programming/fscrawler/settings/target
+[[1;36mDEBUG[m]   (f) compilePath = [/usr/local/programming/fscrawler/settings/target/classes, /home/chris/.m2/repository/fr/pilato/elasticsearch/crawler/fscrawler-framework/2.10-SNAPSHOT/fscrawler-framework-2.10-SNAPSHOT.jar, /home/chris/.m2/repository/commons-io/commons-io/2.13.0/commons-io-2.13.0.jar, /home/chris/.m2/repository/com/fasterxml/jackson/core/jackson-core/2.15.2/jackson-core-2.15.2.jar, /home/chris/.m2/repository/com/fasterxml/jackson/core/jackson-databind/2.15.2/jackson-databind-2.15.2.jar, /home/chris/.m2/repository/com/fasterxml/jackson/datatype/jackson-datatype-jsr310/2.15.2/jackson-datatype-jsr310-2.15.2.jar, /home/chris/.m2/repository/com/fasterxml/jackson/dataformat/jackson-dataformat-xml/2.15.2/jackson-dataformat-xml-2.15.2.jar, /home/chris/.m2/repository/org/codehaus/woodstox/stax2-api/4.2.1/stax2-api-4.2.1.jar, /home/chris/.m2/repository/com/fasterxml/woodstox/woodstox-core/6.5.1/woodstox-core-6.5.1.jar, /home/chris/.m2/repository/com/fasterxml/jackson/dataformat/jackson-dataformat-yaml/2.15.2/jackson-dataformat-yaml-2.15.2.jar, /home/chris/.m2/repository/org/yaml/snakeyaml/2.0/snakeyaml-2.0.jar, /home/chris/.m2/repository/com/fasterxml/jackson/core/jackson-annotations/2.15.2/jackson-annotations-2.15.2.jar, /home/chris/.m2/repository/com/jayway/jsonpath/json-path/2.8.0/json-path-2.8.0.jar, /home/chris/.m2/repository/org/slf4j/slf4j-api/2.0.7/slf4j-api-2.0.7.jar, /home/chris/.m2/repository/org/apache/logging/log4j/log4j-core/2.20.0/log4j-core-2.20.0.jar, /home/chris/.m2/repository/org/apache/logging/log4j/log4j-api/2.20.0/log4j-api-2.20.0.jar, /home/chris/.m2/repository/org/apache/logging/log4j/log4j-1.2-api/2.20.0/log4j-1.2-api-2.20.0.jar, /home/chris/.m2/repository/org/apache/logging/log4j/log4j-slf4j-impl/2.20.0/log4j-slf4j-impl-2.20.0.jar, /home/chris/.m2/repository/org/apache/logging/log4j/log4j-jcl/2.20.0/log4j-jcl-2.20.0.jar, /home/chris/.m2/repository/commons-logging/commons-logging/1.2/commons-logging-1.2.jar, /home/chris/.m2/repository/org/apache/logging/log4j/log4j-jul/2.20.0/log4j-jul-2.20.0.jar, /home/chris/.m2/repository/org/fusesource/jansi/jansi/2.4.0/jansi-2.4.0.jar]
+[[1;36mDEBUG[m]   (f) compileSourceRoots = [/usr/local/programming/fscrawler/settings/src/main/java]
+[[1;36mDEBUG[m]   (f) compilerArgument = -Xlint:all,-serial,-path,-rawtypes,-unchecked
+[[1;36mDEBUG[m]   (f) compilerId = javac
+[[1;36mDEBUG[m]   (f) createMissingPackageInfoClass = true
+[[1;36mDEBUG[m]   (f) debug = true
+[[1;36mDEBUG[m]   (f) debugFileName = javac
+[[1;36mDEBUG[m]   (f) enablePreview = false
+[[1;36mDEBUG[m]   (f) encoding = UTF-8
+[[1;36mDEBUG[m]   (f) failOnError = true
+[[1;36mDEBUG[m]   (f) failOnWarning = false
+[[1;36mDEBUG[m]   (f) forceJavacCompilerUse = false
+[[1;36mDEBUG[m]   (f) fork = false
+[[1;36mDEBUG[m]   (f) generatedSourcesDirectory = /usr/local/programming/fscrawler/settings/target/generated-sources/annotations
+[[1;36mDEBUG[m]   (f) mojoExecution = org.apache.maven.plugins:maven-compiler-plugin:3.11.0:compile {execution: default-compile}
+[[1;36mDEBUG[m]   (f) optimize = true
+[[1;36mDEBUG[m]   (f) outputDirectory = /usr/local/programming/fscrawler/settings/target/classes
+[[1;36mDEBUG[m]   (f) parameters = false
+[[1;36mDEBUG[m]   (f) project = MavenProject: fr.pilato.elasticsearch.crawler:fscrawler-settings:2.10-SNAPSHOT @ /usr/local/programming/fscrawler/settings/pom.xml
+[[1;36mDEBUG[m]   (f) projectArtifact = fr.pilato.elasticsearch.crawler:fscrawler-settings:jar:2.10-SNAPSHOT
+[[1;36mDEBUG[m]   (s) release = 11
+[[1;36mDEBUG[m]   (f) session = org.apache.maven.execution.MavenSession@75308740
+[[1;36mDEBUG[m]   (f) showCompilationChanges = false
+[[1;36mDEBUG[m]   (f) showDeprecation = true
+[[1;36mDEBUG[m]   (f) showWarnings = true
+[[1;36mDEBUG[m]   (f) skipMultiThreadWarning = false
+[[1;36mDEBUG[m]   (f) source = 1.8
+[[1;36mDEBUG[m]   (f) staleMillis = 0
+[[1;36mDEBUG[m]   (s) target = 1.8
+[[1;36mDEBUG[m]   (f) useIncrementalCompilation = true
+[[1;36mDEBUG[m]   (f) verbose = false
+[[1;36mDEBUG[m] -- end configuration --
+[[1;36mDEBUG[m] Using compiler 'javac'.
+[[1;36mDEBUG[m] Adding /usr/local/programming/fscrawler/settings/target/generated-sources/annotations to compile source roots:
+  /usr/local/programming/fscrawler/settings/src/main/java
+[[1;36mDEBUG[m] New compile source roots:
+  /usr/local/programming/fscrawler/settings/src/main/java
+  /usr/local/programming/fscrawler/settings/target/generated-sources/annotations
+[[1;36mDEBUG[m] CompilerReuseStrategy: reuseCreated
+[[1;36mDEBUG[m] useIncrementalCompilation enabled
+[[1;34mINFO[m] Nothing to compile - all classes are up to date
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-resources-plugin:3.3.1:testResources[m [1m(default-testResources)[m @ [36mfscrawler-settings[0;1m ---[m
+[[1;36mDEBUG[m] Configuring mojo org.apache.maven.plugins:maven-resources-plugin:3.3.1:testResources from plugin realm ClassRealm[plugin>org.apache.maven.plugins:maven-resources-plugin:3.3.1, parent: jdk.internal.loader.ClassLoaders$AppClassLoader@277050dc]
+[[1;36mDEBUG[m] Configuring mojo 'org.apache.maven.plugins:maven-resources-plugin:3.3.1:testResources' with basic configurator -->
+[[1;36mDEBUG[m]   (f) addDefaultExcludes = true
+[[1;36mDEBUG[m]   (f) buildFilters = []
+[[1;36mDEBUG[m]   (f) encoding = UTF-8
+[[1;36mDEBUG[m]   (f) escapeWindowsPaths = true
+[[1;36mDEBUG[m]   (f) fileNameFiltering = false
+[[1;36mDEBUG[m]   (s) includeEmptyDirs = false
+[[1;36mDEBUG[m]   (s) outputDirectory = /usr/local/programming/fscrawler/settings/target/test-classes
+[[1;36mDEBUG[m]   (s) overwrite = false
+[[1;36mDEBUG[m]   (f) project = MavenProject: fr.pilato.elasticsearch.crawler:fscrawler-settings:2.10-SNAPSHOT @ /usr/local/programming/fscrawler/settings/pom.xml
+[[1;36mDEBUG[m]   (f) propertiesEncoding = UTF-8
+[[1;36mDEBUG[m]   (s) resources = [Resource {targetPath: null, filtering: false, FileSet {directory: /usr/local/programming/fscrawler/settings/src/test/resources, PatternSet [includes: {}, excludes: {}]}}]
+[[1;36mDEBUG[m]   (f) session = org.apache.maven.execution.MavenSession@75308740
+[[1;36mDEBUG[m]   (f) skip = false
+[[1;36mDEBUG[m]   (f) supportMultiLineFiltering = false
+[[1;36mDEBUG[m]   (f) useBuildFilters = true
+[[1;36mDEBUG[m]   (s) useDefaultDelimiters = true
+[[1;36mDEBUG[m] -- end configuration --
+[[1;36mDEBUG[m] properties used:
+[[1;36mDEBUG[m] awt.toolkit: sun.awt.X11.XToolkit
+[[1;36mDEBUG[m] classworlds.conf: /usr/share/maven/bin/m2.conf
+[[1;36mDEBUG[m] commons-codec.version: 1.16.0
+[[1;36mDEBUG[m] commons-logging.version: 1.2
+[[1;36mDEBUG[m] contrib.dir: /usr/local/programming/fscrawler/settings/contrib
+[[1;36mDEBUG[m] docker.push.password: ${DOCKER_PASSWORD}
+[[1;36mDEBUG[m] docker.push.username: ${DOCKER_USERNAME}
+[[1;36mDEBUG[m] elasticsearch.version: 7.17.7
+[[1;36mDEBUG[m] elasticsearch6.version: 6.8.23
+[[1;36mDEBUG[m] elasticsearch7.version: 7.17.7
+[[1;36mDEBUG[m] elasticsearch8.version: 8.8.1
+[[1;36mDEBUG[m] env.CHROME_DESKTOP: code-url-handler.desktop
+[[1;36mDEBUG[m] env.CLUTTER_IM_MODULE: ibus
+[[1;36mDEBUG[m] env.COLORTERM: truecolor
+[[1;36mDEBUG[m] env.DBUS_SESSION_BUS_ADDRESS: unix:path=/run/user/1000/bus
+[[1;36mDEBUG[m] env.DISPLAY: :10.0
+[[1;36mDEBUG[m] env.DOCKER_PASSWORD: ${DOCKER_PASSWORD}
+[[1;36mDEBUG[m] env.DOCKER_USERNAME: ${DOCKER_USERNAME}
+[[1;36mDEBUG[m] env.GDK_BACKEND: x11
+[[1;36mDEBUG[m] env.GIO_LAUNCHED_DESKTOP_FILE: /usr/share/applications/code.desktop
+[[1;36mDEBUG[m] env.GIO_LAUNCHED_DESKTOP_FILE_PID: 3677
+[[1;36mDEBUG[m] env.GIT_ASKPASS: /usr/share/code/resources/app/extensions/git/dist/askpass.sh
+[[1;36mDEBUG[m] env.GJS_DEBUG_OUTPUT: stderr
+[[1;36mDEBUG[m] env.GJS_DEBUG_TOPICS: JS ERROR;JS LOG
+[[1;36mDEBUG[m] env.GNOME_DESKTOP_SESSION_ID: this-is-deprecated
+[[1;36mDEBUG[m] env.GPG_AGENT_INFO: /run/user/1000/gnupg/S.gpg-agent:0:1
+[[1;36mDEBUG[m] env.GTK_IM_MODULE: ibus
+[[1;36mDEBUG[m] env.GTK_MODULES: gail:atk-bridge
+[[1;36mDEBUG[m] env.HOME: /home/chris
+[[1;36mDEBUG[m] env.INVOCATION_ID: cdc12d9d8cff496fb45de9cdf3821859
+[[1;36mDEBUG[m] env.JAVA_HOME: /home/chris/.sdkman/candidates/java/current
+[[1;36mDEBUG[m] env.JOURNAL_STREAM: 8:32163
+[[1;36mDEBUG[m] env.LANG: en_US.UTF-8
+[[1;36mDEBUG[m] env.LC_ADDRESS: ar_SA.UTF-8
+[[1;36mDEBUG[m] env.LC_IDENTIFICATION: ar_SA.UTF-8
+[[1;36mDEBUG[m] env.LC_MEASUREMENT: ar_SA.UTF-8
+[[1;36mDEBUG[m] env.LC_MONETARY: ar_SA.UTF-8
+[[1;36mDEBUG[m] env.LC_NAME: ar_SA.UTF-8
+[[1;36mDEBUG[m] env.LC_NUMERIC: ar_SA.UTF-8
+[[1;36mDEBUG[m] env.LC_PAPER: ar_SA.UTF-8
+[[1;36mDEBUG[m] env.LC_TELEPHONE: ar_SA.UTF-8
+[[1;36mDEBUG[m] env.LC_TIME: ar_SA.UTF-8
+[[1;36mDEBUG[m] env.LESSCLOSE: /usr/bin/lesspipe %s %s
+[[1;36mDEBUG[m] env.LESSOPEN: | /usr/bin/lesspipe %s
+[[1;36mDEBUG[m] env.LOGNAME: chris
+[[1;36mDEBUG[m] env.LS_COLORS: rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:
+[[1;36mDEBUG[m] env.MANAGERPID: 2419
+[[1;36mDEBUG[m] env.MAVEN_CMD_LINE_ARGS:  test -Dtest=fr.pilato.elasticsearch.crawler.fs.settings.* -X
+[[1;36mDEBUG[m] env.MAVEN_PROJECTBASEDIR: /usr/local/programming/fscrawler
+[[1;36mDEBUG[m] env.OLDPWD: /usr/local/programming/fscrawler/settings
+[[1;36mDEBUG[m] env.ORIGINAL_XDG_CURRENT_DESKTOP: GNOME
+[[1;36mDEBUG[m] env.PATH: /home/chris/bin:/home/chris/.local/bin:/home/chris/.sdkman/candidates/java/current/bin:/home/chris/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin
+[[1;36mDEBUG[m] env.PULSE_SCRIPT: /etc/xrdp/pulse/default.pa
+[[1;36mDEBUG[m] env.PWD: /usr/local/programming/fscrawler/settings
+[[1;36mDEBUG[m] env.QT_ACCESSIBILITY: 1
+[[1;36mDEBUG[m] env.QT_IM_MODULE: ibus
+[[1;36mDEBUG[m] env.SDKMAN_CANDIDATES_API: https://api.sdkman.io/2
+[[1;36mDEBUG[m] env.SDKMAN_CANDIDATES_DIR: /home/chris/.sdkman/candidates
+[[1;36mDEBUG[m] env.SDKMAN_DIR: /home/chris/.sdkman
+[[1;36mDEBUG[m] env.SDKMAN_PLATFORM: linuxx64
+[[1;36mDEBUG[m] env.SESSION_MANAGER: local/scs-dev-server:@/tmp/.ICE-unix/2804,unix/scs-dev-server:/tmp/.ICE-unix/2804
+[[1;36mDEBUG[m] env.SHELL: /bin/bash
+[[1;36mDEBUG[m] env.SHLVL: 1
+[[1;36mDEBUG[m] env.SONATYPE_PASS: 
+[[1;36mDEBUG[m] env.SONATYPE_USER: 
+[[1;36mDEBUG[m] env.SSH_AGENT_PID: 2623
+[[1;36mDEBUG[m] env.SSH_AUTH_SOCK: /run/user/1000/keyring/ssh
+[[1;36mDEBUG[m] env.SYSTEMD_EXEC_PID: 2835
+[[1;36mDEBUG[m] env.TERM: xterm-256color
+[[1;36mDEBUG[m] env.TERM_PROGRAM: vscode
+[[1;36mDEBUG[m] env.TERM_PROGRAM_VERSION: 1.80.1
+[[1;36mDEBUG[m] env.UID: 1000
+[[1;36mDEBUG[m] env.USER: chris
+[[1;36mDEBUG[m] env.VSCODE_GIT_ASKPASS_EXTRA_ARGS: --ms-enable-electron-run-as-node
+[[1;36mDEBUG[m] env.VSCODE_GIT_ASKPASS_MAIN: /usr/share/code/resources/app/extensions/git/dist/askpass-main.js
+[[1;36mDEBUG[m] env.VSCODE_GIT_ASKPASS_NODE: /usr/share/code/code
+[[1;36mDEBUG[m] env.VSCODE_GIT_IPC_HANDLE: /run/user/1000/vscode-git-16f6bff84c.sock
+[[1;36mDEBUG[m] env.XDG_CURRENT_DESKTOP: GNOME
+[[1;36mDEBUG[m] env.XDG_DATA_DIRS: /usr/share/gnome:/usr/local/share:/usr/share:/var/lib/snapd/desktop
+[[1;36mDEBUG[m] env.XDG_MENU_PREFIX: gnome-
+[[1;36mDEBUG[m] env.XDG_RUNTIME_DIR: /run/user/1000
+[[1;36mDEBUG[m] env.XDG_SESSION_CLASS: user
+[[1;36mDEBUG[m] env.XDG_SESSION_TYPE: x11
+[[1;36mDEBUG[m] env.XMODIFIERS: @im=ibus
+[[1;36mDEBUG[m] env.XRDP_PULSE_SINK_SOCKET: xrdp_chansrv_audio_out_socket_10
+[[1;36mDEBUG[m] env.XRDP_PULSE_SOURCE_SOCKET: xrdp_chansrv_audio_in_socket_10
+[[1;36mDEBUG[m] env.XRDP_SESSION: 1
+[[1;36mDEBUG[m] env.XRDP_SOCKET_PATH: /run/xrdp/sockdir
+[[1;36mDEBUG[m] env._: /usr/bin/mvn
+[[1;36mDEBUG[m] file.encoding: UTF-8
+[[1;36mDEBUG[m] file.separator: /
+[[1;36mDEBUG[m] httpasyncclient.version: 4.1.5
+[[1;36mDEBUG[m] httpclient.version: 4.5.14
+[[1;36mDEBUG[m] httpcore.version: 4.4.16
+[[1;36mDEBUG[m] imageio.version: 3.0.3
+[[1;36mDEBUG[m] integ.elasticsearch.port: 9200
+[[1;36mDEBUG[m] integ.elasticsearch.version: 7.17.7
+[[1;36mDEBUG[m] integ.workplace.port: 3002
+[[1;36mDEBUG[m] jackson.version: 2.15.2
+[[1;36mDEBUG[m] jansi.version: 2.4.0
+[[1;36mDEBUG[m] java.awt.graphicsenv: sun.awt.X11GraphicsEnvironment
+[[1;36mDEBUG[m] java.awt.headless: true
+[[1;36mDEBUG[m] java.awt.printerjob: sun.print.PSPrinterJob
+[[1;36mDEBUG[m] java.class.path: /usr/share/maven/boot/plexus-classworlds-2.x.jar
+[[1;36mDEBUG[m] java.class.version: 55.0
+[[1;36mDEBUG[m] java.compiler.version: 11
+[[1;36mDEBUG[m] java.home: /home/chris/.sdkman/candidates/java/11.0.12-zulu
+[[1;36mDEBUG[m] java.io.tmpdir: /tmp
+[[1;36mDEBUG[m] java.library.path: /usr/java/packages/lib:/usr/lib64:/lib64:/lib:/usr/lib
+[[1;36mDEBUG[m] java.runtime.name: OpenJDK Runtime Environment
+[[1;36mDEBUG[m] java.runtime.version: 11.0.12+7-LTS
+[[1;36mDEBUG[m] java.specification.name: Java Platform API Specification
+[[1;36mDEBUG[m] java.specification.vendor: Oracle Corporation
+[[1;36mDEBUG[m] java.specification.version: 11
+[[1;36mDEBUG[m] java.vendor: Azul Systems, Inc.
+[[1;36mDEBUG[m] java.vendor.url: http://www.azul.com/
+[[1;36mDEBUG[m] java.vendor.url.bug: http://www.azul.com/support/
+[[1;36mDEBUG[m] java.vendor.version: Zulu11.50+19-CA
+[[1;36mDEBUG[m] java.version: 11.0.12
+[[1;36mDEBUG[m] java.version.date: 2021-07-20
+[[1;36mDEBUG[m] java.vm.compressedOopsMode: 32-bit
+[[1;36mDEBUG[m] java.vm.info: mixed mode
+[[1;36mDEBUG[m] java.vm.name: OpenJDK 64-Bit Server VM
+[[1;36mDEBUG[m] java.vm.specification.name: Java Virtual Machine Specification
+[[1;36mDEBUG[m] java.vm.specification.vendor: Oracle Corporation
+[[1;36mDEBUG[m] java.vm.specification.version: 11
+[[1;36mDEBUG[m] java.vm.vendor: Azul Systems, Inc.
+[[1;36mDEBUG[m] java.vm.version: 11.0.12+7-LTS
+[[1;36mDEBUG[m] jdk.debug: release
+[[1;36mDEBUG[m] jdk.vendor.version: Zulu11.50+19-CA
+[[1;36mDEBUG[m] jersey.version: 3.1.2
+[[1;36mDEBUG[m] jpeg.version: 1.4.0
+[[1;36mDEBUG[m] jsonpath.version: 2.8.0
+[[1;36mDEBUG[m] library.jansi.path: /usr/share/maven/lib/jansi-native
+[[1;36mDEBUG[m] line.separator: 
+
+[[1;36mDEBUG[m] log4j.version: 2.20.0
+[[1;36mDEBUG[m] maven.build.timestamp: 2023-07-24T08:22:53Z
+[[1;36mDEBUG[m] maven.build.version: Apache Maven 3.6.3
+[[1;36mDEBUG[m] maven.conf: /usr/share/maven/conf
+[[1;36mDEBUG[m] maven.home: /usr/share/maven
+[[1;36mDEBUG[m] maven.multiModuleProjectDirectory: /usr/local/programming/fscrawler
+[[1;36mDEBUG[m] maven.version: 3.6.3
+[[1;36mDEBUG[m] org.slf4j.simpleLogger.log.org.apache.maven.cli.transfer.Slf4jMavenTransferListener: warn
+[[1;36mDEBUG[m] os.arch: amd64
+[[1;36mDEBUG[m] os.name: Linux
+[[1;36mDEBUG[m] os.version: 5.19.0-46-generic
+[[1;36mDEBUG[m] path.separator: :
+[[1;36mDEBUG[m] project.baseUri: file:/usr/local/programming/fscrawler/settings/
+[[1;36mDEBUG[m] project.build.sourceEncoding: UTF-8
+[[1;36mDEBUG[m] project.reporting.outputEncoding: UTF-8
+[[1;36mDEBUG[m] skipIntegTests: false
+[[1;36mDEBUG[m] skipTests: false
+[[1;36mDEBUG[m] skipUnitTests: false
+[[1;36mDEBUG[m] slf4j.version: 2.0.7
+[[1;36mDEBUG[m] snakeyaml.version: 2.0
+[[1;36mDEBUG[m] sonatype.password: 
+[[1;36mDEBUG[m] sonatype.username: 
+[[1;36mDEBUG[m] sun.arch.data.model: 64
+[[1;36mDEBUG[m] sun.boot.library.path: /home/chris/.sdkman/candidates/java/11.0.12-zulu/lib
+[[1;36mDEBUG[m] sun.cpu.endian: little
+[[1;36mDEBUG[m] sun.cpu.isalist: 
+[[1;36mDEBUG[m] sun.desktop: gnome
+[[1;36mDEBUG[m] sun.io.unicode.encoding: UnicodeLittle
+[[1;36mDEBUG[m] sun.java.command: org.codehaus.plexus.classworlds.launcher.Launcher test -Dtest=fr.pilato.elasticsearch.crawler.fs.settings.* -X
+[[1;36mDEBUG[m] sun.java.launcher: SUN_STANDARD
+[[1;36mDEBUG[m] sun.jnu.encoding: UTF-8
+[[1;36mDEBUG[m] sun.management.compiler: HotSpot 64-Bit Tiered Compilers
+[[1;36mDEBUG[m] sun.os.patch.level: unknown
+[[1;36mDEBUG[m] test: fr.pilato.elasticsearch.crawler.fs.settings.*
+[[1;36mDEBUG[m] tests.cluster.cloud_id: 
+[[1;36mDEBUG[m] tests.cluster.pass: changeme
+[[1;36mDEBUG[m] tests.cluster.url: 
+[[1;36mDEBUG[m] tests.cluster.user: elastic
+[[1;36mDEBUG[m] tests.leaveTemporary: false
+[[1;36mDEBUG[m] tests.locale: random
+[[1;36mDEBUG[m] tests.output: onError
+[[1;36mDEBUG[m] tests.parallelism: auto
+[[1;36mDEBUG[m] tests.rest.port: 8080
+[[1;36mDEBUG[m] tests.seed: 
+[[1;36mDEBUG[m] tests.timeout: 600000
+[[1;36mDEBUG[m] tests.timeoutSuite: 600000
+[[1;36mDEBUG[m] tests.timezone: random
+[[1;36mDEBUG[m] tests.verbose: false
+[[1;36mDEBUG[m] tests.workplace.pass: changeme
+[[1;36mDEBUG[m] tests.workplace.url: 
+[[1;36mDEBUG[m] tests.workplace.user: elastic
+[[1;36mDEBUG[m] tiff.version: 1.4.0
+[[1;36mDEBUG[m] tika.version: 2.8.0
+[[1;36mDEBUG[m] user.country: US
+[[1;36mDEBUG[m] user.dir: /usr/local/programming/fscrawler/settings
+[[1;36mDEBUG[m] user.home: /home/chris
+[[1;36mDEBUG[m] user.language: en
+[[1;36mDEBUG[m] user.name: chris
+[[1;36mDEBUG[m] user.timezone: 
+[[1;36mDEBUG[m] Using 'UTF-8' encoding to copy filtered resources.
+[[1;36mDEBUG[m] Using 'UTF-8' encoding to copy filtered properties files.
+[[1;36mDEBUG[m] resource with targetPath null
+directory /usr/local/programming/fscrawler/settings/src/test/resources
+excludes []
+includes []
+[[1;36mDEBUG[m] ignoreDelta true
+[[1;34mINFO[m] Copying 9 resources from src/test/resources to target/test-classes
+[[1;36mDEBUG[m] Copying file jobtest/7/_settings_folder.json
+[[1;36mDEBUG[m] file _settings_folder.json has a filtered file extension
+[[1;36mDEBUG[m] Using 'UTF-8' encoding to copy filtered resource '_settings_folder.json'.
+[[1;36mDEBUG[m] copy /usr/local/programming/fscrawler/settings/src/test/resources/jobtest/7/_settings_folder.json to /usr/local/programming/fscrawler/settings/target/test-classes/jobtest/7/_settings_folder.json
+[[1;36mDEBUG[m] Copying file jobtest/7/_wpsearch_settings.json
+[[1;36mDEBUG[m] file _wpsearch_settings.json has a filtered file extension
+[[1;36mDEBUG[m] Using 'UTF-8' encoding to copy filtered resource '_wpsearch_settings.json'.
+[[1;36mDEBUG[m] copy /usr/local/programming/fscrawler/settings/src/test/resources/jobtest/7/_wpsearch_settings.json to /usr/local/programming/fscrawler/settings/target/test-classes/jobtest/7/_wpsearch_settings.json
+[[1;36mDEBUG[m] Copying file jobtest/7/_settings.json
+[[1;36mDEBUG[m] file _settings.json has a filtered file extension
+[[1;36mDEBUG[m] Using 'UTF-8' encoding to copy filtered resource '_settings.json'.
+[[1;36mDEBUG[m] copy /usr/local/programming/fscrawler/settings/src/test/resources/jobtest/7/_settings.json to /usr/local/programming/fscrawler/settings/target/test-classes/jobtest/7/_settings.json
+[[1;36mDEBUG[m] Copying file jobtest/6/_settings_folder.json
+[[1;36mDEBUG[m] file _settings_folder.json has a filtered file extension
+[[1;36mDEBUG[m] Using 'UTF-8' encoding to copy filtered resource '_settings_folder.json'.
+[[1;36mDEBUG[m] copy /usr/local/programming/fscrawler/settings/src/test/resources/jobtest/6/_settings_folder.json to /usr/local/programming/fscrawler/settings/target/test-classes/jobtest/6/_settings_folder.json
+[[1;36mDEBUG[m] Copying file jobtest/6/_settings.json
+[[1;36mDEBUG[m] file _settings.json has a filtered file extension
+[[1;36mDEBUG[m] Using 'UTF-8' encoding to copy filtered resource '_settings.json'.
+[[1;36mDEBUG[m] copy /usr/local/programming/fscrawler/settings/src/test/resources/jobtest/6/_settings.json to /usr/local/programming/fscrawler/settings/target/test-classes/jobtest/6/_settings.json
+[[1;36mDEBUG[m] Copying file jobtest/8/_settings_folder.json
+[[1;36mDEBUG[m] file _settings_folder.json has a filtered file extension
+[[1;36mDEBUG[m] Using 'UTF-8' encoding to copy filtered resource '_settings_folder.json'.
+[[1;36mDEBUG[m] copy /usr/local/programming/fscrawler/settings/src/test/resources/jobtest/8/_settings_folder.json to /usr/local/programming/fscrawler/settings/target/test-classes/jobtest/8/_settings_folder.json
+[[1;36mDEBUG[m] Copying file jobtest/8/_wpsearch_settings.json
+[[1;36mDEBUG[m] file _wpsearch_settings.json has a filtered file extension
+[[1;36mDEBUG[m] Using 'UTF-8' encoding to copy filtered resource '_wpsearch_settings.json'.
+[[1;36mDEBUG[m] copy /usr/local/programming/fscrawler/settings/src/test/resources/jobtest/8/_wpsearch_settings.json to /usr/local/programming/fscrawler/settings/target/test-classes/jobtest/8/_wpsearch_settings.json
+[[1;36mDEBUG[m] Copying file jobtest/8/_settings.json
+[[1;36mDEBUG[m] file _settings.json has a filtered file extension
+[[1;36mDEBUG[m] Using 'UTF-8' encoding to copy filtered resource '_settings.json'.
+[[1;36mDEBUG[m] copy /usr/local/programming/fscrawler/settings/src/test/resources/jobtest/8/_settings.json to /usr/local/programming/fscrawler/settings/target/test-classes/jobtest/8/_settings.json
+[[1;36mDEBUG[m] Copying file log4j2.xml
+[[1;36mDEBUG[m] file log4j2.xml has a filtered file extension
+[[1;36mDEBUG[m] Using 'UTF-8' encoding to copy filtered resource 'log4j2.xml'.
+[[1;36mDEBUG[m] copy /usr/local/programming/fscrawler/settings/src/test/resources/log4j2.xml to /usr/local/programming/fscrawler/settings/target/test-classes/log4j2.xml
+[[1;36mDEBUG[m] no user filter components
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-compiler-plugin:3.11.0:testCompile[m [1m(default-testCompile)[m @ [36mfscrawler-settings[0;1m ---[m
+[[1;36mDEBUG[m] Configuring mojo org.apache.maven.plugins:maven-compiler-plugin:3.11.0:testCompile from plugin realm ClassRealm[plugin>org.apache.maven.plugins:maven-compiler-plugin:3.11.0, parent: jdk.internal.loader.ClassLoaders$AppClassLoader@277050dc]
+[[1;36mDEBUG[m] Configuring mojo 'org.apache.maven.plugins:maven-compiler-plugin:3.11.0:testCompile' with basic configurator -->
+[[1;36mDEBUG[m]   (f) basedir = /usr/local/programming/fscrawler/settings
+[[1;36mDEBUG[m]   (f) buildDirectory = /usr/local/programming/fscrawler/settings/target
+[[1;36mDEBUG[m]   (f) compileSourceRoots = [/usr/local/programming/fscrawler/settings/src/test/java]
+[[1;36mDEBUG[m]   (f) compilerArgument = -Xlint:all,-serial,-path,-rawtypes,-unchecked
+[[1;36mDEBUG[m]   (f) compilerId = javac
+[[1;36mDEBUG[m]   (f) createMissingPackageInfoClass = true
+[[1;36mDEBUG[m]   (f) debug = true
+[[1;36mDEBUG[m]   (f) debugFileName = javac-test
+[[1;36mDEBUG[m]   (f) enablePreview = false
+[[1;36mDEBUG[m]   (f) encoding = UTF-8
+[[1;36mDEBUG[m]   (f) failOnError = true
+[[1;36mDEBUG[m]   (f) failOnWarning = false
+[[1;36mDEBUG[m]   (f) forceJavacCompilerUse = false
+[[1;36mDEBUG[m]   (f) fork = false
+[[1;36mDEBUG[m]   (f) generatedTestSourcesDirectory = /usr/local/programming/fscrawler/settings/target/generated-test-sources/test-annotations
+[[1;36mDEBUG[m]   (f) mojoExecution = org.apache.maven.plugins:maven-compiler-plugin:3.11.0:testCompile {execution: default-testCompile}
+[[1;36mDEBUG[m]   (f) optimize = true
+[[1;36mDEBUG[m]   (f) outputDirectory = /usr/local/programming/fscrawler/settings/target/test-classes
+[[1;36mDEBUG[m]   (f) parameters = false
+[[1;36mDEBUG[m]   (f) project = MavenProject: fr.pilato.elasticsearch.crawler:fscrawler-settings:2.10-SNAPSHOT @ /usr/local/programming/fscrawler/settings/pom.xml
+[[1;36mDEBUG[m]   (s) release = 11
+[[1;36mDEBUG[m]   (f) session = org.apache.maven.execution.MavenSession@75308740
+[[1;36mDEBUG[m]   (f) showCompilationChanges = false
+[[1;36mDEBUG[m]   (f) showDeprecation = true
+[[1;36mDEBUG[m]   (f) showWarnings = true
+[[1;36mDEBUG[m]   (f) skipMultiThreadWarning = false
+[[1;36mDEBUG[m]   (f) source = 1.8
+[[1;36mDEBUG[m]   (f) staleMillis = 0
+[[1;36mDEBUG[m]   (s) target = 1.8
+[[1;36mDEBUG[m]   (f) testPath = [/usr/local/programming/fscrawler/settings/target/test-classes, /usr/local/programming/fscrawler/settings/target/classes, /home/chris/.m2/repository/fr/pilato/elasticsearch/crawler/fscrawler-framework/2.10-SNAPSHOT/fscrawler-framework-2.10-SNAPSHOT.jar, /home/chris/.m2/repository/commons-io/commons-io/2.13.0/commons-io-2.13.0.jar, /home/chris/.m2/repository/com/fasterxml/jackson/core/jackson-core/2.15.2/jackson-core-2.15.2.jar, /home/chris/.m2/repository/com/fasterxml/jackson/core/jackson-databind/2.15.2/jackson-databind-2.15.2.jar, /home/chris/.m2/repository/com/fasterxml/jackson/datatype/jackson-datatype-jsr310/2.15.2/jackson-datatype-jsr310-2.15.2.jar, /home/chris/.m2/repository/com/fasterxml/jackson/dataformat/jackson-dataformat-xml/2.15.2/jackson-dataformat-xml-2.15.2.jar, /home/chris/.m2/repository/org/codehaus/woodstox/stax2-api/4.2.1/stax2-api-4.2.1.jar, /home/chris/.m2/repository/com/fasterxml/woodstox/woodstox-core/6.5.1/woodstox-core-6.5.1.jar, /home/chris/.m2/repository/com/fasterxml/jackson/dataformat/jackson-dataformat-yaml/2.15.2/jackson-dataformat-yaml-2.15.2.jar, /home/chris/.m2/repository/org/yaml/snakeyaml/2.0/snakeyaml-2.0.jar, /home/chris/.m2/repository/com/fasterxml/jackson/core/jackson-annotations/2.15.2/jackson-annotations-2.15.2.jar, /home/chris/.m2/repository/com/jayway/jsonpath/json-path/2.8.0/json-path-2.8.0.jar, /home/chris/.m2/repository/net/minidev/json-smart/2.5.0/json-smart-2.5.0.jar, /home/chris/.m2/repository/net/minidev/accessors-smart/2.5.0/accessors-smart-2.5.0.jar, /home/chris/.m2/repository/org/ow2/asm/asm/9.5/asm-9.5.jar, /home/chris/.m2/repository/org/slf4j/slf4j-api/2.0.7/slf4j-api-2.0.7.jar, /home/chris/.m2/repository/org/apache/logging/log4j/log4j-core/2.20.0/log4j-core-2.20.0.jar, /home/chris/.m2/repository/org/apache/logging/log4j/log4j-api/2.20.0/log4j-api-2.20.0.jar, /home/chris/.m2/repository/org/apache/logging/log4j/log4j-1.2-api/2.20.0/log4j-1.2-api-2.20.0.jar, /home/chris/.m2/repository/org/apache/logging/log4j/log4j-slf4j-impl/2.20.0/log4j-slf4j-impl-2.20.0.jar, /home/chris/.m2/repository/org/apache/logging/log4j/log4j-jcl/2.20.0/log4j-jcl-2.20.0.jar, /home/chris/.m2/repository/commons-logging/commons-logging/1.2/commons-logging-1.2.jar, /home/chris/.m2/repository/org/apache/logging/log4j/log4j-jul/2.20.0/log4j-jul-2.20.0.jar, /home/chris/.m2/repository/org/fusesource/jansi/jansi/2.4.0/jansi-2.4.0.jar, /home/chris/.m2/repository/fr/pilato/elasticsearch/crawler/fscrawler-test-framework/2.10-SNAPSHOT/fscrawler-test-framework-2.10-SNAPSHOT.jar, /home/chris/.m2/repository/org/hamcrest/hamcrest-all/1.3/hamcrest-all-1.3.jar, /home/chris/.m2/repository/junit/junit/4.13.2/junit-4.13.2.jar, /home/chris/.m2/repository/org/hamcrest/hamcrest-core/1.3/hamcrest-core-1.3.jar, /home/chris/.m2/repository/com/carrotsearch/randomizedtesting/randomizedtesting-runner/2.8.1/randomizedtesting-runner-2.8.1.jar]
+[[1;36mDEBUG[m]   (f) useIncrementalCompilation = true
+[[1;36mDEBUG[m]   (f) useModulePath = true
+[[1;36mDEBUG[m]   (f) verbose = false
+[[1;36mDEBUG[m] -- end configuration --
+[[1;36mDEBUG[m] Using compiler 'javac'.
+[[1;36mDEBUG[m] Adding /usr/local/programming/fscrawler/settings/target/generated-test-sources/test-annotations to test-compile source roots:
+  /usr/local/programming/fscrawler/settings/src/test/java
+[[1;36mDEBUG[m] New test-compile source roots:
+  /usr/local/programming/fscrawler/settings/src/test/java
+  /usr/local/programming/fscrawler/settings/target/generated-test-sources/test-annotations
+[[1;36mDEBUG[m] CompilerReuseStrategy: reuseCreated
+[[1;36mDEBUG[m] useIncrementalCompilation enabled
+[[1;34mINFO[m] Nothing to compile - all classes are up to date
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mjunit4-maven-plugin:2.8.1:junit4[m [1m(unit-tests)[m @ [36mfscrawler-settings[0;1m ---[m
+[[1;36mDEBUG[m] Dependency collection stats: {ConflictMarker.analyzeTime=530411, ConflictMarker.markTime=220264, ConflictMarker.nodeCount=156, ConflictIdSorter.graphTime=175827, ConflictIdSorter.topsortTime=50743, ConflictIdSorter.conflictIdCount=51, ConflictIdSorter.conflictIdCycleCount=0, ConflictResolver.totalTime=1303889, ConflictResolver.conflictItemCount=106, DefaultDependencyCollector.collectTime=125160227, DefaultDependencyCollector.transformTime=2322831}
+[[1;36mDEBUG[m] com.carrotsearch.randomizedtesting:junit4-maven-plugin:jar:2.8.1
+[[1;36mDEBUG[m]    com.carrotsearch.randomizedtesting:junit4-ant:jar:2.8.1:compile
+[[1;36mDEBUG[m]    com.carrotsearch.randomizedtesting:randomizedtesting-runner:jar:2.8.1:compile (optional)
+[[1;36mDEBUG[m]       junit:junit:jar:4.13.1:compile (version managed from default)
+[[1;36mDEBUG[m]          org.hamcrest:hamcrest-core:jar:1.3:compile
+[[1;36mDEBUG[m]    org.apache.maven:maven-plugin-api:jar:3.2.5:compile
+[[1;36mDEBUG[m]       org.apache.maven:maven-model:jar:3.2.5:compile
+[[1;36mDEBUG[m]       org.eclipse.sisu:org.eclipse.sisu.plexus:jar:0.3.0.M1:compile
+[[1;36mDEBUG[m]          javax.enterprise:cdi-api:jar:1.0:compile
+[[1;36mDEBUG[m]             javax.annotation:jsr250-api:jar:1.0:compile
+[[1;36mDEBUG[m]          org.eclipse.sisu:org.eclipse.sisu.inject:jar:0.3.0.M1:compile
+[[1;36mDEBUG[m]    org.apache.maven:maven-core:jar:3.2.5:compile
+[[1;36mDEBUG[m]       org.apache.maven:maven-settings:jar:3.2.5:compile
+[[1;36mDEBUG[m]       org.apache.maven:maven-settings-builder:jar:3.2.5:compile
+[[1;36mDEBUG[m]       org.apache.maven:maven-repository-metadata:jar:3.2.5:compile
+[[1;36mDEBUG[m]       org.apache.maven:maven-model-builder:jar:3.2.5:compile
+[[1;36mDEBUG[m]       org.apache.maven:maven-aether-provider:jar:3.2.5:compile
+[[1;36mDEBUG[m]          org.eclipse.aether:aether-spi:jar:1.0.0.v20140518:compile
+[[1;36mDEBUG[m]       org.eclipse.aether:aether-impl:jar:1.0.0.v20140518:compile
+[[1;36mDEBUG[m]       org.eclipse.aether:aether-api:jar:1.0.0.v20140518:compile
+[[1;36mDEBUG[m]       org.eclipse.aether:aether-util:jar:1.0.0.v20140518:compile
+[[1;36mDEBUG[m]       org.sonatype.sisu:sisu-guice:jar:no_aop:3.2.3:compile
+[[1;36mDEBUG[m]          javax.inject:javax.inject:jar:1:compile
+[[1;36mDEBUG[m]          aopalliance:aopalliance:jar:1.0:compile
+[[1;36mDEBUG[m]          com.google.guava:guava:jar:25.1-jre:compile (version managed from default) (exclusions managed from default)
+[[1;36mDEBUG[m]             org.checkerframework:checker-qual:jar:2.0.0:compile
+[[1;36mDEBUG[m]       org.codehaus.plexus:plexus-interpolation:jar:1.21:compile
+[[1;36mDEBUG[m]       org.codehaus.plexus:plexus-utils:jar:3.0.20:compile
+[[1;36mDEBUG[m]       org.codehaus.plexus:plexus-classworlds:jar:2.5.2:compile
+[[1;36mDEBUG[m]       org.codehaus.plexus:plexus-component-annotations:jar:1.5.5:compile
+[[1;36mDEBUG[m]       org.sonatype.plexus:plexus-sec-dispatcher:jar:1.3:compile
+[[1;36mDEBUG[m]          org.sonatype.plexus:plexus-cipher:jar:1.4:compile
+[[1;36mDEBUG[m]    org.apache.maven:maven-artifact:jar:3.2.5:compile
+[[1;36mDEBUG[m]    org.apache.maven:maven-compat:jar:3.2.5:compile
+[[1;36mDEBUG[m]       org.apache.maven.wagon:wagon-provider-api:jar:2.8:compile
+[[1;36mDEBUG[m]    org.apache.ant:ant:jar:1.10.11:compile
+[[1;36mDEBUG[m]       org.apache.ant:ant-launcher:jar:1.10.11:compile
+[[1;36mDEBUG[m]    org.apache.ant:ant-junit:jar:1.10.11:compile
+[[1;36mDEBUG[m]    org.dom4j:dom4j:jar:2.1.3:compile
+[[1;36mDEBUG[m]    org.apache.maven.shared:maven-common-artifact-filters:jar:3.0.0:compile
+[[1;36mDEBUG[m]       org.sonatype.sisu:sisu-inject-plexus:jar:1.4.2:compile
+[[1;36mDEBUG[m]          org.sonatype.sisu:sisu-inject-bean:jar:1.4.2:compile
+[[1;36mDEBUG[m]             org.sonatype.sisu:sisu-guice:jar:noaop:2.1.7:compile
+[[1;36mDEBUG[m]       org.apache.maven.shared:maven-shared-utils:jar:3.0.0:compile
+[[1;36mDEBUG[m]          commons-io:commons-io:jar:2.4:compile
+[[1;36mDEBUG[m]          com.google.code.findbugs:jsr305:jar:2.0.1:compile
+[[1;36mDEBUG[m]    org.apache.maven.plugins:maven-antrun-plugin:jar:1.8:compile
+[[1;36mDEBUG[m] Created new class realm plugin>com.carrotsearch.randomizedtesting:junit4-maven-plugin:2.8.1
+[[1;36mDEBUG[m] Importing foreign packages into class realm plugin>com.carrotsearch.randomizedtesting:junit4-maven-plugin:2.8.1
+[[1;36mDEBUG[m]   Imported:  < maven.api
+[[1;36mDEBUG[m] Populating class realm plugin>com.carrotsearch.randomizedtesting:junit4-maven-plugin:2.8.1
+[[1;36mDEBUG[m]   Included: com.carrotsearch.randomizedtesting:junit4-maven-plugin:jar:2.8.1
+[[1;36mDEBUG[m]   Included: com.carrotsearch.randomizedtesting:junit4-ant:jar:2.8.1
+[[1;36mDEBUG[m]   Included: com.carrotsearch.randomizedtesting:randomizedtesting-runner:jar:2.8.1
+[[1;36mDEBUG[m]   Included: junit:junit:jar:4.13.1
+[[1;36mDEBUG[m]   Included: org.hamcrest:hamcrest-core:jar:1.3
+[[1;36mDEBUG[m]   Included: javax.enterprise:cdi-api:jar:1.0
+[[1;36mDEBUG[m]   Included: org.eclipse.sisu:org.eclipse.sisu.inject:jar:0.3.0.M1
+[[1;36mDEBUG[m]   Included: org.eclipse.aether:aether-util:jar:1.0.0.v20140518
+[[1;36mDEBUG[m]   Included: org.sonatype.sisu:sisu-guice:jar:no_aop:3.2.3
+[[1;36mDEBUG[m]   Included: aopalliance:aopalliance:jar:1.0
+[[1;36mDEBUG[m]   Included: com.google.guava:guava:jar:25.1-jre
+[[1;36mDEBUG[m]   Included: org.checkerframework:checker-qual:jar:2.0.0
+[[1;36mDEBUG[m]   Included: org.codehaus.plexus:plexus-interpolation:jar:1.21
+[[1;36mDEBUG[m]   Included: org.codehaus.plexus:plexus-utils:jar:3.0.20
+[[1;36mDEBUG[m]   Included: org.codehaus.plexus:plexus-component-annotations:jar:1.5.5
+[[1;36mDEBUG[m]   Included: org.sonatype.plexus:plexus-sec-dispatcher:jar:1.3
+[[1;36mDEBUG[m]   Included: org.sonatype.plexus:plexus-cipher:jar:1.4
+[[1;36mDEBUG[m]   Included: org.apache.ant:ant:jar:1.10.11
+[[1;36mDEBUG[m]   Included: org.apache.ant:ant-launcher:jar:1.10.11
+[[1;36mDEBUG[m]   Included: org.apache.ant:ant-junit:jar:1.10.11
+[[1;36mDEBUG[m]   Included: org.dom4j:dom4j:jar:2.1.3
+[[1;36mDEBUG[m]   Included: org.apache.maven.shared:maven-common-artifact-filters:jar:3.0.0
+[[1;36mDEBUG[m]   Included: org.sonatype.sisu:sisu-inject-bean:jar:1.4.2
+[[1;36mDEBUG[m]   Included: org.sonatype.sisu:sisu-guice:jar:noaop:2.1.7
+[[1;36mDEBUG[m]   Included: org.apache.maven.shared:maven-shared-utils:jar:3.0.0
+[[1;36mDEBUG[m]   Included: commons-io:commons-io:jar:2.4
+[[1;36mDEBUG[m]   Included: com.google.code.findbugs:jsr305:jar:2.0.1
+[[1;36mDEBUG[m]   Included: org.apache.maven.plugins:maven-antrun-plugin:jar:1.8
+[[1;36mDEBUG[m] Configuring mojo com.carrotsearch.randomizedtesting:junit4-maven-plugin:2.8.1:junit4 from plugin realm ClassRealm[plugin>com.carrotsearch.randomizedtesting:junit4-maven-plugin:2.8.1, parent: jdk.internal.loader.ClassLoaders$AppClassLoader@277050dc]
+[[1;36mDEBUG[m] Configuring mojo 'com.carrotsearch.randomizedtesting:junit4-maven-plugin:2.8.1:junit4' with basic configurator -->
+[[1;36mDEBUG[m]   (f) classesDirectory = /usr/local/programming/fscrawler/settings/target/classes
+[[1;36mDEBUG[m]   (f) dir = /usr/local/programming/fscrawler/settings/target
+[[1;36mDEBUG[m]   (f) dynamicAssignmentRatio = 0.25
+[[1;36mDEBUG[m]   (f) excludes = [**/*$*]
+[[1;36mDEBUG[m]   (f) haltOnFailure = true
+[[1;36mDEBUG[m]   (f) heartbeat = 10
+[[1;36mDEBUG[m]   (f) ifNoTests = warn
+[[1;36mDEBUG[m]   (f) includes = [**/*Test.class]
+[[1;36mDEBUG[m]   (f) isolateWorkingDirectories = true
+[[1;36mDEBUG[m]   (f) junitArtifactName = junit:junit
+[[1;36mDEBUG[m]   (f) jvm = java
+[[1;36mDEBUG[m]   (f) jvmOutputAction = pipe,ignore
+[[1;36mDEBUG[m]   (f) leaveTemporary = false
+[[1;36mDEBUG[m]   (f) listeners = <listeners><report-text showStatusError="true" showStatusFailure="true" showOutput="onError" showSuiteSummary="false" showStackTraces="true" showStatusOk="false" showStatusIgnored="true" showThrowable="true"/>
+</listeners>
+
+[[1;36mDEBUG[m]   (f) onNonEmptyWorkDirectory = fail
+[[1;36mDEBUG[m]   (f) packaging = jar
+[[1;36mDEBUG[m]   (f) parallelism = auto
+[[1;36mDEBUG[m]   (f) pluginArtifactMap = {com.carrotsearch.randomizedtesting:junit4-maven-plugin=com.carrotsearch.randomizedtesting:junit4-maven-plugin:maven-plugin:2.8.1:, com.carrotsearch.randomizedtesting:junit4-ant=com.carrotsearch.randomizedtesting:junit4-ant:jar:2.8.1:compile, com.carrotsearch.randomizedtesting:randomizedtesting-runner=com.carrotsearch.randomizedtesting:randomizedtesting-runner:jar:2.8.1:compile, junit:junit=junit:junit:jar:4.13.1:compile, org.hamcrest:hamcrest-core=org.hamcrest:hamcrest-core:jar:1.3:compile, org.apache.maven:maven-plugin-api=org.apache.maven:maven-plugin-api:jar:3.2.5:compile, org.apache.maven:maven-model=org.apache.maven:maven-model:jar:3.2.5:compile, org.eclipse.sisu:org.eclipse.sisu.plexus=org.eclipse.sisu:org.eclipse.sisu.plexus:jar:0.3.0.M1:compile, javax.enterprise:cdi-api=javax.enterprise:cdi-api:jar:1.0:compile, javax.annotation:jsr250-api=javax.annotation:jsr250-api:jar:1.0:compile, org.eclipse.sisu:org.eclipse.sisu.inject=org.eclipse.sisu:org.eclipse.sisu.inject:jar:0.3.0.M1:compile, org.apache.maven:maven-core=org.apache.maven:maven-core:jar:3.2.5:compile, org.apache.maven:maven-settings=org.apache.maven:maven-settings:jar:3.2.5:compile, org.apache.maven:maven-settings-builder=org.apache.maven:maven-settings-builder:jar:3.2.5:compile, org.apache.maven:maven-repository-metadata=org.apache.maven:maven-repository-metadata:jar:3.2.5:compile, org.apache.maven:maven-model-builder=org.apache.maven:maven-model-builder:jar:3.2.5:compile, org.apache.maven:maven-aether-provider=org.apache.maven:maven-aether-provider:jar:3.2.5:compile, org.eclipse.aether:aether-spi=org.eclipse.aether:aether-spi:jar:1.0.0.v20140518:compile, org.eclipse.aether:aether-impl=org.eclipse.aether:aether-impl:jar:1.0.0.v20140518:compile, org.eclipse.aether:aether-api=org.eclipse.aether:aether-api:jar:1.0.0.v20140518:compile, org.eclipse.aether:aether-util=org.eclipse.aether:aether-util:jar:1.0.0.v20140518:compile, org.sonatype.sisu:sisu-guice=org.sonatype.sisu:sisu-guice:jar:noaop:2.1.7:compile, javax.inject:javax.inject=javax.inject:javax.inject:jar:1:compile, aopalliance:aopalliance=aopalliance:aopalliance:jar:1.0:compile, com.google.guava:guava=com.google.guava:guava:jar:25.1-jre:compile, org.checkerframework:checker-qual=org.checkerframework:checker-qual:jar:2.0.0:compile, org.codehaus.plexus:plexus-interpolation=org.codehaus.plexus:plexus-interpolation:jar:1.21:compile, org.codehaus.plexus:plexus-utils=org.codehaus.plexus:plexus-utils:jar:3.0.20:compile, org.codehaus.plexus:plexus-classworlds=org.codehaus.plexus:plexus-classworlds:jar:2.5.2:compile, org.codehaus.plexus:plexus-component-annotations=org.codehaus.plexus:plexus-component-annotations:jar:1.5.5:compile, org.sonatype.plexus:plexus-sec-dispatcher=org.sonatype.plexus:plexus-sec-dispatcher:jar:1.3:compile, org.sonatype.plexus:plexus-cipher=org.sonatype.plexus:plexus-cipher:jar:1.4:compile, org.apache.maven:maven-artifact=org.apache.maven:maven-artifact:jar:3.2.5:compile, org.apache.maven:maven-compat=org.apache.maven:maven-compat:jar:3.2.5:compile, org.apache.maven.wagon:wagon-provider-api=org.apache.maven.wagon:wagon-provider-api:jar:2.8:compile, org.apache.ant:ant=org.apache.ant:ant:jar:1.10.11:compile, org.apache.ant:ant-launcher=org.apache.ant:ant-launcher:jar:1.10.11:compile, org.apache.ant:ant-junit=org.apache.ant:ant-junit:jar:1.10.11:compile, org.dom4j:dom4j=org.dom4j:dom4j:jar:2.1.3:compile, org.apache.maven.shared:maven-common-artifact-filters=org.apache.maven.shared:maven-common-artifact-filters:jar:3.0.0:compile, org.sonatype.sisu:sisu-inject-plexus=org.sonatype.sisu:sisu-inject-plexus:jar:1.4.2:compile, org.sonatype.sisu:sisu-inject-bean=org.sonatype.sisu:sisu-inject-bean:jar:1.4.2:compile, org.apache.maven.shared:maven-shared-utils=org.apache.maven.shared:maven-shared-utils:jar:3.0.0:compile, commons-io:commons-io=commons-io:commons-io:jar:2.4:compile, com.google.code.findbugs:jsr305=com.google.code.findbugs:jsr305:jar:2.0.1:compile, org.apache.maven.plugins:maven-antrun-plugin=org.apache.maven.plugins:maven-antrun-plugin:jar:1.8:compile}
+[[1;36mDEBUG[m]   (f) printSummary = true
+[[1;36mDEBUG[m]   (f) project = MavenProject: fr.pilato.elasticsearch.crawler:fscrawler-settings:2.10-SNAPSHOT @ /usr/local/programming/fscrawler/settings/pom.xml
+[[1;36mDEBUG[m]   (f) projectArtifactMap = {fr.pilato.elasticsearch.crawler:fscrawler-framework=fr.pilato.elasticsearch.crawler:fscrawler-framework:jar:2.10-SNAPSHOT:compile, commons-io:commons-io=commons-io:commons-io:jar:2.13.0:compile, com.fasterxml.jackson.core:jackson-core=com.fasterxml.jackson.core:jackson-core:jar:2.15.2:compile, com.fasterxml.jackson.core:jackson-databind=com.fasterxml.jackson.core:jackson-databind:jar:2.15.2:compile, com.fasterxml.jackson.datatype:jackson-datatype-jsr310=com.fasterxml.jackson.datatype:jackson-datatype-jsr310:jar:2.15.2:compile, com.fasterxml.jackson.dataformat:jackson-dataformat-xml=com.fasterxml.jackson.dataformat:jackson-dataformat-xml:jar:2.15.2:compile, org.codehaus.woodstox:stax2-api=org.codehaus.woodstox:stax2-api:jar:4.2.1:compile, com.fasterxml.woodstox:woodstox-core=com.fasterxml.woodstox:woodstox-core:jar:6.5.1:compile, com.fasterxml.jackson.dataformat:jackson-dataformat-yaml=com.fasterxml.jackson.dataformat:jackson-dataformat-yaml:jar:2.15.2:compile, org.yaml:snakeyaml=org.yaml:snakeyaml:jar:2.0:compile, com.fasterxml.jackson.core:jackson-annotations=com.fasterxml.jackson.core:jackson-annotations:jar:2.15.2:compile, com.jayway.jsonpath:json-path=com.jayway.jsonpath:json-path:jar:2.8.0:compile, net.minidev:json-smart=net.minidev:json-smart:jar:2.5.0:runtime, net.minidev:accessors-smart=net.minidev:accessors-smart:jar:2.5.0:runtime, org.ow2.asm:asm=org.ow2.asm:asm:jar:9.5:runtime, org.slf4j:slf4j-api=org.slf4j:slf4j-api:jar:2.0.7:compile, org.apache.logging.log4j:log4j-core=org.apache.logging.log4j:log4j-core:jar:2.20.0:compile, org.apache.logging.log4j:log4j-api=org.apache.logging.log4j:log4j-api:jar:2.20.0:compile, org.apache.logging.log4j:log4j-1.2-api=org.apache.logging.log4j:log4j-1.2-api:jar:2.20.0:compile, org.apache.logging.log4j:log4j-slf4j-impl=org.apache.logging.log4j:log4j-slf4j-impl:jar:2.20.0:compile, org.apache.logging.log4j:log4j-jcl=org.apache.logging.log4j:log4j-jcl:jar:2.20.0:compile, commons-logging:commons-logging=commons-logging:commons-logging:jar:1.2:compile, org.apache.logging.log4j:log4j-jul=org.apache.logging.log4j:log4j-jul:jar:2.20.0:compile, org.fusesource.jansi:jansi=org.fusesource.jansi:jansi:jar:2.4.0:compile, fr.pilato.elasticsearch.crawler:fscrawler-test-framework=fr.pilato.elasticsearch.crawler:fscrawler-test-framework:jar:2.10-SNAPSHOT:test, org.hamcrest:hamcrest-all=org.hamcrest:hamcrest-all:jar:1.3:test, junit:junit=junit:junit:jar:4.13.2:test, org.hamcrest:hamcrest-core=org.hamcrest:hamcrest-core:jar:1.3:test, com.carrotsearch.randomizedtesting:randomizedtesting-runner=com.carrotsearch.randomizedtesting:randomizedtesting-runner:jar:2.8.1:test}
+[[1;36mDEBUG[m]   (f) seed = 
+[[1;36mDEBUG[m]   (f) session = org.apache.maven.execution.MavenSession@75308740
+[[1;36mDEBUG[m]   (f) shuffleOnForkedJvm = true
+[[1;36mDEBUG[m]   (f) shuffleOnSlave = true
+[[1;36mDEBUG[m]   (f) skipTests = false
+[[1;36mDEBUG[m]   (f) surefireReportsDirectory = /usr/local/programming/fscrawler/settings/target/surefire-reports
+[[1;36mDEBUG[m]   (f) sysouts = false
+[[1;36mDEBUG[m]   (f) systemProperties = {arg.common=arg.common, java.awt.headless=true, java.util.logging.manager=org.apache.logging.log4j.jul.LogManager, sun.net.http.allowRestrictedHeaders=true, tests.cluster.cloud_id=null, tests.cluster.pass=changeme, tests.cluster.url=null, tests.cluster.user=elastic, tests.locale=random, tests.rest.port=8080, tests.timeoutSuite=600000, tests.timezone=random, tests.workplace.pass=changeme, tests.workplace.url=null, tests.workplace.user=elastic}
+[[1;36mDEBUG[m]   (f) tempDir = /usr/local/programming/fscrawler/settings/target
+[[1;36mDEBUG[m]   (f) testClassesDirectory = /usr/local/programming/fscrawler/settings/target/test-classes
+[[1;36mDEBUG[m]   (f) uniqueSuiteNames = true
+[[1;36mDEBUG[m] -- end configuration --
+[[1;36mDEBUG[m] dummy:dummy:jar:1.0 (selected for null)
+[[1;36mDEBUG[m]   com.carrotsearch.randomizedtesting:junit4-ant:jar:2.8.1:compile (selected for compile)
+[[1;36mDEBUG[m] dummy:dummy:jar:1.0 (selected for null)
+[[1;36mDEBUG[m]   junit:junit:jar:4.13.2:test (selected for test)
+[[1;36mDEBUG[m]     org.hamcrest:hamcrest-core:jar:1.3:test (selected for test)
+[[1;36mDEBUG[m] Adding reference: ant.projectHelper
+[[1;36mDEBUG[m] Adding reference: ant.parsing.context
+[[1;36mDEBUG[m] Adding reference: ant.targets
+[[1;36mDEBUG[m] parsing buildfile /usr/local/programming/fscrawler/settings/target/junit4-ant-10716282228648292917.xml with URI = file:/usr/local/programming/fscrawler/settings/target/junit4-ant-10716282228648292917.xml
+[[1;36mDEBUG[m] Setting ro project property: ant.project.name -> junit4-maven-synthetic
+[[1;36mDEBUG[m] Adding reference: junit4-maven-synthetic
+[[1;36mDEBUG[m] Setting ro project property: ant.project.default-target -> __default__
+[[1;36mDEBUG[m] Setting ro project property: ant.file.junit4-maven-synthetic -> /usr/local/programming/fscrawler/settings/target/junit4-ant-10716282228648292917.xml
+[[1;36mDEBUG[m] Setting ro project property: ant.file.type.junit4-maven-synthetic -> file
+[[1;36mDEBUG[m] Project base dir set to: /usr/local/programming/fscrawler/settings/target
+[[1;36mDEBUG[m]  +Target: 
+[[1;36mDEBUG[m]  +Target: __default__
+[[1;36mDEBUG[m] Adding reference: ant.LocalProperties
+[[1;36mDEBUG[m] parsing buildfile jar:file:/home/chris/.m2/repository/org/apache/ant/ant/1.10.11/ant-1.10.11.jar!/org/apache/tools/ant/antlib.xml with URI = jar:file:/home/chris/.m2/repository/org/apache/ant/ant/1.10.11/ant-1.10.11.jar!/org/apache/tools/ant/antlib.xml from a zip file
+[[1;36mDEBUG[m] parsing buildfile jar:file:/home/chris/.m2/repository/com/carrotsearch/randomizedtesting/junit4-ant/2.8.1/junit4-ant-2.8.1.jar!/com/carrotsearch/junit4/antlib.xml with URI = jar:file:/home/chris/.m2/repository/com/carrotsearch/randomizedtesting/junit4-ant/2.8.1/junit4-ant-2.8.1.jar!/com/carrotsearch/junit4/antlib.xml from a zip file
+[[1;36mDEBUG[m] Class com.carrotsearch.ant.tasks.junit4.JUnit4 loaded from parent loader (parentFirst)
+[[1;36mDEBUG[m]  +Datatype junit4 com.carrotsearch.ant.tasks.junit4.JUnit4
+[[1;36mDEBUG[m] Class com.carrotsearch.ant.tasks.junit4.balancers.MergeHints loaded from parent loader (parentFirst)
+[[1;36mDEBUG[m]  +Datatype mergehints com.carrotsearch.ant.tasks.junit4.balancers.MergeHints
+[[1;36mDEBUG[m] Class com.carrotsearch.ant.tasks.junit4.balancers.TopHints loaded from parent loader (parentFirst)
+[[1;36mDEBUG[m]  +Datatype tophints com.carrotsearch.ant.tasks.junit4.balancers.TopHints
+[[1;36mDEBUG[m] Class com.carrotsearch.ant.tasks.junit4.PickSeedTask loaded from parent loader (parentFirst)
+[[1;36mDEBUG[m]  +Datatype pickseed com.carrotsearch.ant.tasks.junit4.PickSeedTask
+[[1;36mDEBUG[m] Class com.carrotsearch.ant.tasks.junit4.PickFromListTask loaded from parent loader (parentFirst)
+[[1;36mDEBUG[m]  +Datatype pickfromlist com.carrotsearch.ant.tasks.junit4.PickFromListTask
+[[1;36mDEBUG[m] Class com.carrotsearch.ant.tasks.junit4.balancers.ExecutionTimeBalancer loaded from parent loader (parentFirst)
+[[1;36mDEBUG[m]  +Datatype execution-times com.carrotsearch.ant.tasks.junit4.balancers.ExecutionTimeBalancer
+[[1;36mDEBUG[m] Class com.carrotsearch.ant.tasks.junit4.listeners.TextReport loaded from parent loader (parentFirst)
+[[1;36mDEBUG[m]  +Datatype report-console com.carrotsearch.ant.tasks.junit4.listeners.TextReport
+[[1;36mDEBUG[m]  +Datatype report-text com.carrotsearch.ant.tasks.junit4.listeners.TextReport
+[[1;36mDEBUG[m] Class com.carrotsearch.ant.tasks.junit4.listeners.antxml.AntXmlReport loaded from parent loader (parentFirst)
+[[1;36mDEBUG[m]  +Datatype report-ant-xml com.carrotsearch.ant.tasks.junit4.listeners.antxml.AntXmlReport
+[[1;36mDEBUG[m] Class com.carrotsearch.ant.tasks.junit4.listeners.json.JsonReport loaded from parent loader (parentFirst)
+[[1;36mDEBUG[m]  +Datatype report-json com.carrotsearch.ant.tasks.junit4.listeners.json.JsonReport
+[[1;36mDEBUG[m] Class com.carrotsearch.ant.tasks.junit4.listeners.ExecutionTimesReport loaded from parent loader (parentFirst)
+[[1;36mDEBUG[m]  +Datatype report-execution-times com.carrotsearch.ant.tasks.junit4.listeners.ExecutionTimesReport
+[[1;36mDEBUG[m] Class com.carrotsearch.ant.tasks.junit4.runlisteners.RunListenerClass loaded from parent loader (parentFirst)
+[[1;36mDEBUG[m]  +Datatype run-listener com.carrotsearch.ant.tasks.junit4.runlisteners.RunListenerClass
+[[1;36mDEBUG[m] Class com.carrotsearch.ant.tasks.junit4.DuplicateResources loaded from parent loader (parentFirst)
+[[1;36mDEBUG[m]  +Datatype duplicate com.carrotsearch.ant.tasks.junit4.DuplicateResources
+[[1;36mDEBUG[m] Class com.carrotsearch.ant.tasks.junit4.listeners.StackTraceFilter loaded from parent loader (parentFirst)
+[[1;36mDEBUG[m]  +Datatype filtertrace com.carrotsearch.ant.tasks.junit4.listeners.StackTraceFilter
+[[1;36mDEBUG[m] parsing buildfile jar:file:/home/chris/.m2/repository/com/carrotsearch/randomizedtesting/junit4-ant/2.8.1/junit4-ant-2.8.1.jar!/com/carrotsearch/junit4/antlib.xml with URI = jar:file:/home/chris/.m2/repository/com/carrotsearch/randomizedtesting/junit4-ant/2.8.1/junit4-ant-2.8.1.jar!/com/carrotsearch/junit4/antlib.xml from a zip file
+[[1;36mDEBUG[m] Build sequence for target(s) `__default__' is [__default__]
+[[1;36mDEBUG[m] Complete build sequence is [__default__, ]
+[[1;34mINFO[m] <JUnit4> says ahoj! Main seed: 4CBB95CD93BDFF1B
+[[1;36mDEBUG[m] fileset: Setup scanner in dir /usr/local/programming/fscrawler/settings/target/test-classes with patternSet{ includes: [**/*Test.class] excludes: [**/*$*] }
+[[1;36mDEBUG[m] Test class parsed: fr/pilato/elasticsearch/crawler/fs/settings/FsCopyResourcesTest.class as fr.pilato.elasticsearch.crawler.fs.settings.FsCopyResourcesTest
+[[1;36mDEBUG[m] Test class parsed: fr/pilato/elasticsearch/crawler/fs/settings/FsCrawlerValidatorTest.class as fr.pilato.elasticsearch.crawler.fs.settings.FsCrawlerValidatorTest
+[[1;36mDEBUG[m] Test class parsed: fr/pilato/elasticsearch/crawler/fs/settings/FsIncludesExcludesTest.class as fr.pilato.elasticsearch.crawler.fs.settings.FsIncludesExcludesTest
+[[1;36mDEBUG[m] Test class parsed: fr/pilato/elasticsearch/crawler/fs/settings/FsMappingTest.class as fr.pilato.elasticsearch.crawler.fs.settings.FsMappingTest
+[[1;36mDEBUG[m] Test class parsed: fr/pilato/elasticsearch/crawler/fs/settings/FsMatchContentTest.class as fr.pilato.elasticsearch.crawler.fs.settings.FsMatchContentTest
+[[1;36mDEBUG[m] Test class parsed: fr/pilato/elasticsearch/crawler/fs/settings/FsMatchFilesTest.class as fr.pilato.elasticsearch.crawler.fs.settings.FsMatchFilesTest
+[[1;36mDEBUG[m] Test class parsed: fr/pilato/elasticsearch/crawler/fs/settings/FsSettingsParserTest.class as fr.pilato.elasticsearch.crawler.fs.settings.FsSettingsParserTest
+[[1;36mDEBUG[m] Test class parsed: fr/pilato/elasticsearch/crawler/fs/settings/FsSettingsTest.class as fr.pilato.elasticsearch.crawler.fs.settings.FsSettingsTest
+[[1;36mDEBUG[m] Test class parsed: fr/pilato/elasticsearch/crawler/fs/settings/FsTest.class as fr.pilato.elasticsearch.crawler.fs.settings.FsTest
+[[1;36mDEBUG[m] Assignment hint: J0  (cost     0) fr.pilato.elasticsearch.crawler.fs.settings.FsCopyResourcesTest (by RoundRobinBalancer)
+[[1;36mDEBUG[m] Assignment hint: J1  (cost     0) fr.pilato.elasticsearch.crawler.fs.settings.FsCrawlerValidatorTest (by RoundRobinBalancer)
+[[1;36mDEBUG[m] Assignment hint: J2  (cost     0) fr.pilato.elasticsearch.crawler.fs.settings.FsIncludesExcludesTest (by RoundRobinBalancer)
+[[1;36mDEBUG[m] Assignment hint: J3  (cost     0) fr.pilato.elasticsearch.crawler.fs.settings.FsMappingTest (by RoundRobinBalancer)
+[[1;36mDEBUG[m] Assignment hint: J0  (cost     0) fr.pilato.elasticsearch.crawler.fs.settings.FsMatchContentTest (by RoundRobinBalancer)
+[[1;36mDEBUG[m] Assignment hint: J1  (cost     0) fr.pilato.elasticsearch.crawler.fs.settings.FsMatchFilesTest (by RoundRobinBalancer)
+[[1;36mDEBUG[m] Assignment hint: J2  (cost     0) fr.pilato.elasticsearch.crawler.fs.settings.FsSettingsParserTest (by RoundRobinBalancer)
+[[1;36mDEBUG[m] Assignment hint: J3  (cost     0) fr.pilato.elasticsearch.crawler.fs.settings.FsSettingsTest (by RoundRobinBalancer)
+[[1;36mDEBUG[m] Assignment hint: J0  (cost     0) fr.pilato.elasticsearch.crawler.fs.settings.FsTest (by RoundRobinBalancer)
+[[1;36mDEBUG[m] Forked JVM J0 assignments (after shuffle):
+[[1;36mDEBUG[m]   fr.pilato.elasticsearch.crawler.fs.settings.FsCopyResourcesTest
+[[1;36mDEBUG[m]   fr.pilato.elasticsearch.crawler.fs.settings.FsMatchContentTest
+[[1;36mDEBUG[m]   fr.pilato.elasticsearch.crawler.fs.settings.FsTest
+[[1;36mDEBUG[m] Forked JVM J1 assignments (after shuffle):
+[[1;36mDEBUG[m]   fr.pilato.elasticsearch.crawler.fs.settings.FsCrawlerValidatorTest
+[[1;36mDEBUG[m]   fr.pilato.elasticsearch.crawler.fs.settings.FsMatchFilesTest
+[[1;36mDEBUG[m] Forked JVM J2 assignments (after shuffle):
+[[1;36mDEBUG[m]   fr.pilato.elasticsearch.crawler.fs.settings.FsIncludesExcludesTest
+[[1;36mDEBUG[m]   fr.pilato.elasticsearch.crawler.fs.settings.FsSettingsParserTest
+[[1;36mDEBUG[m] Forked JVM J3 assignments (after shuffle):
+[[1;36mDEBUG[m]   fr.pilato.elasticsearch.crawler.fs.settings.FsMappingTest
+[[1;36mDEBUG[m]   fr.pilato.elasticsearch.crawler.fs.settings.FsSettingsTest
+[[1;36mDEBUG[m] Stealing queue:
+Executing 9 suites with 4 JVMs.
+
+[[1;36mDEBUG[m] Test class names:
+fr.pilato.elasticsearch.crawler.fs.settings.FsCopyResourcesTest
+fr.pilato.elasticsearch.crawler.fs.settings.FsMatchContentTest
+fr.pilato.elasticsearch.crawler.fs.settings.FsTest
+[[1;36mDEBUG[m] Test class names:
+fr.pilato.elasticsearch.crawler.fs.settings.FsIncludesExcludesTest
+fr.pilato.elasticsearch.crawler.fs.settings.FsSettingsParserTest
+[[1;36mDEBUG[m] Test class names:
+fr.pilato.elasticsearch.crawler.fs.settings.FsCrawlerValidatorTest
+fr.pilato.elasticsearch.crawler.fs.settings.FsMatchFilesTest
+[[1;36mDEBUG[m] Test class names:
+fr.pilato.elasticsearch.crawler.fs.settings.FsMappingTest
+fr.pilato.elasticsearch.crawler.fs.settings.FsSettingsTest
+[[1;36mDEBUG[m] Forked child JVM at '/usr/local/programming/fscrawler/settings/target/J2', command (may need escape sequences for your shell):
+java -Dtests.prefix=tests -Dtests.seed=4CBB95CD93BDFF1B -Darg.common=arg.common -Djava.awt.headless=true -Djava.util.logging.manager=org.apache.logging.log4j.jul.LogManager -Dsun.net.http.allowRestrictedHeaders=true -Dtests.cluster.cloud_id= -Dtests.cluster.pass=changeme -Dtests.cluster.url= -Dtests.cluster.user=elastic -Dtests.locale=random -Dtests.rest.port=8080 -Dtests.timeoutSuite=600000 -Dtests.timezone=random -Dtests.workplace.pass=changeme -Dtests.workplace.url= -Dtests.workplace.user=elastic -Djunit4.childvm.cwd=/usr/local/programming/fscrawler/settings/target/J2 -Djunit4.tempDir=/usr/local/programming/fscrawler/settings/target -Djunit4.childvm.id=2 -Djunit4.childvm.count=4 -classpath /usr/local/programming/fscrawler/settings/target/test-classes:/usr/local/programming/fscrawler/settings/target/classes:/home/chris/.m2/repository/fr/pilato/elasticsearch/crawler/fscrawler-framework/2.10-SNAPSHOT/fscrawler-framework-2.10-SNAPSHOT.jar:/home/chris/.m2/repository/commons-io/commons-io/2.13.0/commons-io-2.13.0.jar:/home/chris/.m2/repository/com/fasterxml/jackson/core/jackson-core/2.15.2/jackson-core-2.15.2.jar:/home/chris/.m2/repository/com/fasterxml/jackson/core/jackson-databind/2.15.2/jackson-databind-2.15.2.jar:/home/chris/.m2/repository/com/fasterxml/jackson/datatype/jackson-datatype-jsr310/2.15.2/jackson-datatype-jsr310-2.15.2.jar:/home/chris/.m2/repository/com/fasterxml/jackson/dataformat/jackson-dataformat-xml/2.15.2/jackson-dataformat-xml-2.15.2.jar:/home/chris/.m2/repository/org/codehaus/woodstox/stax2-api/4.2.1/stax2-api-4.2.1.jar:/home/chris/.m2/repository/com/fasterxml/woodstox/woodstox-core/6.5.1/woodstox-core-6.5.1.jar:/home/chris/.m2/repository/com/fasterxml/jackson/dataformat/jackson-dataformat-yaml/2.15.2/jackson-dataformat-yaml-2.15.2.jar:/home/chris/.m2/repository/org/yaml/snakeyaml/2.0/snakeyaml-2.0.jar:/home/chris/.m2/repository/com/fasterxml/jackson/core/jackson-annotations/2.15.2/jackson-annotations-2.15.2.jar:/home/chris/.m2/repository/com/jayway/jsonpath/json-path/2.8.0/json-path-2.8.0.jar:/home/chris/.m2/repository/net/minidev/json-smart/2.5.0/json-smart-2.5.0.jar:/home/chris/.m2/repository/net/minidev/accessors-smart/2.5.0/accessors-smart-2.5.0.jar:/home/chris/.m2/repository/org/ow2/asm/asm/9.5/asm-9.5.jar:/home/chris/.m2/repository/org/slf4j/slf4j-api/2.0.7/slf4j-api-2.0.7.jar:/home/chris/.m2/repository/org/apache/logging/log4j/log4j-core/2.20.0/log4j-core-2.20.0.jar:/home/chris/.m2/repository/org/apache/logging/log4j/log4j-api/2.20.0/log4j-api-2.20.0.jar:/home/chris/.m2/repository/org/apache/logging/log4j/log4j-1.2-api/2.20.0/log4j-1.2-api-2.20.0.jar:/home/chris/.m2/repository/org/apache/logging/log4j/log4j-slf4j-impl/2.20.0/log4j-slf4j-impl-2.20.0.jar:/home/chris/.m2/repository/org/apache/logging/log4j/log4j-jcl/2.20.0/log4j-jcl-2.20.0.jar:/home/chris/.m2/repository/commons-logging/commons-logging/1.2/commons-logging-1.2.jar:/home/chris/.m2/repository/org/apache/logging/log4j/log4j-jul/2.20.0/log4j-jul-2.20.0.jar:/home/chris/.m2/repository/org/fusesource/jansi/jansi/2.4.0/jansi-2.4.0.jar:/home/chris/.m2/repository/fr/pilato/elasticsearch/crawler/fscrawler-test-framework/2.10-SNAPSHOT/fscrawler-test-framework-2.10-SNAPSHOT.jar:/home/chris/.m2/repository/org/hamcrest/hamcrest-all/1.3/hamcrest-all-1.3.jar:/home/chris/.m2/repository/junit/junit/4.13.2/junit-4.13.2.jar:/home/chris/.m2/repository/org/hamcrest/hamcrest-core/1.3/hamcrest-core-1.3.jar:/home/chris/.m2/repository/com/carrotsearch/randomizedtesting/randomizedtesting-runner/2.8.1/randomizedtesting-runner-2.8.1.jar:/home/chris/.m2/repository/com/carrotsearch/randomizedtesting/junit4-ant/2.8.1/junit4-ant-2.8.1.jar com.carrotsearch.ant.tasks.junit4.forked.ForkedMainSafe -eventsfile /usr/local/programming/fscrawler/settings/target/junit4-J2-20230724_112254_5436235190005278339345.events @/usr/local/programming/fscrawler/settings/target/junit4-J2-20230724_112254_543495228089732095647.suites -stdin
+[[1;36mDEBUG[m] Forked child JVM at '/usr/local/programming/fscrawler/settings/target/J3', command (may need escape sequences for your shell):
+java -Dtests.prefix=tests -Dtests.seed=4CBB95CD93BDFF1B -Darg.common=arg.common -Djava.awt.headless=true -Djava.util.logging.manager=org.apache.logging.log4j.jul.LogManager -Dsun.net.http.allowRestrictedHeaders=true -Dtests.cluster.cloud_id= -Dtests.cluster.pass=changeme -Dtests.cluster.url= -Dtests.cluster.user=elastic -Dtests.locale=random -Dtests.rest.port=8080 -Dtests.timeoutSuite=600000 -Dtests.timezone=random -Dtests.workplace.pass=changeme -Dtests.workplace.url= -Dtests.workplace.user=elastic -Djunit4.childvm.cwd=/usr/local/programming/fscrawler/settings/target/J3 -Djunit4.tempDir=/usr/local/programming/fscrawler/settings/target -Djunit4.childvm.id=3 -Djunit4.childvm.count=4 -classpath /usr/local/programming/fscrawler/settings/target/test-classes:/usr/local/programming/fscrawler/settings/target/classes:/home/chris/.m2/repository/fr/pilato/elasticsearch/crawler/fscrawler-framework/2.10-SNAPSHOT/fscrawler-framework-2.10-SNAPSHOT.jar:/home/chris/.m2/repository/commons-io/commons-io/2.13.0/commons-io-2.13.0.jar:/home/chris/.m2/repository/com/fasterxml/jackson/core/jackson-core/2.15.2/jackson-core-2.15.2.jar:/home/chris/.m2/repository/com/fasterxml/jackson/core/jackson-databind/2.15.2/jackson-databind-2.15.2.jar:/home/chris/.m2/repository/com/fasterxml/jackson/datatype/jackson-datatype-jsr310/2.15.2/jackson-datatype-jsr310-2.15.2.jar:/home/chris/.m2/repository/com/fasterxml/jackson/dataformat/jackson-dataformat-xml/2.15.2/jackson-dataformat-xml-2.15.2.jar:/home/chris/.m2/repository/org/codehaus/woodstox/stax2-api/4.2.1/stax2-api-4.2.1.jar:/home/chris/.m2/repository/com/fasterxml/woodstox/woodstox-core/6.5.1/woodstox-core-6.5.1.jar:/home/chris/.m2/repository/com/fasterxml/jackson/dataformat/jackson-dataformat-yaml/2.15.2/jackson-dataformat-yaml-2.15.2.jar:/home/chris/.m2/repository/org/yaml/snakeyaml/2.0/snakeyaml-2.0.jar:/home/chris/.m2/repository/com/fasterxml/jackson/core/jackson-annotations/2.15.2/jackson-annotations-2.15.2.jar:/home/chris/.m2/repository/com/jayway/jsonpath/json-path/2.8.0/json-path-2.8.0.jar:/home/chris/.m2/repository/net/minidev/json-smart/2.5.0/json-smart-2.5.0.jar:/home/chris/.m2/repository/net/minidev/accessors-smart/2.5.0/accessors-smart-2.5.0.jar:/home/chris/.m2/repository/org/ow2/asm/asm/9.5/asm-9.5.jar:/home/chris/.m2/repository/org/slf4j/slf4j-api/2.0.7/slf4j-api-2.0.7.jar:/home/chris/.m2/repository/org/apache/logging/log4j/log4j-core/2.20.0/log4j-core-2.20.0.jar:/home/chris/.m2/repository/org/apache/logging/log4j/log4j-api/2.20.0/log4j-api-2.20.0.jar:/home/chris/.m2/repository/org/apache/logging/log4j/log4j-1.2-api/2.20.0/log4j-1.2-api-2.20.0.jar:/home/chris/.m2/repository/org/apache/logging/log4j/log4j-slf4j-impl/2.20.0/log4j-slf4j-impl-2.20.0.jar:/home/chris/.m2/repository/org/apache/logging/log4j/log4j-jcl/2.20.0/log4j-jcl-2.20.0.jar:/home/chris/.m2/repository/commons-logging/commons-logging/1.2/commons-logging-1.2.jar:/home/chris/.m2/repository/org/apache/logging/log4j/log4j-jul/2.20.0/log4j-jul-2.20.0.jar:/home/chris/.m2/repository/org/fusesource/jansi/jansi/2.4.0/jansi-2.4.0.jar:/home/chris/.m2/repository/fr/pilato/elasticsearch/crawler/fscrawler-test-framework/2.10-SNAPSHOT/fscrawler-test-framework-2.10-SNAPSHOT.jar:/home/chris/.m2/repository/org/hamcrest/hamcrest-all/1.3/hamcrest-all-1.3.jar:/home/chris/.m2/repository/junit/junit/4.13.2/junit-4.13.2.jar:/home/chris/.m2/repository/org/hamcrest/hamcrest-core/1.3/hamcrest-core-1.3.jar:/home/chris/.m2/repository/com/carrotsearch/randomizedtesting/randomizedtesting-runner/2.8.1/randomizedtesting-runner-2.8.1.jar:/home/chris/.m2/repository/com/carrotsearch/randomizedtesting/junit4-ant/2.8.1/junit4-ant-2.8.1.jar com.carrotsearch.ant.tasks.junit4.forked.ForkedMainSafe -eventsfile /usr/local/programming/fscrawler/settings/target/junit4-J3-20230724_112254_5435935317239546241774.events @/usr/local/programming/fscrawler/settings/target/junit4-J3-20230724_112254_543243558888336512554.suites -stdin
+[[1;36mDEBUG[m] Forked child JVM at '/usr/local/programming/fscrawler/settings/target/J0', command (may need escape sequences for your shell):
+java -Dtests.prefix=tests -Dtests.seed=4CBB95CD93BDFF1B -Darg.common=arg.common -Djava.awt.headless=true -Djava.util.logging.manager=org.apache.logging.log4j.jul.LogManager -Dsun.net.http.allowRestrictedHeaders=true -Dtests.cluster.cloud_id= -Dtests.cluster.pass=changeme -Dtests.cluster.url= -Dtests.cluster.user=elastic -Dtests.locale=random -Dtests.rest.port=8080 -Dtests.timeoutSuite=600000 -Dtests.timezone=random -Dtests.workplace.pass=changeme -Dtests.workplace.url= -Dtests.workplace.user=elastic -Djunit4.childvm.cwd=/usr/local/programming/fscrawler/settings/target/J0 -Djunit4.tempDir=/usr/local/programming/fscrawler/settings/target -Djunit4.childvm.id=0 -Djunit4.childvm.count=4 -classpath /usr/local/programming/fscrawler/settings/target/test-classes:/usr/local/programming/fscrawler/settings/target/classes:/home/chris/.m2/repository/fr/pilato/elasticsearch/crawler/fscrawler-framework/2.10-SNAPSHOT/fscrawler-framework-2.10-SNAPSHOT.jar:/home/chris/.m2/repository/commons-io/commons-io/2.13.0/commons-io-2.13.0.jar:/home/chris/.m2/repository/com/fasterxml/jackson/core/jackson-core/2.15.2/jackson-core-2.15.2.jar:/home/chris/.m2/repository/com/fasterxml/jackson/core/jackson-databind/2.15.2/jackson-databind-2.15.2.jar:/home/chris/.m2/repository/com/fasterxml/jackson/datatype/jackson-datatype-jsr310/2.15.2/jackson-datatype-jsr310-2.15.2.jar:/home/chris/.m2/repository/com/fasterxml/jackson/dataformat/jackson-dataformat-xml/2.15.2/jackson-dataformat-xml-2.15.2.jar:/home/chris/.m2/repository/org/codehaus/woodstox/stax2-api/4.2.1/stax2-api-4.2.1.jar:/home/chris/.m2/repository/com/fasterxml/woodstox/woodstox-core/6.5.1/woodstox-core-6.5.1.jar:/home/chris/.m2/repository/com/fasterxml/jackson/dataformat/jackson-dataformat-yaml/2.15.2/jackson-dataformat-yaml-2.15.2.jar:/home/chris/.m2/repository/org/yaml/snakeyaml/2.0/snakeyaml-2.0.jar:/home/chris/.m2/repository/com/fasterxml/jackson/core/jackson-annotations/2.15.2/jackson-annotations-2.15.2.jar:/home/chris/.m2/repository/com/jayway/jsonpath/json-path/2.8.0/json-path-2.8.0.jar:/home/chris/.m2/repository/net/minidev/json-smart/2.5.0/json-smart-2.5.0.jar:/home/chris/.m2/repository/net/minidev/accessors-smart/2.5.0/accessors-smart-2.5.0.jar:/home/chris/.m2/repository/org/ow2/asm/asm/9.5/asm-9.5.jar:/home/chris/.m2/repository/org/slf4j/slf4j-api/2.0.7/slf4j-api-2.0.7.jar:/home/chris/.m2/repository/org/apache/logging/log4j/log4j-core/2.20.0/log4j-core-2.20.0.jar:/home/chris/.m2/repository/org/apache/logging/log4j/log4j-api/2.20.0/log4j-api-2.20.0.jar:/home/chris/.m2/repository/org/apache/logging/log4j/log4j-1.2-api/2.20.0/log4j-1.2-api-2.20.0.jar:/home/chris/.m2/repository/org/apache/logging/log4j/log4j-slf4j-impl/2.20.0/log4j-slf4j-impl-2.20.0.jar:/home/chris/.m2/repository/org/apache/logging/log4j/log4j-jcl/2.20.0/log4j-jcl-2.20.0.jar:/home/chris/.m2/repository/commons-logging/commons-logging/1.2/commons-logging-1.2.jar:/home/chris/.m2/repository/org/apache/logging/log4j/log4j-jul/2.20.0/log4j-jul-2.20.0.jar:/home/chris/.m2/repository/org/fusesource/jansi/jansi/2.4.0/jansi-2.4.0.jar:/home/chris/.m2/repository/fr/pilato/elasticsearch/crawler/fscrawler-test-framework/2.10-SNAPSHOT/fscrawler-test-framework-2.10-SNAPSHOT.jar:/home/chris/.m2/repository/org/hamcrest/hamcrest-all/1.3/hamcrest-all-1.3.jar:/home/chris/.m2/repository/junit/junit/4.13.2/junit-4.13.2.jar:/home/chris/.m2/repository/org/hamcrest/hamcrest-core/1.3/hamcrest-core-1.3.jar:/home/chris/.m2/repository/com/carrotsearch/randomizedtesting/randomizedtesting-runner/2.8.1/randomizedtesting-runner-2.8.1.jar:/home/chris/.m2/repository/com/carrotsearch/randomizedtesting/junit4-ant/2.8.1/junit4-ant-2.8.1.jar com.carrotsearch.ant.tasks.junit4.forked.ForkedMainSafe -eventsfile /usr/local/programming/fscrawler/settings/target/junit4-J0-20230724_112254_54210226668165626564719.events @/usr/local/programming/fscrawler/settings/target/junit4-J0-20230724_112254_5423738807033542956542.suites -stdin
+[[1;36mDEBUG[m] Forked child JVM at '/usr/local/programming/fscrawler/settings/target/J1', command (may need escape sequences for your shell):
+java -Dtests.prefix=tests -Dtests.seed=4CBB95CD93BDFF1B -Darg.common=arg.common -Djava.awt.headless=true -Djava.util.logging.manager=org.apache.logging.log4j.jul.LogManager -Dsun.net.http.allowRestrictedHeaders=true -Dtests.cluster.cloud_id= -Dtests.cluster.pass=changeme -Dtests.cluster.url= -Dtests.cluster.user=elastic -Dtests.locale=random -Dtests.rest.port=8080 -Dtests.timeoutSuite=600000 -Dtests.timezone=random -Dtests.workplace.pass=changeme -Dtests.workplace.url= -Dtests.workplace.user=elastic -Djunit4.childvm.cwd=/usr/local/programming/fscrawler/settings/target/J1 -Djunit4.tempDir=/usr/local/programming/fscrawler/settings/target -Djunit4.childvm.id=1 -Djunit4.childvm.count=4 -classpath /usr/local/programming/fscrawler/settings/target/test-classes:/usr/local/programming/fscrawler/settings/target/classes:/home/chris/.m2/repository/fr/pilato/elasticsearch/crawler/fscrawler-framework/2.10-SNAPSHOT/fscrawler-framework-2.10-SNAPSHOT.jar:/home/chris/.m2/repository/commons-io/commons-io/2.13.0/commons-io-2.13.0.jar:/home/chris/.m2/repository/com/fasterxml/jackson/core/jackson-core/2.15.2/jackson-core-2.15.2.jar:/home/chris/.m2/repository/com/fasterxml/jackson/core/jackson-databind/2.15.2/jackson-databind-2.15.2.jar:/home/chris/.m2/repository/com/fasterxml/jackson/datatype/jackson-datatype-jsr310/2.15.2/jackson-datatype-jsr310-2.15.2.jar:/home/chris/.m2/repository/com/fasterxml/jackson/dataformat/jackson-dataformat-xml/2.15.2/jackson-dataformat-xml-2.15.2.jar:/home/chris/.m2/repository/org/codehaus/woodstox/stax2-api/4.2.1/stax2-api-4.2.1.jar:/home/chris/.m2/repository/com/fasterxml/woodstox/woodstox-core/6.5.1/woodstox-core-6.5.1.jar:/home/chris/.m2/repository/com/fasterxml/jackson/dataformat/jackson-dataformat-yaml/2.15.2/jackson-dataformat-yaml-2.15.2.jar:/home/chris/.m2/repository/org/yaml/snakeyaml/2.0/snakeyaml-2.0.jar:/home/chris/.m2/repository/com/fasterxml/jackson/core/jackson-annotations/2.15.2/jackson-annotations-2.15.2.jar:/home/chris/.m2/repository/com/jayway/jsonpath/json-path/2.8.0/json-path-2.8.0.jar:/home/chris/.m2/repository/net/minidev/json-smart/2.5.0/json-smart-2.5.0.jar:/home/chris/.m2/repository/net/minidev/accessors-smart/2.5.0/accessors-smart-2.5.0.jar:/home/chris/.m2/repository/org/ow2/asm/asm/9.5/asm-9.5.jar:/home/chris/.m2/repository/org/slf4j/slf4j-api/2.0.7/slf4j-api-2.0.7.jar:/home/chris/.m2/repository/org/apache/logging/log4j/log4j-core/2.20.0/log4j-core-2.20.0.jar:/home/chris/.m2/repository/org/apache/logging/log4j/log4j-api/2.20.0/log4j-api-2.20.0.jar:/home/chris/.m2/repository/org/apache/logging/log4j/log4j-1.2-api/2.20.0/log4j-1.2-api-2.20.0.jar:/home/chris/.m2/repository/org/apache/logging/log4j/log4j-slf4j-impl/2.20.0/log4j-slf4j-impl-2.20.0.jar:/home/chris/.m2/repository/org/apache/logging/log4j/log4j-jcl/2.20.0/log4j-jcl-2.20.0.jar:/home/chris/.m2/repository/commons-logging/commons-logging/1.2/commons-logging-1.2.jar:/home/chris/.m2/repository/org/apache/logging/log4j/log4j-jul/2.20.0/log4j-jul-2.20.0.jar:/home/chris/.m2/repository/org/fusesource/jansi/jansi/2.4.0/jansi-2.4.0.jar:/home/chris/.m2/repository/fr/pilato/elasticsearch/crawler/fscrawler-test-framework/2.10-SNAPSHOT/fscrawler-test-framework-2.10-SNAPSHOT.jar:/home/chris/.m2/repository/org/hamcrest/hamcrest-all/1.3/hamcrest-all-1.3.jar:/home/chris/.m2/repository/junit/junit/4.13.2/junit-4.13.2.jar:/home/chris/.m2/repository/org/hamcrest/hamcrest-core/1.3/hamcrest-core-1.3.jar:/home/chris/.m2/repository/com/carrotsearch/randomizedtesting/randomizedtesting-runner/2.8.1/randomizedtesting-runner-2.8.1.jar:/home/chris/.m2/repository/com/carrotsearch/randomizedtesting/junit4-ant/2.8.1/junit4-ant-2.8.1.jar com.carrotsearch.ant.tasks.junit4.forked.ForkedMainSafe -eventsfile /usr/local/programming/fscrawler/settings/target/junit4-J1-20230724_112254_5437842549665856577696.events @/usr/local/programming/fscrawler/settings/target/junit4-J1-20230724_112254_5431061093929768973578.suites -stdin
+[[1;36mDEBUG[m] Starting JVM J0
+[[1;36mDEBUG[m] Starting JVM J3
+[[1;36mDEBUG[m] Starting JVM J2
+[[1;36mDEBUG[m] Starting JVM J1
+[[1;36mDEBUG[m] Default encoding: UTF-8
+[[1;36mDEBUG[m] Default encoding: UTF-8
+[[1;36mDEBUG[m] Default encoding: UTF-8
+[[1;36mDEBUG[m] Default encoding: UTF-8
+Started J3 PID(110234@scs-dev-server).
+[[1;36mDEBUG[m] Packet received, forkedJvm#3>BOOTSTRAP
+Started J1 PID(110233@scs-dev-server).
+Started J0 PID(110232@scs-dev-server).
+[[1;36mDEBUG[m] Packet received, forkedJvm#1>BOOTSTRAP
+[[1;36mDEBUG[m] Packet received, forkedJvm#0>BOOTSTRAP
+Started J2 PID(110231@scs-dev-server).
+[[1;36mDEBUG[m] Packet received, forkedJvm#2>BOOTSTRAP
+[[1;36mDEBUG[m] Packet received, forkedJvm#0>SUITE_STARTED
+[[1;36mDEBUG[m] Packet received, forkedJvm#2>SUITE_STARTED
+[[1;36mDEBUG[m] Packet received, forkedJvm#3>SUITE_STARTED
+[[1;36mDEBUG[m] Packet received, forkedJvm#2>APPEND_STDOUT
+[[1;36mDEBUG[m] Packet received, forkedJvm#2>APPEND_STDOUT
+[[1;36mDEBUG[m] Packet received, forkedJvm#0>APPEND_STDOUT
+[[1;36mDEBUG[m] Packet received, forkedJvm#1>SUITE_STARTED
+[[1;36mDEBUG[m] Packet received, forkedJvm#0>APPEND_STDOUT
+[[1;36mDEBUG[m] Packet received, forkedJvm#2>TEST_STARTED
+[[1;36mDEBUG[m] Packet received, forkedJvm#0>TEST_STARTED
+[[1;36mDEBUG[m] Packet received, forkedJvm#0>APPEND_STDOUT
+[[1;36mDEBUG[m] Packet received, forkedJvm#2>TEST_FINISHED
+[[1;36mDEBUG[m] Packet received, forkedJvm#0>APPEND_STDOUT
+[[1;36mDEBUG[m] Packet received, forkedJvm#2>TEST_STARTED
+[[1;36mDEBUG[m] Packet received, forkedJvm#0>APPEND_STDOUT
+[[1;36mDEBUG[m] Packet received, forkedJvm#0>APPEND_STDOUT
+[[1;36mDEBUG[m] Packet received, forkedJvm#2>TEST_FINISHED
+[[1;36mDEBUG[m] Packet received, forkedJvm#2>TEST_STARTED
+[[1;36mDEBUG[m] Packet received, forkedJvm#0>APPEND_STDOUT
+[[1;36mDEBUG[m] Packet received, forkedJvm#0>APPEND_STDOUT
+[[1;36mDEBUG[m] Packet received, forkedJvm#0>APPEND_STDOUT
+[[1;36mDEBUG[m] Packet received, forkedJvm#0>APPEND_STDOUT
+[[1;36mDEBUG[m] Packet received, forkedJvm#0>APPEND_STDOUT
+[[1;36mDEBUG[m] Packet received, forkedJvm#0>APPEND_STDOUT
+[[1;36mDEBUG[m] Packet received, forkedJvm#0>APPEND_STDOUT
+[[1;36mDEBUG[m] Packet received, forkedJvm#0>APPEND_STDOUT
+[[1;36mDEBUG[m] Packet received, forkedJvm#0>APPEND_STDOUT
+[[1;36mDEBUG[m] Packet received, forkedJvm#0>APPEND_STDOUT
+[[1;36mDEBUG[m] Packet received, forkedJvm#0>APPEND_STDOUT
+[[1;36mDEBUG[m] Packet received, forkedJvm#0>APPEND_STDOUT
+[[1;36mDEBUG[m] Packet received, forkedJvm#0>APPEND_STDOUT
+[[1;36mDEBUG[m] Packet received, forkedJvm#0>APPEND_STDOUT
+[[1;36mDEBUG[m] Packet received, forkedJvm#0>APPEND_STDOUT
+[[1;36mDEBUG[m] Packet received, forkedJvm#0>APPEND_STDOUT
+[[1;36mDEBUG[m] Packet received, forkedJvm#0>APPEND_STDOUT
+[[1;36mDEBUG[m] Packet received, forkedJvm#0>TEST_FINISHED
+[[1;36mDEBUG[m] Packet received, forkedJvm#0>SUITE_COMPLETED
+[[1;36mDEBUG[m] Packet received, forkedJvm#0>SUITE_STARTED
+[[1;36mDEBUG[m] Packet received, forkedJvm#1>APPEND_STDOUT
+[[1;36mDEBUG[m] Packet received, forkedJvm#1>APPEND_STDOUT
+[[1;36mDEBUG[m] Packet received, forkedJvm#1>TEST_STARTED
+[[1;36mDEBUG[m] Packet received, forkedJvm#1>APPEND_STDOUT
+[[1;36mDEBUG[m] Packet received, forkedJvm#1>APPEND_STDOUT
+[[1;36mDEBUG[m] Packet received, forkedJvm#3>APPEND_STDOUT
+[[1;36mDEBUG[m] Packet received, forkedJvm#1>APPEND_STDOUT
+[[1;36mDEBUG[m] Packet received, forkedJvm#3>APPEND_STDOUT
+[[1;36mDEBUG[m] Packet received, forkedJvm#3>APPEND_STDOUT
+[[1;36mDEBUG[m] Packet received, forkedJvm#3>APPEND_STDOUT
+[[1;36mDEBUG[m] Packet received, forkedJvm#3>APPEND_STDOUT
+[[1;36mDEBUG[m] Packet received, forkedJvm#3>APPEND_STDOUT
+[[1;36mDEBUG[m] Packet received, forkedJvm#3>APPEND_STDOUT
+[[1;36mDEBUG[m] Packet received, forkedJvm#3>APPEND_STDOUT
+[[1;36mDEBUG[m] Packet received, forkedJvm#3>APPEND_STDOUT
+[[1;36mDEBUG[m] Packet received, forkedJvm#3>APPEND_STDOUT
+[[1;36mDEBUG[m] Packet received, forkedJvm#3>APPEND_STDOUT
+[[1;36mDEBUG[m] Packet received, forkedJvm#3>APPEND_STDOUT
+[[1;36mDEBUG[m] Packet received, forkedJvm#3>APPEND_STDOUT
+[[1;36mDEBUG[m] Packet received, forkedJvm#3>APPEND_STDOUT
+[[1;36mDEBUG[m] Packet received, forkedJvm#3>APPEND_STDOUT
+[[1;36mDEBUG[m] Packet received, forkedJvm#3>APPEND_STDOUT
+[[1;36mDEBUG[m] Packet received, forkedJvm#3>APPEND_STDOUT
+[[1;36mDEBUG[m] Packet received, forkedJvm#3>APPEND_STDOUT
+[[1;36mDEBUG[m] Packet received, forkedJvm#3>APPEND_STDOUT
+[[1;36mDEBUG[m] Packet received, forkedJvm#3>APPEND_STDOUT
+[[1;36mDEBUG[m] Packet received, forkedJvm#3>TEST_STARTED
+[[1;36mDEBUG[m] Packet received, forkedJvm#3>APPEND_STDOUT
+[[1;36mDEBUG[m] Packet received, forkedJvm#3>TEST_FINISHED
+[[1;36mDEBUG[m] Packet received, forkedJvm#3>TEST_STARTED
+[[1;36mDEBUG[m] Packet received, forkedJvm#3>TEST_FINISHED
+[[1;36mDEBUG[m] Packet received, forkedJvm#1>APPEND_STDOUT
+[[1;36mDEBUG[m] Packet received, forkedJvm#1>APPEND_STDOUT
+[[1;36mDEBUG[m] Packet received, forkedJvm#1>APPEND_STDOUT
+[[1;36mDEBUG[m] Packet received, forkedJvm#1>APPEND_STDOUT
+[[1;36mDEBUG[m] Packet received, forkedJvm#1>APPEND_STDOUT
+[[1;36mDEBUG[m] Packet received, forkedJvm#1>TEST_FINISHED
+[[1;36mDEBUG[m] Packet received, forkedJvm#1>TEST_STARTED
+[[1;36mDEBUG[m] Packet received, forkedJvm#1>APPEND_STDOUT
+[[1;36mDEBUG[m] Packet received, forkedJvm#2>TEST_FINISHED
+[[1;36mDEBUG[m] Packet received, forkedJvm#2>TEST_STARTED
+[[1;36mDEBUG[m] Packet received, forkedJvm#2>TEST_FINISHED
+[[1;36mDEBUG[m] Packet received, forkedJvm#2>TEST_STARTED
+[[1;36mDEBUG[m] Packet received, forkedJvm#2>TEST_FINISHED
+[[1;36mDEBUG[m] Packet received, forkedJvm#2>TEST_STARTED
+[[1;36mDEBUG[m] Packet received, forkedJvm#2>TEST_FINISHED
+[[1;36mDEBUG[m] Packet received, forkedJvm#2>TEST_STARTED
+[[1;36mDEBUG[m] Packet received, forkedJvm#2>TEST_FINISHED
+[[1;36mDEBUG[m] Packet received, forkedJvm#2>TEST_STARTED
+[[1;36mDEBUG[m] Packet received, forkedJvm#2>TEST_FINISHED
+[[1;36mDEBUG[m] Packet received, forkedJvm#3>TEST_STARTED
+[[1;36mDEBUG[m] Packet received, forkedJvm#2>SUITE_COMPLETED
+[[1;36mDEBUG[m] Packet received, forkedJvm#1>TEST_FINISHED
+[[1;36mDEBUG[m] Packet received, forkedJvm#1>SUITE_COMPLETED
+[[1;36mDEBUG[m] Packet received, forkedJvm#2>SUITE_STARTED
+[[1;36mDEBUG[m] Packet received, forkedJvm#2>APPEND_STDOUT
+[[1;36mDEBUG[m] Packet received, forkedJvm#2>APPEND_STDOUT
+[[1;36mDEBUG[m] Packet received, forkedJvm#2>TEST_STARTED
+[[1;36mDEBUG[m] Packet received, forkedJvm#1>SUITE_STARTED
+[[1;36mDEBUG[m] Packet received, forkedJvm#1>APPEND_STDOUT
+[[1;36mDEBUG[m] Packet received, forkedJvm#1>APPEND_STDOUT
+[[1;36mDEBUG[m] Packet received, forkedJvm#1>TEST_STARTED
+[[1;36mDEBUG[m] Packet received, forkedJvm#1>APPEND_STDOUT
+[[1;36mDEBUG[m] Packet received, forkedJvm#1>APPEND_STDOUT
+[[1;36mDEBUG[m] Packet received, forkedJvm#1>APPEND_STDOUT
+[[1;36mDEBUG[m] Packet received, forkedJvm#1>APPEND_STDOUT
+[[1;36mDEBUG[m] Packet received, forkedJvm#1>APPEND_STDOUT
+[[1;36mDEBUG[m] Packet received, forkedJvm#1>APPEND_STDOUT
+[[1;36mDEBUG[m] Packet received, forkedJvm#1>APPEND_STDOUT
+[[1;36mDEBUG[m] Packet received, forkedJvm#1>APPEND_STDOUT
+[[1;36mDEBUG[m] Packet received, forkedJvm#1>APPEND_STDOUT
+[[1;36mDEBUG[m] Packet received, forkedJvm#1>APPEND_STDOUT
+[[1;36mDEBUG[m] Packet received, forkedJvm#1>TEST_FINISHED
+[[1;36mDEBUG[m] Packet received, forkedJvm#1>TEST_STARTED
+[[1;36mDEBUG[m] Packet received, forkedJvm#1>APPEND_STDOUT
+[[1;36mDEBUG[m] Packet received, forkedJvm#3>APPEND_STDOUT
+[[1;36mDEBUG[m] Packet received, forkedJvm#1>APPEND_STDOUT
+[[1;36mDEBUG[m] Packet received, forkedJvm#3>TEST_FINISHED
+[[1;36mDEBUG[m] Packet received, forkedJvm#1>APPEND_STDOUT
+[[1;36mDEBUG[m] Packet received, forkedJvm#0>APPEND_STDOUT
+[[1;36mDEBUG[m] Packet received, forkedJvm#3>TEST_STARTED
+[[1;36mDEBUG[m] Packet received, forkedJvm#0>APPEND_STDOUT
+[[1;36mDEBUG[m] Packet received, forkedJvm#1>APPEND_STDOUT
+[[1;36mDEBUG[m] Packet received, forkedJvm#0>TEST_STARTED
+[[1;36mDEBUG[m] Packet received, forkedJvm#1>APPEND_STDOUT
+[[1;36mDEBUG[m] Packet received, forkedJvm#3>TEST_FINISHED
+[[1;36mDEBUG[m] Packet received, forkedJvm#0>TEST_FINISHED
+[[1;36mDEBUG[m] Packet received, forkedJvm#0>SUITE_COMPLETED
+[[1;36mDEBUG[m] Packet received, forkedJvm#3>TEST_STARTED
+[[1;36mDEBUG[m] Packet received, forkedJvm#0>SUITE_STARTED
+[[1;36mDEBUG[m] Packet received, forkedJvm#1>APPEND_STDOUT
+[[1;36mDEBUG[m] Packet received, forkedJvm#3>APPEND_STDOUT
+[[1;36mDEBUG[m] Packet received, forkedJvm#0>APPEND_STDOUT
+[[1;36mDEBUG[m] Packet received, forkedJvm#3>TEST_FINISHED
+[[1;36mDEBUG[m] Packet received, forkedJvm#1>APPEND_STDOUT
+[[1;36mDEBUG[m] Packet received, forkedJvm#3>TEST_STARTED
+[[1;36mDEBUG[m] Packet received, forkedJvm#0>APPEND_STDOUT
+[[1;36mDEBUG[m] Packet received, forkedJvm#3>TEST_FINISHED
+[[1;36mDEBUG[m] Packet received, forkedJvm#1>APPEND_STDOUT
+[[1;36mDEBUG[m] Packet received, forkedJvm#3>TEST_STARTED
+[[1;36mDEBUG[m] Packet received, forkedJvm#0>TEST_STARTED
+[[1;36mDEBUG[m] Packet received, forkedJvm#3>TEST_FINISHED
+[[1;36mDEBUG[m] Packet received, forkedJvm#1>APPEND_STDOUT
+[[1;36mDEBUG[m] Packet received, forkedJvm#3>TEST_STARTED
+[[1;36mDEBUG[m] Packet received, forkedJvm#0>APPEND_STDOUT
+[[1;36mDEBUG[m] Packet received, forkedJvm#1>APPEND_STDOUT
+[[1;36mDEBUG[m] Packet received, forkedJvm#0>TEST_FINISHED
+[[1;36mDEBUG[m] Packet received, forkedJvm#1>APPEND_STDOUT
+[[1;36mDEBUG[m] Packet received, forkedJvm#0>TEST_STARTED
+[[1;36mDEBUG[m] Packet received, forkedJvm#3>APPEND_STDOUT
+[[1;36mDEBUG[m] Packet received, forkedJvm#0>APPEND_STDOUT
+[[1;36mDEBUG[m] Packet received, forkedJvm#1>APPEND_STDOUT
+[[1;36mDEBUG[m] Packet received, forkedJvm#0>TEST_FINISHED
+[[1;36mDEBUG[m] Packet received, forkedJvm#3>TEST_FINISHED
+[[1;36mDEBUG[m] Packet received, forkedJvm#0>SUITE_COMPLETED
+[[1;36mDEBUG[m] Packet received, forkedJvm#1>APPEND_STDOUT
+[[1;36mDEBUG[m] Packet received, forkedJvm#3>TEST_STARTED
+[[1;36mDEBUG[m] Packet received, forkedJvm#1>APPEND_STDOUT
+[[1;36mDEBUG[m] Packet received, forkedJvm#3>TEST_FINISHED
+[[1;36mDEBUG[m] Packet received, forkedJvm#1>APPEND_STDOUT
+[[1;36mDEBUG[m] Packet received, forkedJvm#3>TEST_STARTED
+[[1;36mDEBUG[m] Packet received, forkedJvm#1>APPEND_STDOUT
+[[1;36mDEBUG[m] Packet received, forkedJvm#3>TEST_FINISHED
+[[1;36mDEBUG[m] Packet received, forkedJvm#1>APPEND_STDOUT
+[[1;36mDEBUG[m] Packet received, forkedJvm#3>TEST_STARTED
+[[1;36mDEBUG[m] Packet received, forkedJvm#1>APPEND_STDOUT
+[[1;36mDEBUG[m] Packet received, forkedJvm#3>TEST_FINISHED
+[[1;36mDEBUG[m] Packet received, forkedJvm#1>APPEND_STDOUT
+[[1;36mDEBUG[m] Packet received, forkedJvm#1>APPEND_STDOUT
+[[1;36mDEBUG[m] Packet received, forkedJvm#1>APPEND_STDOUT
+[[1;36mDEBUG[m] Packet received, forkedJvm#3>TEST_STARTED
+[[1;36mDEBUG[m] Packet received, forkedJvm#1>APPEND_STDOUT
+[[1;36mDEBUG[m] Packet received, forkedJvm#1>APPEND_STDOUT
+[[1;36mDEBUG[m] Packet received, forkedJvm#3>APPEND_STDOUT
+[[1;36mDEBUG[m] Packet received, forkedJvm#1>APPEND_STDOUT
+[[1;36mDEBUG[m] Packet received, forkedJvm#3>TEST_FINISHED
+[[1;36mDEBUG[m] Packet received, forkedJvm#1>APPEND_STDOUT
+[[1;36mDEBUG[m] Packet received, forkedJvm#3>TEST_STARTED
+[[1;36mDEBUG[m] Packet received, forkedJvm#1>APPEND_STDOUT
+[[1;36mDEBUG[m] Packet received, forkedJvm#3>TEST_FINISHED
+[[1;36mDEBUG[m] Packet received, forkedJvm#1>APPEND_STDOUT
+[[1;36mDEBUG[m] Packet received, forkedJvm#3>TEST_STARTED
+[[1;36mDEBUG[m] Packet received, forkedJvm#1>APPEND_STDOUT
+[[1;36mDEBUG[m] Packet received, forkedJvm#1>APPEND_STDOUT
+[[1;36mDEBUG[m] Packet received, forkedJvm#3>APPEND_STDOUT
+[[1;36mDEBUG[m] Packet received, forkedJvm#1>APPEND_STDOUT
+[[1;36mDEBUG[m] Packet received, forkedJvm#3>TEST_FINISHED
+[[1;36mDEBUG[m] Packet received, forkedJvm#1>APPEND_STDOUT
+[[1;36mDEBUG[m] Packet received, forkedJvm#3>TEST_STARTED
+[[1;36mDEBUG[m] Packet received, forkedJvm#1>APPEND_STDOUT
+[[1;36mDEBUG[m] Packet received, forkedJvm#1>APPEND_STDOUT
+[[1;36mDEBUG[m] Packet received, forkedJvm#3>APPEND_STDOUT
+[[1;36mDEBUG[m] Packet received, forkedJvm#1>APPEND_STDOUT
+[[1;36mDEBUG[m] Packet received, forkedJvm#3>TEST_FINISHED
+[[1;36mDEBUG[m] Packet received, forkedJvm#1>APPEND_STDOUT
+[[1;36mDEBUG[m] Packet received, forkedJvm#3>TEST_STARTED
+[[1;36mDEBUG[m] Packet received, forkedJvm#1>APPEND_STDOUT
+[[1;36mDEBUG[m] Packet received, forkedJvm#3>TEST_FINISHED
+[[1;36mDEBUG[m] Packet received, forkedJvm#1>APPEND_STDOUT
+[[1;36mDEBUG[m] Packet received, forkedJvm#3>TEST_STARTED
+[[1;36mDEBUG[m] Packet received, forkedJvm#1>APPEND_STDOUT
+[[1;36mDEBUG[m] Packet received, forkedJvm#3>TEST_FINISHED
+[[1;36mDEBUG[m] Packet received, forkedJvm#1>APPEND_STDOUT
+[[1;36mDEBUG[m] Packet received, forkedJvm#3>TEST_STARTED
+[[1;36mDEBUG[m] Packet received, forkedJvm#1>APPEND_STDOUT
+[[1;36mDEBUG[m] Packet received, forkedJvm#1>APPEND_STDOUT
+[[1;36mDEBUG[m] Packet received, forkedJvm#3>APPEND_STDOUT
+[[1;36mDEBUG[m] Packet received, forkedJvm#1>APPEND_STDOUT
+[[1;36mDEBUG[m] Packet received, forkedJvm#3>TEST_FINISHED
+[[1;36mDEBUG[m] Packet received, forkedJvm#1>APPEND_STDOUT
+[[1;36mDEBUG[m] Packet received, forkedJvm#3>APPEND_STDOUT
+[[1;36mDEBUG[m] Packet received, forkedJvm#1>APPEND_STDOUT
+[[1;36mDEBUG[m] Packet received, forkedJvm#3>APPEND_STDOUT
+[[1;36mDEBUG[m] Packet received, forkedJvm#1>APPEND_STDOUT
+[[1;36mDEBUG[m] Packet received, forkedJvm#3>APPEND_STDOUT
+[[1;36mDEBUG[m] Packet received, forkedJvm#1>APPEND_STDOUT
+[[1;36mDEBUG[m] Packet received, forkedJvm#1>APPEND_STDOUT
+[[1;36mDEBUG[m] Packet received, forkedJvm#3>SUITE_COMPLETED
+[[1;36mDEBUG[m] Packet received, forkedJvm#1>APPEND_STDOUT
+[[1;36mDEBUG[m] Packet received, forkedJvm#1>APPEND_STDOUT
+[[1;36mDEBUG[m] Packet received, forkedJvm#3>SUITE_STARTED
+[[1;36mDEBUG[m] Packet received, forkedJvm#1>APPEND_STDOUT
+[[1;36mDEBUG[m] Packet received, forkedJvm#3>APPEND_STDOUT
+[[1;36mDEBUG[m] Packet received, forkedJvm#1>APPEND_STDOUT
+[[1;36mDEBUG[m] Packet received, forkedJvm#3>APPEND_STDOUT
+[[1;36mDEBUG[m] Packet received, forkedJvm#1>APPEND_STDOUT
+[[1;36mDEBUG[m] Packet received, forkedJvm#3>TEST_STARTED
+[[1;36mDEBUG[m] Packet received, forkedJvm#1>APPEND_STDOUT
+[[1;36mDEBUG[m] Packet received, forkedJvm#3>APPEND_STDOUT
+[[1;36mDEBUG[m] Packet received, forkedJvm#1>APPEND_STDOUT
+[[1;36mDEBUG[m] Packet received, forkedJvm#3>APPEND_STDOUT
+[[1;36mDEBUG[m] Packet received, forkedJvm#1>APPEND_STDOUT
+[[1;36mDEBUG[m] Packet received, forkedJvm#3>APPEND_STDOUT
+[[1;36mDEBUG[m] Packet received, forkedJvm#1>APPEND_STDOUT
+[[1;36mDEBUG[m] Packet received, forkedJvm#3>APPEND_STDOUT
+[[1;36mDEBUG[m] Packet received, forkedJvm#1>APPEND_STDOUT
+[[1;36mDEBUG[m] Packet received, forkedJvm#3>TEST_FINISHED
+[[1;36mDEBUG[m] Packet received, forkedJvm#1>APPEND_STDOUT
+[[1;36mDEBUG[m] Packet received, forkedJvm#3>SUITE_COMPLETED
+[[1;36mDEBUG[m] Packet received, forkedJvm#1>APPEND_STDOUT
+[[1;36mDEBUG[m] Packet received, forkedJvm#1>APPEND_STDOUT
+[[1;36mDEBUG[m] Packet received, forkedJvm#1>APPEND_STDOUT
+[[1;36mDEBUG[m] Packet received, forkedJvm#1>APPEND_STDOUT
+[[1;36mDEBUG[m] Packet received, forkedJvm#1>APPEND_STDOUT
+[[1;36mDEBUG[m] Packet received, forkedJvm#1>APPEND_STDOUT
+[[1;36mDEBUG[m] Packet received, forkedJvm#1>APPEND_STDOUT
+[[1;36mDEBUG[m] Packet received, forkedJvm#1>APPEND_STDOUT
+[[1;36mDEBUG[m] Packet received, forkedJvm#1>APPEND_STDOUT
+[[1;36mDEBUG[m] Packet received, forkedJvm#1>APPEND_STDOUT
+[[1;36mDEBUG[m] Packet received, forkedJvm#1>APPEND_STDOUT
+[[1;36mDEBUG[m] Packet received, forkedJvm#1>APPEND_STDOUT
+[[1;36mDEBUG[m] Packet received, forkedJvm#1>APPEND_STDOUT
+[[1;36mDEBUG[m] Packet received, forkedJvm#1>APPEND_STDOUT
+[[1;36mDEBUG[m] Packet received, forkedJvm#1>APPEND_STDOUT
+[[1;36mDEBUG[m] Packet received, forkedJvm#1>APPEND_STDOUT
+[[1;36mDEBUG[m] Packet received, forkedJvm#1>APPEND_STDOUT
+[[1;36mDEBUG[m] Packet received, forkedJvm#1>APPEND_STDOUT
+[[1;36mDEBUG[m] Packet received, forkedJvm#1>APPEND_STDOUT
+[[1;36mDEBUG[m] Packet received, forkedJvm#1>APPEND_STDOUT
+[[1;36mDEBUG[m] Packet received, forkedJvm#1>APPEND_STDOUT
+[[1;36mDEBUG[m] Packet received, forkedJvm#1>APPEND_STDOUT
+[[1;36mDEBUG[m] Packet received, forkedJvm#1>APPEND_STDOUT
+[[1;36mDEBUG[m] Packet received, forkedJvm#1>APPEND_STDOUT
+[[1;36mDEBUG[m] Packet received, forkedJvm#1>APPEND_STDOUT
+[[1;36mDEBUG[m] Packet received, forkedJvm#1>APPEND_STDOUT
+[[1;36mDEBUG[m] Packet received, forkedJvm#1>APPEND_STDOUT
+[[1;36mDEBUG[m] Packet received, forkedJvm#1>APPEND_STDOUT
+[[1;36mDEBUG[m] Packet received, forkedJvm#1>APPEND_STDOUT
+[[1;36mDEBUG[m] Packet received, forkedJvm#1>APPEND_STDOUT
+[[1;36mDEBUG[m] Packet received, forkedJvm#1>APPEND_STDOUT
+[[1;36mDEBUG[m] Packet received, forkedJvm#1>APPEND_STDOUT
+[[1;36mDEBUG[m] Packet received, forkedJvm#1>APPEND_STDOUT
+[[1;36mDEBUG[m] Packet received, forkedJvm#1>APPEND_STDOUT
+[[1;36mDEBUG[m] Packet received, forkedJvm#1>APPEND_STDOUT
+[[1;36mDEBUG[m] Packet received, forkedJvm#1>APPEND_STDOUT
+[[1;36mDEBUG[m] Packet received, forkedJvm#1>APPEND_STDOUT
+[[1;36mDEBUG[m] Packet received, forkedJvm#1>APPEND_STDOUT
+[[1;36mDEBUG[m] Packet received, forkedJvm#1>APPEND_STDOUT
+[[1;36mDEBUG[m] Packet received, forkedJvm#1>APPEND_STDOUT
+[[1;36mDEBUG[m] Packet received, forkedJvm#1>APPEND_STDOUT
+[[1;36mDEBUG[m] Packet received, forkedJvm#1>APPEND_STDOUT
+[[1;36mDEBUG[m] Packet received, forkedJvm#1>APPEND_STDOUT
+[[1;36mDEBUG[m] Packet received, forkedJvm#1>APPEND_STDOUT
+[[1;36mDEBUG[m] Packet received, forkedJvm#1>APPEND_STDOUT
+[[1;36mDEBUG[m] Packet received, forkedJvm#1>APPEND_STDOUT
+[[1;36mDEBUG[m] Packet received, forkedJvm#1>APPEND_STDOUT
+[[1;36mDEBUG[m] Packet received, forkedJvm#1>APPEND_STDOUT
+[[1;36mDEBUG[m] Packet received, forkedJvm#1>APPEND_STDOUT
+[[1;36mDEBUG[m] Packet received, forkedJvm#1>APPEND_STDOUT
+[[1;36mDEBUG[m] Packet received, forkedJvm#1>APPEND_STDOUT
+[[1;36mDEBUG[m] Packet received, forkedJvm#1>APPEND_STDOUT
+[[1;36mDEBUG[m] Packet received, forkedJvm#1>APPEND_STDOUT
+[[1;36mDEBUG[m] Packet received, forkedJvm#1>APPEND_STDOUT
+[[1;36mDEBUG[m] Packet received, forkedJvm#1>APPEND_STDOUT
+[[1;36mDEBUG[m] Packet received, forkedJvm#1>APPEND_STDOUT
+[[1;36mDEBUG[m] Packet received, forkedJvm#1>APPEND_STDOUT
+[[1;36mDEBUG[m] Packet received, forkedJvm#1>APPEND_STDOUT
+[[1;36mDEBUG[m] Packet received, forkedJvm#1>TEST_FINISHED
+[[1;36mDEBUG[m] Packet received, forkedJvm#1>TEST_STARTED
+[[1;36mDEBUG[m] Packet received, forkedJvm#1>APPEND_STDOUT
+[[1;36mDEBUG[m] Packet received, forkedJvm#1>APPEND_STDOUT
+[[1;36mDEBUG[m] Packet received, forkedJvm#1>APPEND_STDOUT
+[[1;36mDEBUG[m] Packet received, forkedJvm#1>APPEND_STDOUT
+[[1;36mDEBUG[m] Packet received, forkedJvm#1>APPEND_STDOUT
+[[1;36mDEBUG[m] Packet received, forkedJvm#1>APPEND_STDOUT
+[[1;36mDEBUG[m] Packet received, forkedJvm#1>APPEND_STDOUT
+[[1;36mDEBUG[m] Packet received, forkedJvm#1>APPEND_STDOUT
+[[1;36mDEBUG[m] Packet received, forkedJvm#1>APPEND_STDOUT
+[[1;36mDEBUG[m] Packet received, forkedJvm#1>APPEND_STDOUT
+[[1;36mDEBUG[m] Packet received, forkedJvm#1>APPEND_STDOUT
+[[1;36mDEBUG[m] Packet received, forkedJvm#1>APPEND_STDOUT
+[[1;36mDEBUG[m] Packet received, forkedJvm#1>APPEND_STDOUT
+[[1;36mDEBUG[m] Packet received, forkedJvm#1>APPEND_STDOUT
+[[1;36mDEBUG[m] Packet received, forkedJvm#1>APPEND_STDOUT
+[[1;36mDEBUG[m] Packet received, forkedJvm#1>APPEND_STDOUT
+[[1;36mDEBUG[m] Packet received, forkedJvm#1>APPEND_STDOUT
+[[1;36mDEBUG[m] Packet received, forkedJvm#1>APPEND_STDOUT
+[[1;36mDEBUG[m] Packet received, forkedJvm#1>APPEND_STDOUT
+[[1;36mDEBUG[m] Packet received, forkedJvm#1>APPEND_STDOUT
+[[1;36mDEBUG[m] Packet received, forkedJvm#1>APPEND_STDOUT
+[[1;36mDEBUG[m] Packet received, forkedJvm#1>APPEND_STDOUT
+[[1;36mDEBUG[m] Packet received, forkedJvm#1>TEST_FINISHED
+[[1;36mDEBUG[m] Packet received, forkedJvm#1>TEST_STARTED
+[[1;36mDEBUG[m] Packet received, forkedJvm#1>APPEND_STDOUT
+[[1;36mDEBUG[m] Packet received, forkedJvm#1>APPEND_STDOUT
+[[1;36mDEBUG[m] Packet received, forkedJvm#1>APPEND_STDOUT
+[[1;36mDEBUG[m] Packet received, forkedJvm#1>APPEND_STDOUT
+[[1;36mDEBUG[m] Packet received, forkedJvm#1>APPEND_STDOUT
+[[1;36mDEBUG[m] Packet received, forkedJvm#1>APPEND_STDOUT
+[[1;36mDEBUG[m] Packet received, forkedJvm#1>APPEND_STDOUT
+[[1;36mDEBUG[m] Packet received, forkedJvm#1>APPEND_STDOUT
+[[1;36mDEBUG[m] Packet received, forkedJvm#1>APPEND_STDOUT
+[[1;36mDEBUG[m] Packet received, forkedJvm#1>APPEND_STDOUT
+[[1;36mDEBUG[m] Packet received, forkedJvm#1>APPEND_STDOUT
+[[1;36mDEBUG[m] Packet received, forkedJvm#1>APPEND_STDOUT
+[[1;36mDEBUG[m] Packet received, forkedJvm#1>APPEND_STDOUT
+[[1;36mDEBUG[m] Packet received, forkedJvm#1>TEST_FINISHED
+[[1;36mDEBUG[m] Packet received, forkedJvm#1>TEST_STARTED
+[[1;36mDEBUG[m] Packet received, forkedJvm#1>APPEND_STDOUT
+[[1;36mDEBUG[m] Packet received, forkedJvm#1>APPEND_STDOUT
+[[1;36mDEBUG[m] Packet received, forkedJvm#1>APPEND_STDOUT
+[[1;36mDEBUG[m] Packet received, forkedJvm#1>APPEND_STDOUT
+[[1;36mDEBUG[m] Packet received, forkedJvm#1>APPEND_STDOUT
+[[1;36mDEBUG[m] Packet received, forkedJvm#1>APPEND_STDOUT
+[[1;36mDEBUG[m] Packet received, forkedJvm#1>APPEND_STDOUT
+[[1;36mDEBUG[m] Packet received, forkedJvm#1>APPEND_STDOUT
+[[1;36mDEBUG[m] Packet received, forkedJvm#1>APPEND_STDOUT
+[[1;36mDEBUG[m] Packet received, forkedJvm#1>APPEND_STDOUT
+[[1;36mDEBUG[m] Packet received, forkedJvm#1>APPEND_STDOUT
+[[1;36mDEBUG[m] Packet received, forkedJvm#1>APPEND_STDOUT
+[[1;36mDEBUG[m] Packet received, forkedJvm#1>APPEND_STDOUT
+[[1;36mDEBUG[m] Packet received, forkedJvm#1>APPEND_STDOUT
+[[1;36mDEBUG[m] Packet received, forkedJvm#1>APPEND_STDOUT
+[[1;36mDEBUG[m] Packet received, forkedJvm#1>APPEND_STDOUT
+[[1;36mDEBUG[m] Packet received, forkedJvm#1>APPEND_STDOUT
+[[1;36mDEBUG[m] Packet received, forkedJvm#1>APPEND_STDOUT
+[[1;36mDEBUG[m] Packet received, forkedJvm#1>APPEND_STDOUT
+[[1;36mDEBUG[m] Packet received, forkedJvm#1>APPEND_STDOUT
+[[1;36mDEBUG[m] Packet received, forkedJvm#1>APPEND_STDOUT
+[[1;36mDEBUG[m] Packet received, forkedJvm#1>APPEND_STDOUT
+[[1;36mDEBUG[m] Packet received, forkedJvm#1>APPEND_STDOUT
+[[1;36mDEBUG[m] Packet received, forkedJvm#1>APPEND_STDOUT
+[[1;36mDEBUG[m] Packet received, forkedJvm#1>APPEND_STDOUT
+[[1;36mDEBUG[m] Packet received, forkedJvm#1>APPEND_STDOUT
+[[1;36mDEBUG[m] Packet received, forkedJvm#1>APPEND_STDOUT
+[[1;36mDEBUG[m] Packet received, forkedJvm#1>APPEND_STDOUT
+[[1;36mDEBUG[m] Packet received, forkedJvm#1>APPEND_STDOUT
+[[1;36mDEBUG[m] Packet received, forkedJvm#1>APPEND_STDOUT
+[[1;36mDEBUG[m] Packet received, forkedJvm#1>APPEND_STDOUT
+[[1;36mDEBUG[m] Packet received, forkedJvm#1>APPEND_STDOUT
+[[1;36mDEBUG[m] Packet received, forkedJvm#1>TEST_FINISHED
+[[1;36mDEBUG[m] Packet received, forkedJvm#1>TEST_STARTED
+[[1;36mDEBUG[m] Packet received, forkedJvm#1>APPEND_STDOUT
+[[1;36mDEBUG[m] Packet received, forkedJvm#1>APPEND_STDOUT
+[[1;36mDEBUG[m] Packet received, forkedJvm#1>APPEND_STDOUT
+[[1;36mDEBUG[m] Packet received, forkedJvm#1>APPEND_STDOUT
+[[1;36mDEBUG[m] Packet received, forkedJvm#1>APPEND_STDOUT
+[[1;36mDEBUG[m] Packet received, forkedJvm#1>APPEND_STDOUT
+[[1;36mDEBUG[m] Packet received, forkedJvm#1>APPEND_STDOUT
+[[1;36mDEBUG[m] Packet received, forkedJvm#1>APPEND_STDOUT
+[[1;36mDEBUG[m] Packet received, forkedJvm#1>APPEND_STDOUT
+[[1;36mDEBUG[m] Packet received, forkedJvm#1>APPEND_STDOUT
+[[1;36mDEBUG[m] Packet received, forkedJvm#1>APPEND_STDOUT
+[[1;36mDEBUG[m] Packet received, forkedJvm#1>APPEND_STDOUT
+[[1;36mDEBUG[m] Packet received, forkedJvm#1>APPEND_STDOUT
+[[1;36mDEBUG[m] Packet received, forkedJvm#1>APPEND_STDOUT
+[[1;36mDEBUG[m] Packet received, forkedJvm#1>APPEND_STDOUT
+[[1;36mDEBUG[m] Packet received, forkedJvm#1>APPEND_STDOUT
+[[1;36mDEBUG[m] Packet received, forkedJvm#1>APPEND_STDOUT
+[[1;36mDEBUG[m] Packet received, forkedJvm#1>APPEND_STDOUT
+[[1;36mDEBUG[m] Packet received, forkedJvm#1>APPEND_STDOUT
+[[1;36mDEBUG[m] Packet received, forkedJvm#1>APPEND_STDOUT
+[[1;36mDEBUG[m] Packet received, forkedJvm#1>APPEND_STDOUT
+[[1;36mDEBUG[m] Packet received, forkedJvm#1>TEST_FINISHED
+[[1;36mDEBUG[m] Packet received, forkedJvm#1>SUITE_COMPLETED
+[[1;36mDEBUG[m] Packet received, forkedJvm#2>APPEND_STDOUT
+[[1;36mDEBUG[m] Packet received, forkedJvm#2>TEST_FINISHED
+[[1;36mDEBUG[m] Packet received, forkedJvm#2>TEST_STARTED
+[[1;36mDEBUG[m] Packet received, forkedJvm#2>APPEND_STDOUT
+[[1;36mDEBUG[m] Packet received, forkedJvm#2>TEST_FINISHED
+[[1;36mDEBUG[m] Packet received, forkedJvm#2>TEST_STARTED
+[[1;36mDEBUG[m] Packet received, forkedJvm#2>APPEND_STDOUT
+[[1;36mDEBUG[m] Packet received, forkedJvm#2>TEST_FINISHED
+[[1;36mDEBUG[m] Packet received, forkedJvm#2>TEST_STARTED
+[[1;36mDEBUG[m] Packet received, forkedJvm#2>APPEND_STDOUT
+[[1;36mDEBUG[m] Packet received, forkedJvm#2>TEST_FINISHED
+[[1;36mDEBUG[m] Packet received, forkedJvm#2>TEST_STARTED
+[[1;36mDEBUG[m] Packet received, forkedJvm#2>APPEND_STDOUT
+[[1;36mDEBUG[m] Packet received, forkedJvm#2>TEST_FINISHED
+[[1;36mDEBUG[m] Packet received, forkedJvm#2>TEST_STARTED
+[[1;36mDEBUG[m] Packet received, forkedJvm#2>APPEND_STDOUT
+[[1;36mDEBUG[m] Packet received, forkedJvm#2>TEST_FINISHED
+[[1;36mDEBUG[m] Packet received, forkedJvm#2>TEST_STARTED
+[[1;36mDEBUG[m] Packet received, forkedJvm#2>APPEND_STDOUT
+[[1;36mDEBUG[m] Packet received, forkedJvm#2>TEST_FINISHED
+[[1;36mDEBUG[m] Packet received, forkedJvm#2>TEST_STARTED
+[[1;36mDEBUG[m] Packet received, forkedJvm#2>APPEND_STDOUT
+[[1;36mDEBUG[m] Packet received, forkedJvm#2>APPEND_STDOUT
+[[1;36mDEBUG[m] Packet received, forkedJvm#2>TEST_FINISHED
+[[1;36mDEBUG[m] Packet received, forkedJvm#2>TEST_STARTED
+[[1;36mDEBUG[m] Packet received, forkedJvm#2>APPEND_STDOUT
+[[1;36mDEBUG[m] Packet received, forkedJvm#2>TEST_FINISHED
+[[1;36mDEBUG[m] Packet received, forkedJvm#2>TEST_STARTED
+[[1;36mDEBUG[m] Packet received, forkedJvm#2>APPEND_STDOUT
+[[1;36mDEBUG[m] Packet received, forkedJvm#2>TEST_FINISHED
+[[1;36mDEBUG[m] Packet received, forkedJvm#2>TEST_STARTED
+[[1;36mDEBUG[m] Packet received, forkedJvm#2>APPEND_STDOUT
+[[1;36mDEBUG[m] Packet received, forkedJvm#2>TEST_FINISHED
+[[1;36mDEBUG[m] Packet received, forkedJvm#2>TEST_STARTED
+[[1;36mDEBUG[m] Packet received, forkedJvm#2>APPEND_STDOUT
+[[1;36mDEBUG[m] Packet received, forkedJvm#2>TEST_FINISHED
+[[1;36mDEBUG[m] Packet received, forkedJvm#2>TEST_STARTED
+[[1;36mDEBUG[m] Packet received, forkedJvm#2>APPEND_STDOUT
+[[1;36mDEBUG[m] Packet received, forkedJvm#2>TEST_FINISHED
+[[1;36mDEBUG[m] Packet received, forkedJvm#2>TEST_STARTED
+[[1;36mDEBUG[m] Packet received, forkedJvm#2>APPEND_STDOUT
+[[1;36mDEBUG[m] Packet received, forkedJvm#2>TEST_FINISHED
+[[1;36mDEBUG[m] Packet received, forkedJvm#2>TEST_STARTED
+[[1;36mDEBUG[m] Packet received, forkedJvm#2>APPEND_STDOUT
+[[1;36mDEBUG[m] Packet received, forkedJvm#2>TEST_FINISHED
+[[1;36mDEBUG[m] Packet received, forkedJvm#2>TEST_STARTED
+[[1;36mDEBUG[m] Packet received, forkedJvm#2>APPEND_STDOUT
+[[1;36mDEBUG[m] Packet received, forkedJvm#2>TEST_FINISHED
+[[1;36mDEBUG[m] Packet received, forkedJvm#2>TEST_STARTED
+[[1;36mDEBUG[m] Packet received, forkedJvm#0>QUIT
+[[1;36mDEBUG[m] Forked JVM J0 finished with exit code: 0
+[[1;36mDEBUG[m] Packet received, forkedJvm#3>QUIT
+[[1;36mDEBUG[m] Forked JVM J3 finished with exit code: 0
+[[1;36mDEBUG[m] Packet received, forkedJvm#1>QUIT
+[[1;36mDEBUG[m] Forked JVM J1 finished with exit code: 0
+[[1;36mDEBUG[m] Packet received, forkedJvm#2>APPEND_STDOUT
+[[1;36mDEBUG[m] Packet received, forkedJvm#2>TEST_FINISHED
+[[1;36mDEBUG[m] Packet received, forkedJvm#2>TEST_STARTED
+[[1;36mDEBUG[m] Packet received, forkedJvm#2>APPEND_STDOUT
+[[1;36mDEBUG[m] Packet received, forkedJvm#2>APPEND_STDOUT
+[[1;36mDEBUG[m] Packet received, forkedJvm#2>TEST_FINISHED
+[[1;36mDEBUG[m] Packet received, forkedJvm#2>TEST_STARTED
+[[1;36mDEBUG[m] Packet received, forkedJvm#2>APPEND_STDOUT
+[[1;36mDEBUG[m] Packet received, forkedJvm#2>TEST_FINISHED
+[[1;36mDEBUG[m] Packet received, forkedJvm#2>SUITE_COMPLETED
+[[1;36mDEBUG[m] Packet received, forkedJvm#2>QUIT
+[[1;36mDEBUG[m] Forked JVM J2 finished with exit code: 0
+[[1;34mINFO[m] JVM J0:     0.70 ..     2.51 =     1.81s
+[[1;34mINFO[m] JVM J1:     0.71 ..     2.57 =     1.86s
+[[1;34mINFO[m] JVM J2:     0.71 ..     3.02 =     2.31s
+[[1;34mINFO[m] JVM J3:     0.70 ..     2.53 =     1.83s
+[[1;34mINFO[m] Execution time total: 3.02 sec.
+[[1;34mINFO[m] Tests summary: 9 suites, 58 tests
+[[1;34mINFO[m] [1m------------------------------------------------------------------------[m
+[[1;34mINFO[m] [1;32mBUILD SUCCESS[m
+[[1;34mINFO[m] [1m------------------------------------------------------------------------[m
+[[1;34mINFO[m] Total time:  4.614 s
+[[1;34mINFO[m] Finished at: 2023-07-24T11:22:57+03:00
+[[1;34mINFO[m] [1m------------------------------------------------------------------------[m

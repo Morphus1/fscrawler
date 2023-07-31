@@ -9,10 +9,10 @@
       </Console>
    </Appenders>
    <Loggers>
-      <Logger name="fr.pilato.elasticsearch.crawler.fs.settings" level="info" additivity="false">
+      <Logger name="fr.pilato.elasticsearch.crawler.fs.settings" level="debug" additivity="false">
          <AppenderRef ref="CONSOLE"/>
       </Logger>
-      <Root level="info">
+      <Root level="debug">
          <AppenderRef ref="CONSOLE"/>
       </Root>
    </Loggers>

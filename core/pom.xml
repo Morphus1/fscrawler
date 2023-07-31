@@ -120,6 +120,12 @@
             <scope>test</scope>
         </dependency>
 
+        <!-- Trying to Implement Vectorization -->
+        <dependency>
+            <groupId>com.github.neuml</groupId>
+            <artifactId>txtai.java</artifactId>
+            <version>5.5.0</version>
+        </dependency>
     </dependencies>
 
 </project>

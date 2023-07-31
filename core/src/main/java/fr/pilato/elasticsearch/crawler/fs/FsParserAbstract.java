@@ -35,6 +35,7 @@ import fr.pilato.elasticsearch.crawler.fs.framework.OsValidator;
 import fr.pilato.elasticsearch.crawler.fs.framework.SignTool;
 import fr.pilato.elasticsearch.crawler.fs.service.FsCrawlerDocumentService;
 import fr.pilato.elasticsearch.crawler.fs.service.FsCrawlerManagementService;
+import fr.pilato.elasticsearch.crawler.fs.settings.Fs;
 import fr.pilato.elasticsearch.crawler.fs.settings.FsSettings;
 import fr.pilato.elasticsearch.crawler.fs.settings.Server.PROTOCOL;
 import fr.pilato.elasticsearch.crawler.fs.tika.TikaDocParser;
@@ -55,7 +56,16 @@ import java.time.LocalDateTime;
 import java.time.temporal.ChronoUnit;
 import java.util.ArrayList;
 import java.util.Collection;
+import java.util.HashMap;
 import java.util.stream.Collectors;
+import java.util.Arrays;
+import java.util.List;
+import java.util.Map;
+
+import txtai.API.IndexResult;
+import txtai.Embeddings;
+import txtai.Embeddings.Document;
+import txtai.Embeddings.SearchResult;
 
 import static fr.pilato.elasticsearch.crawler.fs.framework.FsCrawlerUtil.*;
 import static fr.pilato.elasticsearch.crawler.fs.framework.JsonUtil.asMap;
@@ -370,217 +380,228 @@ public abstract class FsParserAbstract extends FsParser {
         return managementService.getFolderDirectory(path);
     }
 
-    /**
-     * Index a file
-     */
-    private void indexFile(FileAbstractModel fileAbstractModel, ScanStatistic stats, String dirname, InputStream inputStream,
-                           long filesize) throws Exception {
-        final String filename = fileAbstractModel.getName();
-        final LocalDateTime created = fileAbstractModel.getCreationDate();
-        final LocalDateTime lastModified = fileAbstractModel.getLastModifiedDate();
-        final LocalDateTime lastAccessed = fileAbstractModel.getAccessDate();
-        final String extension = fileAbstractModel.getExtension();
-        final long size = fileAbstractModel.getSize();
+/**
+ * Index a file
+ */
+private void indexFile(FileAbstractModel fileAbstractModel, ScanStatistic stats, String dirname, InputStream inputStream,
+                       long filesize) throws Exception {
+    final String filename = fileAbstractModel.getName();
+    final LocalDateTime created = fileAbstractModel.getCreationDate();
+    final LocalDateTime lastModified = fileAbstractModel.getLastModifiedDate();
+    final LocalDateTime lastAccessed = fileAbstractModel.getAccessDate();
+    final String extension = fileAbstractModel.getExtension();
+    final long size = fileAbstractModel.getSize();
 
-        logger.debug("fetching content from [{}],[{}]", dirname, filename);
-        String fullFilename = computeRealPathName(dirname, filename);
+    logger.debug("fetching content from [{}],[{}]", dirname, filename);
+    String fullFilename = computeRealPathName(dirname, filename);
 
-        // Create the Doc object (only needed when we have add_as_inner_object: true (default) or when we don't index json or xml)
-        String id = generateIdFromFilename(filename, dirname);
-        if (fsSettings.getFs().isAddAsInnerObject() || (!fsSettings.getFs().isJsonSupport() && !fsSettings.getFs().isXmlSupport())) {
-            Doc doc = new Doc();
+    // Create the Doc object (only needed when we have add_as_inner_object: true (default) or when we don't index json or xml)
+    String id = generateIdFromFilename(filename, dirname);
+    if (fsSettings.getFs().isAddAsInnerObject() || (!fsSettings.getFs().isJsonSupport() && !fsSettings.getFs().isXmlSupport())) {
+        Doc doc = new Doc();
 
-            // File
-            doc.getFile().setFilename(filename);
-            doc.getFile().setCreated(localDateTimeToDate(created));
-            doc.getFile().setLastModified(localDateTimeToDate(lastModified));
-            doc.getFile().setLastAccessed(localDateTimeToDate(lastAccessed));
-            doc.getFile().setIndexingDate(localDateTimeToDate(LocalDateTime.now()));
-            if (fsSettings.getServer() == null) {
-                doc.getFile().setUrl("file://" + fullFilename);
-            } else if (fsSettings.getServer().getProtocol().equals(PROTOCOL.FTP)) {
-                doc.getFile().setUrl(String.format("ftp://%s:%d%s", fsSettings.getServer().getHostname(), fsSettings.getServer().getPort(), fullFilename));
+        // File
+        doc.getFile().setFilename(filename);
+        doc.getFile().setCreated(localDateTimeToDate(created));
+        doc.getFile().setLastModified(localDateTimeToDate(lastModified));
+        doc.getFile().setLastAccessed(localDateTimeToDate(lastAccessed));
+        doc.getFile().setIndexingDate(localDateTimeToDate(LocalDateTime.now()));
+        if (fsSettings.getServer() == null) {
+            doc.getFile().setUrl("file://" + fullFilename);
+        } else if (fsSettings.getServer().getProtocol().equals(PROTOCOL.FTP)) {
+            doc.getFile().setUrl(String.format("ftp://%s:%d%s", fsSettings.getServer().getHostname(), fsSettings.getServer().getPort(), fullFilename));
+        }
+        doc.getFile().setExtension(extension);
+        if (fsSettings.getFs().isAddFilesize()) {
+            doc.getFile().setFilesize(size);
+        }
+        // File
+
+        // Path
+        // Encoded version of the dir this file belongs to
+        doc.getPath().setRoot(SignTool.sign(dirname));
+        // The virtual URL (not including the initial root dir)
+        doc.getPath().setVirtual(computeVirtualPathName(stats.getRootPath(), fullFilename));
+        // The real and complete filename
+        doc.getPath().setReal(fullFilename);
+        // Path
+
+        // Attributes
+        if (fsSettings.getFs().isAttributesSupport()) {
+            doc.setAttributes(new Attributes());
+            doc.getAttributes().setOwner(fileAbstractModel.getOwner());
+            doc.getAttributes().setGroup(fileAbstractModel.getGroup());
+            if (fileAbstractModel.getPermissions() >= 0) {
+                doc.getAttributes().setPermissions(fileAbstractModel.getPermissions());
             }
-            doc.getFile().setExtension(extension);
-            if (fsSettings.getFs().isAddFilesize()) {
-                doc.getFile().setFilesize(size);
-            }
-            // File
+        }
+        // Attributes
 
-            // Path
-            // Encoded version of the dir this file belongs to
-            doc.getPath().setRoot(SignTool.sign(dirname));
-            // The virtual URL (not including the initial root dir)
-            doc.getPath().setVirtual(computeVirtualPathName(stats.getRootPath(), fullFilename));
-            // The real and complete filename
-            doc.getPath().setReal(fullFilename);
-            // Path
-
-            // Attributes
-            if (fsSettings.getFs().isAttributesSupport()) {
-                doc.setAttributes(new Attributes());
-                doc.getAttributes().setOwner(fileAbstractModel.getOwner());
-                doc.getAttributes().setGroup(fileAbstractModel.getGroup());
-                if (fileAbstractModel.getPermissions() >= 0) {
-                    doc.getAttributes().setPermissions(fileAbstractModel.getPermissions());
-                }
-            }
-            // Attributes
+        // If needed, we generate the content in addition to metadata
+        if (fsSettings.getFs().isJsonSupport()) {
+            // https://github.com/dadoonet/fscrawler/issues/5 : Support JSon files
+            doc.setObject(asMap(inputStream));
+        } else if (fsSettings.getFs().isXmlSupport()) {
+            // https://github.com/dadoonet/fscrawler/issues/185 : Support Xml files
+            doc.setObject(XmlDocParser.generateMap(inputStream));
+        } else {
+            // Extracting content with Tika
+            TikaDocParser.generate(fsSettings, inputStream, filename, fullFilename, doc, messageDigest, filesize);
 
             // If needed, we generate the content in addition to metadata
-            if (fsSettings.getFs().isJsonSupport()) {
-                // https://github.com/dadoonet/fscrawler/issues/5 : Support JSon files
-                doc.setObject(asMap(inputStream));
-            } else if (fsSettings.getFs().isXmlSupport()) {
-                // https://github.com/dadoonet/fscrawler/issues/185 : Support Xml files
-                doc.setObject(XmlDocParser.generateMap(inputStream));
-            } else {
-                // Extracting content with Tika
-                TikaDocParser.generate(fsSettings, inputStream, filename, fullFilename, doc, messageDigest, filesize);
-            }
+            if (!fsSettings.getFs().isJsonSupport() && !fsSettings.getFs().isXmlSupport()) {
+                if (fsSettings.getFs().isVectorize()) { // Check the "vectorize" boolean
+                    Embeddings embeddings = new Embeddings("http://localhost:8000");
+                    String extractedData = doc.getContent();
 
-            // Log whether vectorize is enabled or not
-            boolean vectorize = fsSettings.getFs().setVectorize();
-            if (vectorize) {
-                logger.info("!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! VECTORIZE IS ON !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!");
-            } else {
-                logger.info("!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! Vectorize is OFF !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!");
-            }
+                    // Generate the embedding for the extracted data
+                    List<Double> embeddingList = embeddings.transform(extractedData);
+                    
+                    // Convert the embedding List<Double> to float[]
+                    float[] embedding = new float[embeddingList.size()];
+                    for (int i = 0; i < embeddingList.size(); i++) {
+                        embedding[i] = embeddingList.get(i).floatValue();
+                    }
 
-            // We index the data structure
-            if (isIndexable(doc.getContent(), fsSettings.getFs().getFilters())) {
-                if (!closed) {
-                    FSCrawlerLogger.documentDebug(id,
-                            computeVirtualPathName(stats.getRootPath(), fullFilename),
-                            "Indexing content");
-                    documentService.index(
-                            fsSettings.getElasticsearch().getIndex(),
-                            id,
-                            doc,
-                            fsSettings.getElasticsearch().getPipeline());
-                } else {
-                    logger.warn("trying to add new file while closing crawler. Document [{}]/[{}] has been ignored",
-                            fsSettings.getElasticsearch().getIndex(), id);
+                    // Set the embedding in the Doc object
+                    doc.setDenseVector(embedding);
                 }
-            } else {
-                logger.debug("We ignore file [{}] because it does not match all the patterns {}", filename,
-                        fsSettings.getFs().getFilters());
             }
-        } else {
-            if (fsSettings.getFs().isJsonSupport()) {
-                FSCrawlerLogger.documentDebug(generateIdFromFilename(filename, dirname),
+        }
+
+        // We index the data structure
+        if (isIndexable(doc.getContent(), fsSettings.getFs().getFilters())) {
+            if (!closed) {
+                FSCrawlerLogger.documentDebug(id,
                         computeVirtualPathName(stats.getRootPath(), fullFilename),
-                        "Indexing json content");
-                // We index the json content directly
-                if (!closed) {
-                    documentService.indexRawJson(
-                            fsSettings.getElasticsearch().getIndex(),
-                            id,
-                            read(inputStream),
-                            fsSettings.getElasticsearch().getPipeline());
-                } else {
-                    logger.warn("trying to add new file while closing crawler. Document [{}]/[{}] has been ignored",
-                            fsSettings.getElasticsearch().getIndex(), id);
-                }
-            } else if (fsSettings.getFs().isXmlSupport()) {
-                FSCrawlerLogger.documentDebug(generateIdFromFilename(filename, dirname),
-                        computeVirtualPathName(stats.getRootPath(), fullFilename),
-                        "Indexing xml content");
-                // We index the xml content directly (after transformation to json)
-                if (!closed) {
-                    documentService.indexRawJson(
-                            fsSettings.getElasticsearch().getIndex(),
-                            id,
-                            XmlDocParser.generate(inputStream),
-                            fsSettings.getElasticsearch().getPipeline());
-                } else {
-                    logger.warn("trying to add new file while closing crawler. Document [{}]/[{}] has been ignored",
-                            fsSettings.getElasticsearch().getIndex(), id);
-                }
+                        "Indexing content");
+                documentService.index(
+                        fsSettings.getElasticsearch().getIndex(),
+                        id,
+                        doc,
+                        fsSettings.getElasticsearch().getPipeline());
+            } else {
+                logger.warn("trying to add new file while closing crawler. Document [{}]/[{}] has been ignored",
+                        fsSettings.getElasticsearch().getIndex(), id);
+            }
+        } else {
+            logger.debug("We ignore file [{}] because it does not match all the patterns {}", filename,
+                    fsSettings.getFs().getFilters());
+        }
+    } else {
+        if (fsSettings.getFs().isJsonSupport()) {
+            FSCrawlerLogger.documentDebug(generateIdFromFilename(filename, dirname),
+                    computeVirtualPathName(stats.getRootPath(), fullFilename),
+                    "Indexing json content");
+            // We index the json content directly
+            if (!closed) {
+                documentService.indexRawJson(
+                        fsSettings.getElasticsearch().getIndex(),
+                        id,
+                        read(inputStream),
+                        fsSettings.getElasticsearch().getPipeline());
+            } else {
+                logger.warn("trying to add new file while closing crawler. Document [{}]/[{}] has been ignored",
+                        fsSettings.getElasticsearch().getIndex(), id);
+            }
+        } else if (fsSettings.getFs().isXmlSupport()) {
+            FSCrawlerLogger.documentDebug(generateIdFromFilename(filename, dirname),
+                    computeVirtualPathName(stats.getRootPath(), fullFilename),
+                    "Indexing xml content");
+            // We index the xml content directly (after transformation to json)
+            if (!closed) {
+                documentService.indexRawJson(
+                        fsSettings.getElasticsearch().getIndex(),
+                        id,
+                        XmlDocParser.generate(inputStream),
+                        fsSettings.getElasticsearch().getPipeline());
+            } else {
+                logger.warn("trying to add new file while closing crawler. Document [{}]/[{}] has been ignored",
+                        fsSettings.getElasticsearch().getIndex(), id);
             }
         }
     }
+}
 
-    private String generateIdFromFilename(String filename, String filepath) throws NoSuchAlgorithmException {
-        String filepathForId = filepath.replace("\\", "/");
-        String filenameForId = filename.replace("\\", "").replace("/", "");
-        String idSource = filepathForId.endsWith("/") ? filepathForId.concat(filenameForId) : filepathForId.concat("/").concat(filenameForId);
-        return fsSettings.getFs().isFilenameAsId() ? filename : SignTool.sign(idSource);
+private String generateIdFromFilename(String filename, String filepath) throws NoSuchAlgorithmException {
+    String filepathForId = filepath.replace("\\", "/");
+    String filenameForId = filename.replace("\\", "").replace("/", "");
+    String idSource = filepathForId.endsWith("/") ? filepathForId.concat(filenameForId) : filepathForId.concat("/").concat(filenameForId);
+    return fsSettings.getFs().isFilenameAsId() ? filename : SignTool.sign(idSource);
+}
+
+private String read(InputStream input) throws IOException {
+    try (BufferedReader buffer = new BufferedReader(new InputStreamReader(input, StandardCharsets.UTF_8))) {
+        return buffer.lines().collect(Collectors.joining("\n"));
+    }
+}
+
+/**
+ * Index a folder object in elasticsearch
+ * @param id        id of the folder
+ * @param folder    path object
+ */
+private void indexDirectory(String id, Folder folder) throws IOException {
+    if (!closed) {
+        managementService.storeVisitedDirectory(fsSettings.getElasticsearch().getIndexFolder(), id, folder);
+    } else {
+        logger.warn("trying to add new file while closing crawler. Document [{}]/[{}] has been ignored",
+                fsSettings.getElasticsearch().getIndexFolder(), id);
+    }
+}
+
+/**
+ * Index a directory
+ * @param path complete path like "/", "/path/to/subdir", "C:\\dir", "C:/dir", "/C:/dir", "//SOMEONE/dir"
+ */
+private void indexDirectory(String path) throws Exception {
+    String name = path.substring(path.lastIndexOf(pathSeparator) + 1);
+    String rootdir = path.substring(0, path.lastIndexOf(pathSeparator));
+    Folder folder = new Folder(name, SignTool.sign(rootdir), path, computeVirtualPathName(stats.getRootPath(), path));
+
+    indexDirectory(SignTool.sign(path), folder);
+}
+
+/**
+ * Remove a full directory and sub dirs recursively
+ */
+private void removeEsDirectoryRecursively(final String path) throws Exception {
+    logger.debug("Delete folder [{}]", path);
+    Collection<String> listFile = getFileDirectory(path);
+
+    for (String esfile : listFile) {
+        esDelete(managementService, fsSettings.getElasticsearch().getIndex(), SignTool.sign(path.concat(pathSeparator).concat(esfile)));
     }
 
-    private String read(InputStream input) throws IOException {
-        try (BufferedReader buffer = new BufferedReader(new InputStreamReader(input, StandardCharsets.UTF_8))) {
-            return buffer.lines().collect(Collectors.joining("\n"));
-        }
+    Collection<String> listFolder = getFolderDirectory(path);
+    for (String esfolder : listFolder) {
+        removeEsDirectoryRecursively(esfolder);
     }
 
-    /**
-     * Index a folder object in elasticsearch
-     * @param id        id of the folder
-     * @param folder    path object
-     */
-    private void indexDirectory(String id, Folder folder) throws IOException {
-        if (!closed) {
-            managementService.storeVisitedDirectory(fsSettings.getElasticsearch().getIndexFolder(), id, folder);
-        } else {
-            logger.warn("trying to add new file while closing crawler. Document [{}]/[{}] has been ignored",
-                    fsSettings.getElasticsearch().getIndexFolder(), id);
-        }
+    esDelete(managementService, fsSettings.getElasticsearch().getIndexFolder(), SignTool.sign(path));
+}
+
+/**
+ * Remove a document with the document service
+ */
+private void esDelete(FsCrawlerDocumentService service, String index, String id) throws IOException {
+    logger.debug("Deleting {}/{}", index, id);
+    if (!closed) {
+        service.delete(index, id);
+    } else {
+        logger.warn("trying to remove a file while closing crawler. Document [{}]/[{}] has been ignored", index, id);
     }
+}
 
-    /**
-     * Index a directory
-     * @param path complete path like "/", "/path/to/subdir", "C:\\dir", "C:/dir", "/C:/dir", "//SOMEONE/dir"
-     */
-    private void indexDirectory(String path) throws Exception {
-        String name = path.substring(path.lastIndexOf(pathSeparator) + 1);
-        String rootdir = path.substring(0, path.lastIndexOf(pathSeparator));
-        Folder folder = new Folder(name, SignTool.sign(rootdir), path, computeVirtualPathName(stats.getRootPath(), path));
-
-        indexDirectory(SignTool.sign(path), folder);
+/**
+ * Remove a document with the management service
+ */
+private void esDelete(FsCrawlerManagementService service, String index, String id) {
+    logger.debug("Deleting {}/{}", index, id);
+    if (!closed) {
+        service.delete(index, id);
+    } else {
+        logger.warn("trying to remove a file while closing crawler. Document [{}]/[{}] has been ignored", index, id);
     }
-
-    /**
-     * Remove a full directory and sub dirs recursively
-     */
-    private void removeEsDirectoryRecursively(final String path) throws Exception {
-        logger.debug("Delete folder [{}]", path);
-        Collection<String> listFile = getFileDirectory(path);
-
-        for (String esfile : listFile) {
-            esDelete(managementService, fsSettings.getElasticsearch().getIndex(), SignTool.sign(path.concat(pathSeparator).concat(esfile)));
-        }
-
-        Collection<String> listFolder = getFolderDirectory(path);
-        for (String esfolder : listFolder) {
-            removeEsDirectoryRecursively(esfolder);
-        }
-
-        esDelete(managementService, fsSettings.getElasticsearch().getIndexFolder(), SignTool.sign(path));
-    }
-
-    /**
-     * Remove a document with the document service
-     */
-    private void esDelete(FsCrawlerDocumentService service, String index, String id) throws IOException {
-        logger.debug("Deleting {}/{}", index, id);
-        if (!closed) {
-            service.delete(index, id);
-        } else {
-            logger.warn("trying to remove a file while closing crawler. Document [{}]/[{}] has been ignored", index, id);
-        }
-    }
-
-    /**
-     * Remove a document with the management service
-     */
-    private void esDelete(FsCrawlerManagementService service, String index, String id) {
-        logger.debug("Deleting {}/{}", index, id);
-        if (!closed) {
-            service.delete(index, id);
-        } else {
-            logger.warn("trying to remove a file while closing crawler. Document [{}]/[{}] has been ignored", index, id);
-        }
-    }
-
+}
 }

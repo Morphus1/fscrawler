@@ -34,12 +34,14 @@ public class Doc {
     private Attributes attributes;
     private Map<String, Object> object;
     private Map<String, Object> external;
+    private float[] denseVector;
 
     public Doc() {
         meta = new Meta();
         file = new File();
         path = new Path();
         external = null;
+        denseVector = null;
     }
 
     public Doc(String content) {
@@ -109,5 +111,14 @@ public class Doc {
 
     public void setExternal(Map<String, Object> external) {
         this.external = external;
+    }
+
+    // Getter and setter for the dense vector field
+    public float[] getDenseVector() {
+        return denseVector;
+    }
+
+    public void setDenseVector(float[] denseVector) {
+        this.denseVector = denseVector;
     }
 }

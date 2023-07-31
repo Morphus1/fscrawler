@@ -425,6 +425,10 @@ public class FsMappingTest extends AbstractFSCrawlerMetadataTestCase {
                 "      \"content\": {\n" +
                 "        \"type\": \"text\"\n" +
                 "      },\n" +
+                "      \"dense_vector\": {\n" +
+                "        \"type\": \"dense_vector\",\n" +
+                "        \"dims\": 384\n" +
+                "      },\n" +
                 "      \"file\": {\n" +
                 "        \"properties\": {\n" +
                 "          \"content_type\": {\n" +

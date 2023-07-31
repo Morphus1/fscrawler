@@ -255,7 +255,7 @@ public class Fs {
             return this;
         }
 
-        public Builder setVectorize(boolean vectorize) {
+        public Builder isVectorize(boolean vectorize) {
             this.vectorize = vectorize;
             return this;
         }
@@ -512,7 +512,7 @@ public class Fs {
       this.tikaConfigPath = tikaConfigPath;
     }
 
-    public boolean setVectorize() {
+    public boolean isVectorize() {
         return vectorize;
     }
 
